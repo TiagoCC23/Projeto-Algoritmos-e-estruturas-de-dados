@@ -53,3 +53,10 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Ignore arquivos de build
+cmake-build-*
+
+# Ignore configurações do CLion
+.idea/
+*.iml
