@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "r1_1_text_matrix.h"
 
 int main(void)
 {

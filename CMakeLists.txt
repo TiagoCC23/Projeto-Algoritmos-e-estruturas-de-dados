@@ -6,4 +6,6 @@ set(CMAKE_C_STANDARD 17)
 include_directories(Fase1)
 include_directories(Fase2)
 
-add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c)
+add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
+        r1_1_text_matrix.c
+        r1_1_text_matrix.h)
