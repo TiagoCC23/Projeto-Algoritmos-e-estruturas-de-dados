@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void pesquisa(char* mtr[], char substrg[],int line, int column);
+int pesquisa(int line, int column,char* mtr[line][column], char substrg[]);
 void teste();
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_PESQUISASUBSTRINGS_H

@@ -2,21 +2,21 @@
 // Created by tiago on 23/10/2025.
 //
 
-#include "PesquisaSubstrings.h"
+#include "R1.2 - Manipulação do texto e tokens.h"
 
-void pesquisa(char* mtr[], char substrg[], int line, int column)
-{
+int pesquisa(int line, int column,char* mtr[line][column], char substrg[]) // primeiro vem as linhas e depois as colunas, para o
+{                                                                          // compilador saber como e que vai saltar
     int contador_palavras=0;
     int subStringSize=strlen(substrg);
-    if (subStringSize==0) // Caso não haja uma substring
+    if (subStringSize==0) // caso nao haja uma substring.
     {
-        return;
+        return 0;
     }
     for (int i = 0; i < line; i++)
     {
         for (int j = 0; j < column; j++)
         {
-            char* string = &mtr[i][j];
+            char* string = mtr[i][j];
             for (int k = 0; k < strlen(string); k++)
             {
                 int contadorLetras=0;
@@ -29,19 +29,17 @@ void pesquisa(char* mtr[], char substrg[], int line, int column)
                 }
                 if (contadorLetras==subStringSize) {
                     contador_palavras++;
-              break;
                 }
             }
-           break;
+
         }
-        break;
     }
-    printf("%d\n", contador_palavras);
+    return contador_palavras;
 }
 
 void teste()
 {
-    char* matriz[2][3] = {{"abc", "fte", "aaa"}, {"abc", "fae", "abaa"}}; // Com o ponteiro, o tamanho passa a ser dinâmico
-    char substr[] = "a";
-    pesquisa(matriz, substr, 2, 3); // Com o *, passa a ser o conteúdo da matriz
+    char* matriz[2][3] = {{"cbc", "fte", "aaa"}, {"abc", "fae", "abaa"}}; // com o ponteiro, (*) o tamanho passa a ser dinâmico.
+    char substr[] = "f";
+    printf("%d",pesquisa(2, 3,matriz, substr));              // com o (*), passa a ser o conteúdo da matriz.
 }

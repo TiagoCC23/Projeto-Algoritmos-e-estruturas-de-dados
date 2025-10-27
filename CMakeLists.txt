@@ -7,5 +7,5 @@ include_directories(Fase1)
 include_directories(Fase2)
 
 add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
-        Fase1/PesquisaSubstrings.c
-        Fase1/PesquisaSubstrings.h)
+        "Fase1/R1.2 - Manipulação do texto e tokens.c"
+        "Fase1/R1.2 - Manipulação do texto e tokens.h")
