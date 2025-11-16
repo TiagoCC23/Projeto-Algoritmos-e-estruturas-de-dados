@@ -15,11 +15,16 @@
  * @param lines numero de linhas na matriz
  * @param columns numero de colunas na matriz
  * @param matr matriz de apontadores para strings
- * @return
+ * @return retorna a string final so com os caracteres unicos
  */
 
 char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]);
-
+/**
+  *
+  *
+  * funçao que ve todos os caracteres existente e "guarda-os"
+  *
+  */
 void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
 
 void testeColeta();
