@@ -16,9 +16,11 @@ MATRIX_STR *create_matrix(int size) {
 }
 
 void resize_matrix(MATRIX_STR *mx, int new_size) {
-    mx->strings = realloc(mx->strings, new_size * sizeof(char));
+    mx->strings = realloc(mx->strings, new_size * sizeof(char*));
+    for (int i = mx->size; i < new_size; i++) {
+        mx->strings[i] = NULL;
+    }
     mx->size = new_size;
-    
 }
 
 void add_string(MATRIX_STR *mx, const char *str) {
@@ -26,5 +28,7 @@ void add_string(MATRIX_STR *mx, const char *str) {
 }
 
 void print_matrix(MATRIX_STR *mx) {
-
+    for (int i = 0; i < mx->count; i++) {
+        printf("[%d] -> %s\n", i, mx->strings[i]);
+    }
 }
