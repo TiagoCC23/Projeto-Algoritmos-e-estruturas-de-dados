@@ -4,9 +4,9 @@
 
 #include "r1_1_text_matrix.h"
 
-MATRIX_STR *create_matrix(int size) {
+MATRIX_STR *create_matrix(int size) { // numero de linhas!
     MATRIX_STR *mx = malloc(sizeof(MATRIX_STR));
-    mx->strings = malloc(size * sizeof(char)); // matrix->strings eh o mesmo que (*matrix).strings
+    mx->strings = malloc(size * sizeof(char*)); // matrix->strings eh o mesmo que (*matrix).strings
     for (int i = 0; i < size; i++) {
         mx->strings[i] = NULL;
     }
@@ -24,11 +24,49 @@ void resize_matrix(MATRIX_STR *mx, int new_size) {
 }
 
 void add_string(MATRIX_STR *mx, const char *str) {
+    if (mx->count >= mx->size)
+        resize_matrix(mx, mx->size * 2);
 
+    mx->strings[mx->count] = malloc((strlen(str) + 1) * sizeof(char));
+    strcpy(mx->strings[mx->count], str);
+    mx->count++;
 }
 
 void print_matrix(MATRIX_STR *mx) {
     for (int i = 0; i < mx->count; i++) {
         printf("[%d] -> %s\n", i, mx->strings[i]);
     }
+}
+
+void free_matrix(MATRIX_STR *mx) {
+    for (int i = 0; i < mx->count; i++) {
+        free(mx->strings[i]); // liberta as linhas
+    }
+    free(mx->strings); // liberta a matrix
+    free(mx);
+}
+
+void test_r1_1() {
+    MATRIX_STR *textMatrix = create_matrix(3);
+
+    add_string(textMatrix, "o rato roeu a roupa do rei de roma");
+    add_string(textMatrix, "tres pratos de trigo para tres triges");
+    add_string(textMatrix, "o pelo do pe do pedro eh petro");
+
+    printf("matrix completa:\n");
+    print_matrix(textMatrix);
+
+    MATRIX_STR *tokenMatrix = create_matrix(5);
+
+    add_string(tokenMatrix, "o");
+    add_string(tokenMatrix, "a");
+    add_string(tokenMatrix, "do");
+    add_string(tokenMatrix, "rei");
+    add_string(tokenMatrix, "trigo");
+
+    printf("tokens:\n");
+    print_matrix(tokenMatrix);
+
+    free_matrix(textMatrix);
+    free_matrix(tokenMatrix);
 }

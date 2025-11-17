@@ -22,4 +22,6 @@ void resize_matrix(MATRIX_STR *mx, int new_size);    // reajusta a matriz
 void add_string(MATRIX_STR *mx, const char *str);    // adiciona strings
 void print_matrix(MATRIX_STR *mx);                   // imprime a lista de strings
 
+void test_r1_1();
+
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_1_TEXT_MATRIX_H
