@@ -5,7 +5,8 @@
 
 int main(void)
 {
-    testeColeta();
+    //testeColeta();
+    testeFrequencias();
     //testeSubPesquisa();
     return 0;
 }

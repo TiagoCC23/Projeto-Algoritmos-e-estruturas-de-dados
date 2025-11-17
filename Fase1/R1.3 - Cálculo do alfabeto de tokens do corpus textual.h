@@ -19,15 +19,20 @@
  */
 
 char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]);
+void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
 /**
   *
   *
   * funçao que ve todos os caracteres existente e "guarda-os"
   *
   */
-void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
+void analisarCaracteresUnicos(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
 
+/**
+ * funçao teste para a coleta de caracteres
+ */
 void testeColeta();
 
+void testeFrequencias();
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H

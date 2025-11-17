@@ -4,7 +4,7 @@
 
 #include "R1.3 - Cálculo do alfabeto de tokens do corpus textual.h"
 
-void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
+void analisarCaracteresUnicos(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
 
     for (int i = 0; i < lines; i++) {
         for (int j = 0; j < columns; j++) {
@@ -21,6 +21,26 @@ void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int 
     }
 }
 
+void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
+    for (int i = 0; i < lines; i++) {
+        for (int j = 0; j < columns; j++) {
+            char *string = matr[i][j];
+            if (string == NULL) {
+                continue;
+            }
+            for (int k = 0; string[k] != '\0'; k++) {
+                unsigned char caracter = (unsigned char) string[k];
+                if (string[k+1=='\0']) {
+                    break;
+                }
+            if (string[k] ==string[k+1]) {
+                CaracteresAnalisados[caracter]++;
+            }
+            }
+        }
+    }
+}
+
 char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
     if (matr == NULL) {
         return NULL;
@@ -28,7 +48,7 @@ char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
     int CaracteresAnalisados[256] = {0};                           // cria o array com os caracteres que serao analisados
     int contadorUnico = 0;                                         // cria o contador que ve quantos caracteres sao unicos
     int j = 0;
-    analisarCaracteres(lines, columns, matr, CaracteresAnalisados);
+    analisarCaracteresUnicos(lines, columns, matr, CaracteresAnalisados);
     for (int i = 0; i < 256; i++) {
         if (CaracteresAnalisados[i] == 1) {
             contadorUnico++;
@@ -48,6 +68,19 @@ char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
     return string;
 }
 
+void contarFrequencias(int lines, int columns, char *matr[lines][columns]) {
+    int CaracteresAnalisados[256] = {0};
+
+
+    analisarCaracteresPares(lines, columns, matr, CaracteresAnalisados);
+
+    for (int i = 0; i < 256; i++) {
+        if (CaracteresAnalisados[i] > 0) {
+            printf("O par '%c%c' apareceu %d vezes.\n", (char)i, (char)i, CaracteresAnalisados[i]);
+        }
+    }
+}
+
 void testeColeta() {
     char *textMatrix[3][2] = {{"ola", "adeus"}, {"cansei", "escrever"}, {"sugestoes", "doidas"}};
     char *caracterUnicos = caracteresUnicos(3, 2, textMatrix);
@@ -55,4 +88,11 @@ void testeColeta() {
         printf("%c ", caracterUnicos[i]);
     }
     free(caracterUnicos);
+}
+
+
+
+void testeFrequencias() {
+    char *textMatriz[3][2]={{"hello", "ola"}, {"conheces", "mario"}, {"aquele", "armarioo"}};
+    contarFrequencias(3, 2, textMatriz);
 }
