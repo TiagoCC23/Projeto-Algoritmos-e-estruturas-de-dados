@@ -32,6 +32,20 @@ void add_string(MATRIX_STR *mx, const char *str) {
     mx->count++;
 }
 
+void remove_line(MATRIX_STR *mx, int idx) { // caso seja para remover a linha
+    free(mx->strings[idx]);
+    mx->strings[idx] = mx->strings[idx+1];
+    mx->strings[idx+1] = NULL;
+    mx->count--;
+}
+
+void remove_strings(MATRIX_STR *mx, int start, int end) {
+    for (int i = start; i < end; i++) {
+        free(mx->strings[i]);
+        mx->count--;
+    }
+}
+
 void print_matrix(MATRIX_STR *mx) {
     for (int i = 0; i < mx->count; i++) {
         printf("[%d] -> %s\n", i, mx->strings[i]);
@@ -54,6 +68,10 @@ void test_r1_1() {
     add_string(textMatrix, "o pelo do pe do pedro eh petro");
 
     printf("matrix completa:\n");
+    print_matrix(textMatrix);
+
+    printf("apos remover a linha 1:\n");
+    remove_line(textMatrix, 1);
     print_matrix(textMatrix);
 
     MATRIX_STR *tokenMatrix = create_matrix(5);
