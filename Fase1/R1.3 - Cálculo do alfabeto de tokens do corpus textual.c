@@ -28,11 +28,9 @@ void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns],
             if (string == NULL) {
                 continue;
             }
-            for (int k = 0; string[k] != '\0'; k++) {
+            for (int k = 0; string[k+1] != '\0'; k++) {
                 unsigned char caracter = (unsigned char) string[k];
-                if (string[k+1=='\0']) {
-                    break;
-                }
+
             if (string[k] ==string[k+1]) {
                 CaracteresAnalisados[caracter]++;
             }
@@ -70,7 +68,6 @@ char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
 
 void contarFrequencias(int lines, int columns, char *matr[lines][columns]) {
     int CaracteresAnalisados[256] = {0};
-
 
     analisarCaracteresPares(lines, columns, matr, CaracteresAnalisados);
 
