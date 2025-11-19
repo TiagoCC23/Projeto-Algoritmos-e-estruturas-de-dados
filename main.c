@@ -6,7 +6,8 @@
 int main(void)
 {
     //testeColeta();
-    testeFrequencias();
+    //testeFrequencias();
+    imprimirAlfabetos();
     //testeSubPesquisa();
     return 0;
 }

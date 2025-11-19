@@ -87,6 +87,18 @@ void testeColeta() {
     free(caracterUnicos);
 }
 
+void imprimirAlfabetos(/*Vai receber alguma coisa, mas ainda não sei o quê*/) {
+    char *tokens[]={"Ola", "Mundo", "Planeta"};
+    int tamTokens=3;// Muito provavelmente vai ser automático
+    printf("_________________\n");
+    printf("|  ID |  Token  |\n");
+    printf("|-----|---------|\n");
+    for (int i = 0; i<tamTokens; i++) {
+        char *token = tokens[i];
+        printf("|  %d  |  %s  |\n", i, token);
+    }
+    printf("______|__________\n");
+}
 
 
 void testeFrequencias() {
