@@ -32,18 +32,27 @@ void add_string(MATRIX_STR *mx, const char *str) {
     mx->count++;
 }
 
-void remove_line(MATRIX_STR *mx, int idx) { // caso seja para remover a linha
+void remove_line(MATRIX_STR *mx, int idx) {
     free(mx->strings[idx]);
-    mx->strings[idx] = mx->strings[idx+1];
-    mx->strings[idx+1] = NULL;
+    for (int i = idx; i < mx->count - 1; i++) {
+        mx->strings[i] = mx->strings[i + 1];
+    }
+    mx->strings[mx->count - 1] = NULL;
     mx->count--;
 }
 
 void remove_strings(MATRIX_STR *mx, int start, int end) {
-    for (int i = start; i < end; i++) {
+    int total = end - start + 1; // incluindo o valor do fim
+    for (int i = start; i <= end; i++) {
         free(mx->strings[i]);
-        mx->count--;
     }
+    for (int i = end + 1; i < mx->count; i++) {
+        mx->strings[i - total] = mx->strings[i];
+    }
+    for (int i = mx->count - total; i < mx->count; i++) {
+        mx->strings[i] = NULL;
+    }
+    mx->count -= total;
 }
 
 void print_matrix(MATRIX_STR *mx) {
@@ -66,12 +75,19 @@ void test_r1_1() {
     add_string(textMatrix, "o rato roeu a roupa do rei de roma");
     add_string(textMatrix, "tres pratos de trigo para tres triges");
     add_string(textMatrix, "o pelo do pe do pedro eh petro");
+    add_string(textMatrix, "a aranha arranha a ra. a ra arranha a aranha");
+    add_string(textMatrix, "casa suja, chao sujo");
+    add_string(textMatrix, "um limao, mil limoes, um milhao de limoes");
 
     printf("matrix completa:\n");
     print_matrix(textMatrix);
 
     printf("apos remover a linha 1:\n");
     remove_line(textMatrix, 1);
+    print_matrix(textMatrix);
+
+    printf("apos remover da linha 1 a 3:\n");
+    remove_strings(textMatrix, 1,3);
     print_matrix(textMatrix);
 
     MATRIX_STR *tokenMatrix = create_matrix(5);
