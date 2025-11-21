@@ -19,6 +19,7 @@
  */
 
 char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]);
+char tokenLongo(char *tokens[],int tamanhoToken);
 void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
 /**
   *
@@ -35,6 +36,7 @@ void testeColeta();
 
 void testeFrequencias();
 
-void imprimirAlfabetos(/*Vai receber alguma coisa, mas ainda não sei o quê*/);
+void testeImprimirAlfabetos();
+void imprimirAlfabeto(char *tokens[], int tamTokens);
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H

@@ -77,7 +77,41 @@ void contarFrequencias(int lines, int columns, char *matr[lines][columns]) {
         }
     }
 }
-
+char tokenLongo(char *tokens[],int tamanhoToken)
+{
+    int endereco=0,  maior=0;
+    for (int i=0; i<tamanhoToken; i++)
+    {
+        int contador=0;
+        char *token=tokens[i];
+        for (int j=0; j<strlen(token); j++ )
+        {
+            contador++;
+        }
+        if (contador>maior)
+        {
+            endereco=i;
+            maior=contador;
+        }
+    }
+    return *tokens[endereco];
+}
+void imprimirAlfabeto(char *tokens[], int tamTokens) {
+    printf("_____________________________\n");
+    printf("|  ID   |  Token            |\n");
+    printf("|-------|-------------------|\n");
+    for (int i = 0; i<tamTokens; i++) {
+        char *token = tokens[i];
+        if (*token==' ')
+        {
+            printf("|  %-3d  |  ' '%-12s  |\n", i, token);
+        } else
+        {
+            printf("|  %-3d  |  %-15s  |\n", i, token);
+        }
+    }
+    printf("|_______|___________________|\n");
+}
 void testeColeta() {
     char *textMatrix[3][2] = {{"ola", "adeus"}, {"cansei", "escrever"}, {"sugestoes", "doidas"}};
     char *caracterUnicos = caracteresUnicos(3, 2, textMatrix);
@@ -86,22 +120,22 @@ void testeColeta() {
     }
     free(caracterUnicos);
 }
-
-void imprimirAlfabetos(/*Vai receber alguma coisa, mas ainda não sei o quê*/) {
-    char *tokens[]={"Ola", "Mundo", "Planeta"};
-    int tamTokens=3;// Muito provavelmente vai ser automático
-    printf("_________________\n");
-    printf("|  ID |  Token  |\n");
-    printf("|-----|---------|\n");
-    for (int i = 0; i<tamTokens; i++) {
-        char *token = tokens[i];
-        printf("|  %d  |  %s  |\n", i, token);
-    }
-    printf("______|__________\n");
-}
-
-
 void testeFrequencias() {
     char *textMatriz[3][2]={{"hello", "ola"}, {"conheces", "mario"}, {"aquele", "armarioo"}};
     contarFrequencias(3, 2, textMatriz);
+}
+void testeImprimirAlfabetos() {
+    char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
+    int tamTokens=strlen(tokens)-1;
+    imprimirAlfabeto(tokens, tamTokens);
+}
+
+void testeTokenMaisLongo()
+{
+    char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
+    char subtoken=tokenLongo(tokens, 5);
+    for (int i=0; i<5; i++)
+    {
+        printf("%c",  subtoken[i]);
+    }
 }
