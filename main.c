@@ -5,10 +5,10 @@
 
 int main(void)
 {
-    //testeColeta();
+    testeColeta();
     //testeFrequencias();
     //testeImprimirAlfabetos();
-    testeTokenMaisLongo();
+    //testeTokenMaisLongo();
     //testeSubPesquisa();
     return 0;
 }

@@ -13,28 +13,27 @@
 /**
  *
  * @param lines numero de linhas na matriz
- * @param columns numero de colunas na matriz
  * @param matr matriz de apontadores para strings
+ * @param tamTokens tamanho de tokens
  * @return retorna a string final so com os caracteres unicos
  */
 
-char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]);
-char tokenLongo(char *tokens[],int tamanhoToken);
-void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
+char **caracteresUnicos(int lines, char **matr, int *tamTokens);
+char *tokenLongo(char *tokens[],int tamanhoToken);
+void testeTokenMaisLongo();
 /**
   *
   *
   * funçao que ve todos os caracteres existente e "guarda-os"
   *
   */
-void analisarCaracteresUnicos(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
+void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[256]);
 
 /**
  * funçao teste para a coleta de caracteres
  */
 void testeColeta();
 
-void testeFrequencias();
 
 void testeImprimirAlfabetos();
 void imprimirAlfabeto(char *tokens[], int tamTokens);

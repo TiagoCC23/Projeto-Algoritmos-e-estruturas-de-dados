@@ -4,11 +4,10 @@
 
 #include "R1.3 - Cálculo do alfabeto de tokens do corpus textual.h"
 
-void analisarCaracteresUnicos(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
+void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[256]) {
 
     for (int i = 0; i < lines; i++) {
-        for (int j = 0; j < columns; j++) {
-            char *string = matr[i][j];
+            char *string = matr[i];
             if (string == NULL) {
                 continue;                                           // se receber uma string apontada for vazia, ele avança para a proxima iteraçao
             }
@@ -19,65 +18,54 @@ void analisarCaracteresUnicos(int lines, int columns, char *matr[lines][columns]
             }
         }
     }
-}
 
-void analisarCaracteresPares(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
-    for (int i = 0; i < lines; i++) {
-        for (int j = 0; j < columns; j++) {
-            char *string = matr[i][j];
-            if (string == NULL) {
-                continue;
-            }
-            for (int k = 0; string[k+1] != '\0'; k++) {
-                unsigned char caracter = (unsigned char) string[k];
-
-            if (string[k] ==string[k+1]) {
-                CaracteresAnalisados[caracter]++;
-            }
-            }
-        }
-    }
-}
-
-char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
+char **caracteresUnicos(int lines, char **matr, int *tamTokens) {
     if (matr == NULL) {
         return NULL;
     }
     int CaracteresAnalisados[256] = {0};                           // cria o array com os caracteres que serao analisados
     int contadorUnico = 0;                                         // cria o contador que ve quantos caracteres sao unicos
     int j = 0;
-    analisarCaracteresUnicos(lines, columns, matr, CaracteresAnalisados);
+    analisarCaracteresUnicos(lines,  matr, CaracteresAnalisados);
     for (int i = 0; i < 256; i++) {
         if (CaracteresAnalisados[i] == 1) {
             contadorUnico++;
         }
     }
-    char *string = (char *) malloc(sizeof(char) * contadorUnico + 1);
+    char **string = (char **) malloc(sizeof(char*) * contadorUnico);
     if (string == NULL) {
         return NULL;
     }
 
     for (int i = 0; i < 256; i++) {
         if (CaracteresAnalisados[i] == 1) {
-            string[j++] = (char)i;
+            string[j] = (char *) malloc(sizeof(char));
+            string[j][0] = (char) i;
+            string[j][1] = '\0';
+            j++;
         }
     }
-    string[j] = '\0';
+    *tamTokens=contadorUnico;
     return string;
 }
 
-void contarFrequencias(int lines, int columns, char *matr[lines][columns]) {
-    int CaracteresAnalisados[256] = {0};
-
-    analisarCaracteresPares(lines, columns, matr, CaracteresAnalisados);
-
-    for (int i = 0; i < 256; i++) {
-        if (CaracteresAnalisados[i] > 0) {
-            printf("O par '%c%c' apareceu %d vezes.\n", (char)i, (char)i, CaracteresAnalisados[i]);
+int encontrarIndicePar(char **listaPars[], char *parProcurado, int totalPares) {
+    for (int i = 0; i < totalPares; i++) {
+        if (strcmp(listaPars[i], parProcurado) == 0) {             // compara com a lista de pares existentes
+            return i;                                              // caso exista, ele devolve a posiçao onde se encontra o par
         }
     }
+    return -1;
 }
-char tokenLongo(char *tokens[],int tamanhoToken)
+void atualizarPares(char ***listaPars[], char *novoPar,int **frequencias,  int *total ) {
+    int indicePar= encontrarIndicePar(*listaPars, novoPar, *total);
+    if (indicePar != -1) {
+        (*frequencias)[indicePar]++;
+    }
+
+}
+
+char *tokenLongo(char *tokens[],int tamanhoToken)//1.4
 {
     int endereco=0,  maior=0;
     for (int i=0; i<tamanhoToken; i++)
@@ -94,7 +82,7 @@ char tokenLongo(char *tokens[],int tamanhoToken)
             maior=contador;
         }
     }
-    return *tokens[endereco];
+    return tokens[endereco];
 }
 void imprimirAlfabeto(char *tokens[], int tamTokens) {
     printf("_____________________________\n");
@@ -112,17 +100,23 @@ void imprimirAlfabeto(char *tokens[], int tamTokens) {
     }
     printf("|_______|___________________|\n");
 }
+
+
+                /*----------/ funçoes de teste /----------*/
 void testeColeta() {
-    char *textMatrix[3][2] = {{"ola", "adeus"}, {"cansei", "escrever"}, {"sugestoes", "doidas"}};
-    char *caracterUnicos = caracteresUnicos(3, 2, textMatrix);
-    for (int i = 0; i < strlen(caracterUnicos); i++) {
-        printf("%c ", caracterUnicos[i]);
+    char *textMatrix[] = {"bar par"};
+    int lines=1;
+    int tamTokens=0;
+    char **caracterUnicos = caracteresUnicos(lines, textMatrix, &tamTokens);
+    imprimirAlfabeto(caracterUnicos, tamTokens);
+    for (int i = 0; i < tamTokens; i++) {
+        free(caracterUnicos[i]);
     }
     free(caracterUnicos);
 }
 void testeFrequencias() {
     char *textMatriz[3][2]={{"hello", "ola"}, {"conheces", "mario"}, {"aquele", "armarioo"}};
-    contarFrequencias(3, 2, textMatriz);
+
 }
 void testeImprimirAlfabetos() {
     char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
@@ -133,9 +127,10 @@ void testeImprimirAlfabetos() {
 void testeTokenMaisLongo()
 {
     char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
-    char subtoken=tokenLongo(tokens, 5);
-    for (int i=0; i<5; i++)
+    int tamTokens=strlen(tokens)-1;
+    char *subtoken=tokenLongo(tokens, tamTokens);
+    for (int i=0; i<strlen(subtoken); i++)
     {
-        printf("%c",  subtoken[i]);
+        printf("%c", subtoken[i]);
     }
 }
