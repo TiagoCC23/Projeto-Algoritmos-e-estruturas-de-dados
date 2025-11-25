@@ -2,7 +2,7 @@
 // Created by tiago on 15/11/2025.
 //
 
-#include "R1.3 - Cálculo do alfabeto de tokens do corpus textual.h"
+#include "r1_3_alphabet_tokens.h"
 
 void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
 
@@ -48,7 +48,7 @@ char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]) {
     return string;
 }
 
-void testeColeta() {
+void test_r1_3() {
     char *textMatrix[3][2] = {{"ola", "adeus"}, {"cansei", "escrever"}, {"sugestoes", "doidas"}};
     char *caracterUnicos = caracteresUnicos(3, 2, textMatrix);
     for (int i = 0; i < strlen(caracterUnicos); i++) {

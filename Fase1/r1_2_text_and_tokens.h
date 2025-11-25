@@ -42,6 +42,6 @@ int pesquisa(int line, int column,char* mtr[line][column], char substrg[]);
 /**
  * Seria o client da função teste para a subpesquisa
  */
-void testeSubPesquisa();
+void test_r1_2();
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_PESQUISASUBSTRINGS_H
