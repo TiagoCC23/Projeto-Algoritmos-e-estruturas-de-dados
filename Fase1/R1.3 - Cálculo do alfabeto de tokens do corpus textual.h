@@ -8,6 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "r1_1_text_matrix.h"
+
+
 
 
 /**
@@ -17,8 +20,8 @@
  * @param tamTokens tamanho de tokens
  * @return retorna a string final so com os caracteres unicos
  */
-
-char **caracteresUnicos(int lines, char **matr, int *tamTokens);
+void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
+void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens);
 char *tokenLongo(char *tokens[],int tamanhoToken);
 void testeTokenMaisLongo();
 /**
@@ -33,9 +36,9 @@ void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[
  * funçao teste para a coleta de caracteres
  */
 void testeColeta();
-
-
+void insertString(MATRIX_STR *matr, char *newStr);
+void testeFrequencias();
 void testeImprimirAlfabetos();
-void imprimirAlfabeto(char *tokens[], int tamTokens);
+void imprimirAlfabeto(char *tokens[], int tamTokens, int *frequencias);
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H
