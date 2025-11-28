@@ -24,13 +24,8 @@ void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
 void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens);
 char *tokenLongo(char *tokens[],int tamanhoToken);
 void testeTokenMaisLongo();
-/**
-  *
-  *
-  * funçao que ve todos os caracteres existente e "guarda-os"
-  *
-  */
-void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[256]);
+char* contarFreq(char **pares, int totalPares);
+
 
 /**
  * funçao teste para a coleta de caracteres

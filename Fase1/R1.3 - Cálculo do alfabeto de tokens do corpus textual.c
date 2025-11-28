@@ -4,6 +4,28 @@
 
 #include "R1.3 - Cálculo do alfabeto de tokens do corpus textual.h"
 
+#include <ctype.h>
+
+                /*----------/ funçoes necessarias /----------*/
+
+char* contarFreq(char **pares, int totalPares) {
+    int maior=0, endereco=0;
+    for (int i = 0; i < totalPares; i++) {
+        int contador=0;
+        for (int j = 0; j < totalPares; j++) {
+            if (strcmp(pares[i], pares[j]) == 0) {
+                contador++;
+            }
+            }
+
+            if (contador > maior) {
+                maior = contador;
+                endereco = i;
+        }
+    }
+return pares[endereco];
+}
+
 void insertString(MATRIX_STR *matr, char *newStr)
 {
     for (int i=0; i<((*matr).count); i++)                  // neste ciclo verifica-se se a string a ser inserida ja existe ou nao
@@ -32,6 +54,9 @@ void initMatrStruct(MATRIX_STR *str)
 }
 
 void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
+
+                /*----------/ funçoes do projeto /----------*/
+
 void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens) {
     if (matr.strings == NULL) {
         printf("Erro");
@@ -57,44 +82,35 @@ for (int i=0; i<matr.count; i++)
 }
     *tamTokens=(*tokens).count;
 }
+void merge(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens) {
+    if (matr.strings == NULL) {
+        printf("Erro");
+        return;
+    }
+    int pos=0;
+    char auxSubStr[3]={0,0,0};
+    char **freqString = NULL;                                  // começa a NULL se realocar a memoria
+    for (int i=0; i<matr.count; i++) {
+        char *string=matr.strings[i];
+        for (int j=0; j<strlen(string)-1; j++){
+            auxSubStr[0]=tolower(string[j]);
+            auxSubStr[1]=tolower(string[j+1]);
+            auxSubStr[2]='\0';
+            char **temp = realloc(freqString, (pos + 1) * sizeof(char*));
+            freqString = temp;
 
-int encontrarIndicePar(char **listaPars[], char *parProcurado, int totalPares) {
-    for (int i = 0; i < totalPares; i++) {
-        if (strcmp(listaPars[i], parProcurado) == 0) {             // compara com a lista de pares existentes
-            return i;                                              // caso exista, ele devolve a posiçao onde se encontra o par
+            freqString[pos] = (char*)malloc(3 * sizeof(char));
+            strcpy(freqString[pos], auxSubStr);
+            pos++;
+
         }
     }
-    return -1;
+    char *maiorFreq= contarFreq(freqString, pos);
 }
-void atualizarPares(char ***listaPars[], char *novoPar,int **frequencias,  int *total ) {
-    int indicePar= encontrarIndicePar(*listaPars, novoPar, *total);
-    if (indicePar != -1) {                                        // se o par exisitir, ele incrementa o conteúdo do indice desse par
-        (*frequencias)[indicePar]++;
-    } else
-    {
-        int novoSize= *total+1;                                   // cria-se um novo tamanho para realocar os pares
-        *listaPars= (char***)realloc(*listaPars,novoSize*sizeof(char *));
-        *frequencias = (int*)realloc(*frequencias, novoSize*sizeof(int));
-        (*frequencias)[*total]=1;                                 // seta-se o contador de frequências em 1
-        (*listaPars)[*total]=strdup(novoPar);                     // copia-se a substring, que corresponde ao par, para a listaPars
-        (*total)++;
-    }
-}
-void contarFrequencia(char ** string,char ** outPars, int ** outFreq, int * outTotal, int lines)
-{
-char aux[3];
-    for (int i=0; i<lines; i++)
-    {
-        char *substring= string[i];
-        for (int j=0; substring[j+1]!='\0'; j++)
-        {
-            aux[0]=substring[i];
-            aux[1]=substring[i+1];
-            aux[2]='\0';
-            atualizarPares(outPars,aux, outFreq,outTotal);
-        }
-    }
-}
+
+
+
+
 char *tokenLongo(char *tokens[],int tamanhoToken)//1.4
 {
     int endereco=0,  maior=0;
@@ -114,6 +130,9 @@ char *tokenLongo(char *tokens[],int tamanhoToken)//1.4
     }
     return tokens[endereco];
 }
+
+
+
 void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias)
 {
     if (frequencias==0){
@@ -152,12 +171,12 @@ void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias)
 
 
                 /*----------/ funçoes de teste /----------*/
+
 void testeColeta() {
     MATRIX_STR string;
     initMatrStruct(&string);
 
-    insertString(&string, "bar ");
-    insertString(&string, " par");
+    insertString(&string, "bar par");
 
 int tamTokens=0;
 
@@ -167,21 +186,15 @@ int tamTokens=0;
     imprimirAlfabeto(&tokens, 0);
 }
 void testeFrequencias() {
-    char *textMatriz[]={"bar"," ", "par"};
-    int lines=3;
+MATRIX_STR string;
+    initMatrStruct(&string);
+    insertString(&string, "bar par");
+    int tamTokens=0;
+    MATRIX_STR tokens;
+    initMatrStruct(&tokens);
+    merge(&tokens, string, &tamTokens);
+    imprimirAlfabeto(&tokens, 0);
 
-    char **pares=NULL;
-    int *outFreq=NULL;
-    int total=0;
-
-    contarFrequencia(textMatriz,&pares, &outFreq, &total, lines);
-    //imprimirAlfabeto(pares, total, outFreq);
-    for(int i=0; i<total; i++)
-    {
-        free(pares[i]);
-    }
-    free(pares);
-    free(outFreq);
 }
 void testeImprimirAlfabetos() {
     char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
