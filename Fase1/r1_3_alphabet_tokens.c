@@ -1,8 +1,4 @@
-//
-// Created by tiago on 15/11/2025.
-//
-
-#include "R1.3 - Cálculo do alfabeto de tokens do corpus textual.h"
+#include "r1_3_alphabet_tokens.h"
 
 #include <ctype.h>
 
@@ -184,6 +180,15 @@ int tamTokens=0;
     initMatrStruct(&tokens);
     caracteresUnicos(&tokens, string, &tamTokens);
     imprimirAlfabeto(&tokens, 0);
+}
+void test_r1_3() {
+    char *textMatrix[3][2] = {{"ola", "adeus"}, {"cansei", "escrever"}, {"sugestoes", "doidas"}};
+    char *caracterUnicos = caracteresUnicos(3, 2, textMatrix);
+    for (int i = 0; i < strlen(caracterUnicos); i++) {
+        printf("%c ", caracterUnicos[i]);
+    }
+    printf("\n");
+    free(caracterUnicos);
 }
 void testeFrequencias() {
 MATRIX_STR string;

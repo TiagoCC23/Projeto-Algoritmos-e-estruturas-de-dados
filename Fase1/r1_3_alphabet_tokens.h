@@ -1,7 +1,3 @@
-//
-// Created by tiago on 15/11/2025.
-//
-
 #ifndef PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H
 #define PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H
 #include <stdio.h>
@@ -36,5 +32,9 @@ void initMatrStruct(MATRIX_STR *str);
 void testeFrequencias();
 void testeImprimirAlfabetos();
 void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias);
+void test_r1_3();
+
+
+
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H
