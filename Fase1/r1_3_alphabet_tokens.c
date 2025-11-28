@@ -1,7 +1,3 @@
-//
-// Created by tiago on 15/11/2025.
-//
-
 #include "r1_3_alphabet_tokens.h"
 
 void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]) {
@@ -54,5 +50,6 @@ void test_r1_3() {
     for (int i = 0; i < strlen(caracterUnicos); i++) {
         printf("%c ", caracterUnicos[i]);
     }
+    printf("\n");
     free(caracterUnicos);
 }

@@ -1,6 +1,3 @@
-//
-// Created by tiago on 23/10/2025.
-//
 #include "r1_2_text_and_tokens.h"
 
 int tabelaKMP (char* pattern,int length, int dfa[R_KMP][length]) {
@@ -69,5 +66,5 @@ int pesquisa(int line, int column, char* mtr[line][column], char substrg[]) // p
 void test_r1_2() {
     char* matriz[2][3] = {{"cbc", "fte", "aaa"}, {"abc", "fae", "abaa"}}; // com o ponteiro, (*) o tamanho da string passa a ser dinâmico.
     char substr[] = "f";
-    printf("%d",pesquisa(2, 3,matriz, substr)); // com o (*), passa a ser o conteúdo da matriz.
+    printf("%d\n",pesquisa(2, 3,matriz, substr)); // com o (*), passa a ser o conteúdo da matriz.
 }

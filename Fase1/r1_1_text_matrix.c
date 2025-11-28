@@ -1,7 +1,3 @@
-//
-// Created by rayss on 23/10/2025.
-//
-
 #include "r1_1_text_matrix.h"
 
 MATRIX_STR *create_matrix(int size) { // numero de linhas!
@@ -55,13 +51,13 @@ void remove_strings(MATRIX_STR *mx, int start, int end) {
     mx->count -= total;
 }
 
-void print_matrix(MATRIX_STR *mx) {
+void print_matrix_str(MATRIX_STR *mx) {
     for (int i = 0; i < mx->count; i++) {
         printf("[%d] -> %s\n", i, mx->strings[i]);
     }
 }
 
-void free_matrix(MATRIX_STR *mx) {
+void free_matrix_str(MATRIX_STR *mx) {
     for (int i = 0; i < mx->count; i++) {
         free(mx->strings[i]); // liberta as linhas
     }
@@ -80,15 +76,15 @@ void test_r1_1() {
     add_string(textMatrix, "um limao, mil limoes, um milhao de limoes");
 
     printf("matrix completa:\n");
-    print_matrix(textMatrix);
+    print_matrix_str(textMatrix);
 
     printf("apos remover a linha 1:\n");
     remove_line(textMatrix, 1);
-    print_matrix(textMatrix);
+    print_matrix_str(textMatrix);
 
     printf("apos remover da linha 1 a 3:\n");
     remove_strings(textMatrix, 1,3);
-    print_matrix(textMatrix);
+    print_matrix_str(textMatrix);
 
     MATRIX_STR *tokenMatrix = create_matrix(5);
 
@@ -99,8 +95,8 @@ void test_r1_1() {
     add_string(tokenMatrix, "trigo");
 
     printf("tokens:\n");
-    print_matrix(tokenMatrix);
+    print_matrix_str(tokenMatrix);
 
-    free_matrix(textMatrix);
-    free_matrix(tokenMatrix);
+    free_matrix_str(textMatrix);
+    free_matrix_str(tokenMatrix);
 }

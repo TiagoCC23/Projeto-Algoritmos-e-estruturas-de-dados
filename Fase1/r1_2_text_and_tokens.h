@@ -1,12 +1,10 @@
-//
-// Created by tiago on 23/10/2025.
-//
-
 #ifndef PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_PESQUISASUBSTRINGS_H
 #define PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_PESQUISASUBSTRINGS_H
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 #define R_KMP 256 // macro para que ele inclua todos os caracteres do codigo ASCII
 
 /**
