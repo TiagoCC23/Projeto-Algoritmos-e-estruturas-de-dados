@@ -37,8 +37,9 @@ void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[
  */
 void testeColeta();
 void insertString(MATRIX_STR *matr, char *newStr);
+void initMatrStruct(MATRIX_STR *str);
 void testeFrequencias();
 void testeImprimirAlfabetos();
-void imprimirAlfabeto(char *tokens[], int tamTokens, int *frequencias);
+void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias);
 
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_3_CÁLCULO_DO_ALFABETO_DE_TOKENS_DO_CORPUS_TEXTUAL_H

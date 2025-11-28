@@ -6,38 +6,35 @@
 
 void insertString(MATRIX_STR *matr, char *newStr)
 {
-if ((*matr).count>=(*matr).size)
-{
-    char* *newPtr= (char*) realloc((*matr).strings,1+sizeof(MATRIX_STR));
-}
-    for (int i=0; i<((*matr).count); i++)
+    for (int i=0; i<((*matr).count); i++)                  // neste ciclo verifica-se se a string a ser inserida ja existe ou nao
     {
         if (strcmp((*matr).strings[i], newStr)==0)
         {
-            break;
+            printf("Ja existe");
+            return;
         }
-            strcpy((*matr).strings[i], newStr);
-
     }
-    (*matr).count++;
+if ((*matr).count>=(*matr).size)                          // se haver mais strings alocadas do que tamanho da string, realoca-se tamanho
+{
+    int newSize=(*matr).size*2;                           // para o tamanho da string ficar dinamico
+    (*matr).strings= (char**) realloc((*matr).strings,newSize*sizeof(char*));
 }
-void analisarCaracteresUnicos(int lines,  char **matr, int CaracteresAnalisados[256]) {
+    (*matr).strings[(*matr).count]=(char *) malloc(strlen(newStr)+1);  // aloca-se memoria para a nova string, somando +1 para o \0
+    strcpy((*matr).strings[(*matr).count], newStr);
 
-    for (int i = 0; i < lines; i++) {
-            char *string = matr[i];
-            if (string == NULL) {
-                continue;                                           // se receber uma string apontada for vazia, ele avança para a proxima iteraçao
-            }
-            for (int k = 0; string[k] != '\0'; k++) {
-                unsigned char caracter = (unsigned char) string[k];
-                CaracteresAnalisados[caracter]=1;                   // quando ele vê um caracter ele marca como visto, sendo a marcaçao um 1
-                                                                    //-> CaracteresAnalisados[a]=1
-            }
-        }
-    }
+    (*matr).count++;                                                        // atualiza-se a contagem de strings
+}
+void initMatrStruct(MATRIX_STR *str)
+{
+    (*str).count=0;
+    (*str).size=1;
+    (*str).strings=(char**)calloc((*str).count,sizeof(char*));
+}
+
 void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
 void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens) {
     if (matr.strings == NULL) {
+        printf("Erro");
         return;
     }
 
@@ -49,16 +46,16 @@ for (int i=0; i<matr.count; i++)
     {
         if (CaracteresAnalisados[(unsigned char)string[j]]==0)
         {
-            CaracteresAnalisados[j]=1;
-            char *newStr= (char*)malloc(2*sizeof(char));
+            CaracteresAnalisados[(unsigned char)string[j]]=1;
+            char *newStr= (char*)malloc(2*sizeof(char*));
             newStr[0]=string[j];
             newStr[1]='\0';
-            insertString(tokens,newStr, 0);
+            insertString(tokens,newStr);
 
         }
     }
-    *tamTokens=matr.count;
 }
+    *tamTokens=(*tokens).count;
 }
 
 int encontrarIndicePar(char **listaPars[], char *parProcurado, int totalPares) {
@@ -117,14 +114,14 @@ char *tokenLongo(char *tokens[],int tamanhoToken)//1.4
     }
     return tokens[endereco];
 }
-void imprimirAlfabeto(char *tokens[], int tamTokens, int *frequencias)
+void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias)
 {
     if (frequencias==0){
         printf("_____________________________\n");
         printf("|  ID   |  Token            |\n");
         printf("|-------|-------------------|\n");
-        for (int i = 0; i<tamTokens; i++) {
-            char *token = tokens[i];
+        for (int i = 0; i<(*tokens).count; i++) {
+            char *token = (*tokens).strings[i];
             if (*token==' ')
             {
                 printf("|  %-3d  |  ' '%-12s  |\n", i, token);
@@ -139,8 +136,8 @@ void imprimirAlfabeto(char *tokens[], int tamTokens, int *frequencias)
         printf("___________________________________\n");
         printf("|  ID   |  Token  |  Frequencias  |\n");
         printf("|-------|---------|---------------|\n");
-        for (int i = 0; i<tamTokens; i++) {
-            char *token = tokens[i];
+        for (int i = 0; i<(*tokens).count; i++) {
+            char *token = (*tokens).strings[i];
             if (*token==' ')
             {
                 printf("|  %-3d  |  ' '%-6s  |  %-12d  |\n", i, token, frequencias[i]);
@@ -156,15 +153,18 @@ void imprimirAlfabeto(char *tokens[], int tamTokens, int *frequencias)
 
                 /*----------/ funçoes de teste /----------*/
 void testeColeta() {
-    char *textMatrix[] = {"bar par"};
-    int lines=1;
-    int tamTokens=0;
-    char **caracterUnicos = caracteresUnicos(lines, textMatrix, &tamTokens);
-    imprimirAlfabeto(caracterUnicos, tamTokens, 0);
-    for (int i = 0; i < tamTokens; i++) {
-        free(caracterUnicos[i]);
-    }
-    free(caracterUnicos);
+    MATRIX_STR string;
+    initMatrStruct(&string);
+
+    insertString(&string, "bar ");
+    insertString(&string, " par");
+
+int tamTokens=0;
+
+    MATRIX_STR tokens;
+    initMatrStruct(&tokens);
+    caracteresUnicos(&tokens, string, &tamTokens);
+    imprimirAlfabeto(&tokens, 0);
 }
 void testeFrequencias() {
     char *textMatriz[]={"bar"," ", "par"};
@@ -175,7 +175,7 @@ void testeFrequencias() {
     int total=0;
 
     contarFrequencia(textMatriz,&pares, &outFreq, &total, lines);
-    imprimirAlfabeto(pares, total, outFreq);
+    //imprimirAlfabeto(pares, total, outFreq);
     for(int i=0; i<total; i++)
     {
         free(pares[i]);
@@ -186,7 +186,7 @@ void testeFrequencias() {
 void testeImprimirAlfabetos() {
     char *tokens[]={"Ola", "Mundo", "Planeta", " ", "."};
     int tamTokens=strlen(tokens)-1;
-    imprimirAlfabeto(tokens, tamTokens,0);
+    //imprimirAlfabeto(tokens, tamTokens,0);
 }
 
 void testeTokenMaisLongo()
