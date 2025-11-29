@@ -38,7 +38,7 @@ int KMPesquisa(char* text, int size, int MatchSize, int dfa[R_KMP][MatchSize], i
 int pesquisa(int line, int column,char* mtr[line][column], char substrg[]);
 
 /**
- * Seria o client da função teste para a subpesquisa
+ * @brief funçao de teste para o requisito R1.2
  */
 void test_r1_2();
 

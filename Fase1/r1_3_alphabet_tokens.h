@@ -23,6 +23,9 @@ char *caracteresUnicos(int lines, int columns, char *matr[lines][columns]);
   */
 void analisarCaracteres(int lines, int columns, char *matr[lines][columns], int CaracteresAnalisados[256]);
 
+/**
+ * @brief funçao de teste para o requisito R1.3
+ */
 void test_r1_3();
 
 

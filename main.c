@@ -2,6 +2,7 @@
 #include "Fase1/r1_2_text_and_tokens.h"
 #include "Fase1/r1_3_alphabet_tokens.h"
 #include "r1_4_tokenization.h"
+#include "r1_5_term_frequency.h"
 
 int main(void) {
     // printf("FASE 1:\n");
@@ -11,8 +12,9 @@ int main(void) {
     // test_r1_2();
     // printf("\n>>> R1.3 <<<\n");
     // test_r1_3();
-    printf("\n>>> R1.4 <<<\n");
-    test_r1_4();
-    //printf("\n>>> R1.5 <<<\n");
+    // printf("\n>>> R1.4 <<<\n");
+    // test_r1_4();
+    printf("\n>>> R1.5 <<<\n");
+    test_r1_5();
     return 0;
 }
