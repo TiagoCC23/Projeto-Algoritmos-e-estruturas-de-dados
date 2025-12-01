@@ -3,35 +3,72 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <ctype.h>
 #include "r1_1_text_matrix.h"
 
 
-
+/**
+ *@brief esta funçao serve para substituir todas as ocorrencias de um par por um id, diminuindo o tamanho da string e possibilitando o merge
+ * @param text matriz que contem o corpus do texto
+ * @param par par de maior frequencia que vai para a funçao e depois substituido
+ * @param novoTokenID o token atualizado para depois substituir no par, para diminuir a string
+ */
+void substituirParNoTexto(MATRIX_STR *text, char *par, char novoTokenID);
 
 /**
- *
- * @param lines numero de linhas na matriz
- * @param matr matriz de apontadores para strings
- * @param tamTokens tamanho de tokens
- * @return retorna a string final so com os caracteres unicos
+ *@brief esta funçao serve para ver qual par e o mais repetido. Caso a frequencia seja igual, retorna o primeiro par
+ * @param pares pares que existem nas strings
+ * @param totalPares quantidade de pares
+ * @return par com maior frequencia
  */
-void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
-void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR matr, int *tamTokens);
-char *tokenLongo(char *tokens[],int tamanhoToken);
-void testeTokenMaisLongo();
 char* contarFreq(char **pares, int totalPares);
 
+/**
+ *@brief esta funçao permite criar os tokens finais. Nela temos os caracteres unicos e por fim temos os caracteres unicos mais os pares ate ao numero de tokens desejados
+ * @param text matriz que contem o corpus do texto que sera comprimido
+ * @param tokens matriz usada para armazenar os tokens
+ * @param newTokens a quantidade de tokens desejada
+ */
+void build_tokens(MATRIX_STR *text,MATRIX_STR *tokens,int newTokens);
 
 /**
- * funçao teste para a coleta de caracteres
+ *@brief funçao que ira apanhar os caracteres que sao unicos na frase
+ * @param tokens matriz que vai guardar os tokens
+ * @param matr a mesma struct onde vai ser passada a matriz
+ */
+void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR *matr);
+
+/**
+ *@brief esta funçao permite fazer a junçao dos tokens. Assim sendo, ela pega nos pares consecutivos, ve qual e o mais frequente e funde-o.
+ * @param tokens matriz que vai guardar os tokens
+ * @param matr matriz que contem o corpus do texto que ira diminuir apos os merges substituindo o par pelo novo id do par
+ */
+void merge(MATRIX_STR *tokens, MATRIX_STR *matr);
+
+/**
+ *@brief esta funçao serve para formatar e imprimir o alfabeto de tokens
+ * @param tokens matriz de tokens usada para formatar e imprimir o alfabeto
+ */
+void imprimirAlfabeto(const MATRIX_STR *tokens);
+
+/**
+ * @brief funçao client que mostra os tokens todos
+ */
+void tokensFinais();
+
+/**
+ * @brief funçao que mostra os caracteres unicos
  */
 void testeColeta();
-void insertString(MATRIX_STR *matr, char *newStr);
-void initMatrStruct(MATRIX_STR *str);
+
+/**
+ * @brief funçao que mostra o par mais frequente apos o primeiro merge
+ */
 void testeFrequencias();
-void testeImprimirAlfabetos();
-void imprimirAlfabeto(MATRIX_STR *tokens, int *frequencias);
+
+/**
+ *@brief client de teste das funçoes todas deste requisito
+ */
 void test_r1_3();
 
 
