@@ -1,0 +1,75 @@
+\doxysection{Fase1/r1\+\_\+1\+\_\+text\+\_\+matrix.c File Reference}
+\hypertarget{r1__1__text__matrix_8c}{}\label{r1__1__text__matrix_8c}\index{Fase1/r1\_1\_text\_matrix.c@{Fase1/r1\_1\_text\_matrix.c}}
+{\ttfamily \#include "{}r1\+\_\+1\+\_\+text\+\_\+matrix.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\+\_\+matrix}} (int size)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_a8d7232c5adcaa4b5dab39fe19659ff43}{resize\+\_\+matrix}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int new\+\_\+size)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\+\_\+string}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, const char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_a34e9789a7cbc4d007bd33adbb9aba02d}{remove\+\_\+line}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int idx)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_ae2b49b2c92128ef0d93a9a7379bca450}{remove\+\_\+strings}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int start, int end)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa}{print\+\_\+matrix\+\_\+str}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\+\_\+matrix\+\_\+str}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx)
+\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8c_acd46af836c1863d8e133e931db03752a}{test\+\_\+r1\+\_\+1}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r1__1__text__matrix_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!add\_string@{add\_string}}
+\index{add\_string@{add\_string}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{add\_string()}{add\_string()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75} 
+void add\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!create\_matrix@{create\_matrix}}
+\index{create\_matrix@{create\_matrix}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{create\_matrix()}{create\_matrix()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} create\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!free\_matrix\_str@{free\_matrix\_str}}
+\index{free\_matrix\_str@{free\_matrix\_str}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{free\_matrix\_str()}{free\_matrix\_str()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898} 
+void free\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!print\_matrix\_str@{print\_matrix\_str}}
+\index{print\_matrix\_str@{print\_matrix\_str}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{print\_matrix\_str()}{print\_matrix\_str()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa} 
+void print\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_a34e9789a7cbc4d007bd33adbb9aba02d}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!remove\_line@{remove\_line}}
+\index{remove\_line@{remove\_line}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{remove\_line()}{remove\_line()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_a34e9789a7cbc4d007bd33adbb9aba02d} 
+void remove\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_ae2b49b2c92128ef0d93a9a7379bca450}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!remove\_strings@{remove\_strings}}
+\index{remove\_strings@{remove\_strings}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{remove\_strings()}{remove\_strings()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_ae2b49b2c92128ef0d93a9a7379bca450} 
+void remove\+\_\+strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{start}{, }\item[{int}]{end}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_a8d7232c5adcaa4b5dab39fe19659ff43}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!resize\_matrix@{resize\_matrix}}
+\index{resize\_matrix@{resize\_matrix}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{resize\_matrix()}{resize\_matrix()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_a8d7232c5adcaa4b5dab39fe19659ff43} 
+void resize\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{new\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r1__1__text__matrix_8c_acd46af836c1863d8e133e931db03752a}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!test\_r1\_1@{test\_r1\_1}}
+\index{test\_r1\_1@{test\_r1\_1}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{test\_r1\_1()}{test\_r1\_1()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8c_acd46af836c1863d8e133e931db03752a} 
+void test\+\_\+r1\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
