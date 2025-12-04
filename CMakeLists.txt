@@ -15,4 +15,6 @@ add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
         "Fase1/r1_3_alphabet_tokens.h"
         Fase1/r1_4_tokenization.c
         Fase1/r1_4_tokenization.h
+        Fase1/r1_6_similarity.c
+        Fase1/r1_6_similarity.h
 )

@@ -2,6 +2,7 @@
 #include "Fase1/r1_2_text_and_tokens.h"
 #include "Fase1/r1_3_alphabet_tokens.h"
 #include "r1_4_tokenization.h"
+#include "Fase1/r1_6_similarity.h"
 
 int main(void)
 {
@@ -11,10 +12,13 @@ int main(void)
     // test_r1_1();
     // printf("\n>>> R1.2 <<<\n");
     // test_r1_2();
-     printf("\n>>> R1.3 <<<\n");
-     test_r1_3();
-     // printf("\n>>> R1.4 <<<\n");
+    // printf("\n>>> R1.3 <<<\n");
+    // test_r1_3();
+    // printf("\n>>> R1.4 <<<\n");
      // test_r1_4();
     //printf("\n>>> R1.5 <<<\n");
+    // teste_r1_5();
+    printf("\n>>> R1.6 <<<\n");
+    test_r1_6();
     return 0;
 }
