@@ -14,11 +14,11 @@ int main(void)
     // test_r1_2();
     // printf("\n>>> R1.3 <<<\n");
     // test_r1_3();
-    // printf("\n>>> R1.4 <<<\n");
-     // test_r1_4();
+    printf("\n>>> R1.4 <<<\n");
+     test_r1_4();
     //printf("\n>>> R1.5 <<<\n");
     // teste_r1_5();
-    printf("\n>>> R1.6 <<<\n");
-    test_r1_6();
+    // printf("\n>>> R1.6 <<<\n");
+    // test_r1_6();
     return 0;
 }

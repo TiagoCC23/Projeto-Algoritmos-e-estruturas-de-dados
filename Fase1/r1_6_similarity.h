@@ -9,11 +9,11 @@
 //#include "r1_5_"
 #include "math.h"
 
-float cossenoSimilaridade_TF(int *a, int *b, int size ); // Depois mudo para struct
-// float produtoInterno_TF(MATRIX_INT *a, MATRIX_INT *b );     // Depois mudo para struct
+float cossenoSimilaridade_TF(int *a, int *b, int size );
 float produtoInterno_TF(int *a, int *b, int size);
 float normalCossenoSimilaridade_TF(int *a, int size );
 void testeSimilaridade();
 void testeprodInterno();
+float testeCompararFrases(const MATRIX_INT* a, int idA, int idB);
 void test_r1_6();
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R1_6_SIMILARITY_H

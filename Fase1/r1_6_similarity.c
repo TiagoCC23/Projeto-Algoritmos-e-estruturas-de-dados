@@ -5,14 +5,6 @@
 #include "r1_6_similarity.h"
 
 
-/*float produtoInterno_TF(MATRIX_INT *a, MATRIX_INT *b ) {
-    int produtoInt=0;
-    for (int i = 0; i < a->count; i++) {
-            produtoInt += *a->strings[i] * *b->strings[i];
-        }
-
-    return (float) produtoInt;
-    }*/
 float produtoInterno_TF(int *a, int *b, int size) {
     int soma = 0;
     for (int i = 0; i < size; i++) {
@@ -37,7 +29,6 @@ float cossenoSimilaridade_TF(int *a, int *b, int size ) {
     return cossenoSim;
 }
 
-
 void testeprodInterno() {
     int arrayAteste[]={4,2,3,4};
     int arrayBteste[]={4,1,2,5};
@@ -49,10 +40,32 @@ void testeSimilaridade() {
     int arrayAteste[]={4,2,3,4};
     int arrayBteste[]={4,1,2,5};
     int size=4;
-    printf("2%f\n",cossenoSimilaridade_TF(arrayAteste, arrayBteste, size ));
+    printf("%f\n",cossenoSimilaridade_TF(arrayAteste, arrayBteste, size ));
 }
 
-void test_r1_6() {
+float testeCompararFrases(const MATRIX_INT* a, const int idA, const int idB)
+{
+    int *tfA = a->strings[idA];
+    int *tfB = a->strings[idB];
+    int size = a->lengths[idA];
+    float resTeste=cossenoSimilaridade_TF(tfA, tfB, size);
+    if (resTeste>0.80)
+    {
+        printf("Elevada\n");
+        return resTeste;
+    }
+    if (resTeste>0.50 && resTeste <0.80)
+    {
+        printf("Media\n");
+        return resTeste;
+    }
+    printf("Baixa\n");
+    return resTeste;
+}
+void test_r1_6()
+{
+MATRIX_STR *tokens =create_matrix(9);
+    // printf("%f", testeCompararFrases());
     testeprodInterno();
     testeSimilaridade();
 }
