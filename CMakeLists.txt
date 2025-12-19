@@ -17,4 +17,8 @@ add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
         Fase1/r1_4_tokenization.h
         Fase1/r1_6_similarity.c
         Fase1/r1_6_similarity.h
+        Fase2/r2_3_text_files.c
+        Fase2/r2_3_text_files.h
+        Fase2/r2_4_binary_files.c
+        Fase2/r2_4_binary_files.h
 )

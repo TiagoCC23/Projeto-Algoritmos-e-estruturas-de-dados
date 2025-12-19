@@ -4,41 +4,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
-#define R_KMP 256 // macro para que ele inclua todos os caracteres do codigo ASCII
-
+#include "r1_1_text_matrix.h"
 /**
- *
- * @param pattern Eh o padrao que ele vai usar para ver os estados
- * @param length Comprimento do padrao
- * @param dfa Eh o dfa classico usado para construir a tabela
- * @return X que seria o estado do dfa
+ * @brief esta funçao serve para contar a quantidade de strings em que aparece determinada substring
+ * @param str matriz que contem o corpus do texto
+ * @param subStr substring que ira ser procurada nas substrings
+ * @return a quantidade de vezes em que a substring apelidade de search aparece
  */
-int tabelaKMP (char* pattern,int length, int dfa[R_KMP][length]);
+int stringSearch(const MATRIX_STR *str, const char *subStr);
 
 /**
- *
- * @param text Eh o texto da string que ele vai querer pesquisar
- * @param size Eh o tamanho da string
- * @param MatchSize Eh o tamanho do padrao para quando der match
- * @param dfa Eh o dfa classico que vai usar para procurar
- * @param XReset Eh o estado de reset para quando o padrao eh encontrado
- * @return ContadorPalavras que eh a quantidade de vezes que achou o padrao
- */
-int KMPesquisa(char* text, int size, int MatchSize, int dfa[R_KMP][MatchSize], int XReset);
-
-/**
- *
- * @param line eh o numero de linhas da matriz
- * @param column eh o numero de colunas da matriz
- * @param mtr eh a matriz de apontadores para chars que eh passada
- * @param substrg eh a substring que queremos procurar
- * @return
- */
-int pesquisa(int line, int column,char* mtr[line][column], char substrg[]);
-
-/**
- * Seria o client da função teste para a subpesquisa
+ * @brief seria o client da função teste para a subpesquisa
  */
 void test_r1_2();
 
