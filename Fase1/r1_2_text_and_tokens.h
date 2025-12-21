@@ -5,6 +5,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include "r1_1_text_matrix.h"
+
+/**
+ * @brief
+ * @param fileName
+ * @param mx
+ */
+void loadFile(char* fileName, MATRIX_STR *mx);
 /**
  * @brief esta funçao serve para contar a quantidade de strings em que aparece determinada substring
  * @param str matriz que contem o corpus do texto

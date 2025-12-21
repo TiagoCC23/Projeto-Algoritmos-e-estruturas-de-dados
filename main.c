@@ -4,14 +4,17 @@
 #include "r1_4_tokenization.h"
 #include "Fase1/r1_6_similarity.h"
 
+#include "Fase2/r2_3_text_files.h"
+#include "Fase2/r2_4_binary_files.h"
+
 int main(void)
 {
 
      printf("FASE 1:\n");
      // printf("\n>>> R1.1 <<<\n");
      // test_r1_1();
-     // printf("\n>>> R1.2 <<<\n");
-     // test_r1_2();
+      printf("\n>>> R1.2 <<<\n");
+      test_r1_2();
     // printf("\n>>> R1.3 <<<\n");
     // test_r1_3();
     // printf("\n>>> R1.4 <<<\n");
@@ -20,5 +23,9 @@ int main(void)
     // teste_r1_5();
     // printf("\n>>> R1.6 <<<\n");
     // test_r1_6();
+    // printf("FASE 2:\n");
+
+    // printf("\n>>> R2.3 <<<\n");
+    test_r2_r3();
     return 0;
 }
