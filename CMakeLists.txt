@@ -17,4 +17,6 @@ add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
         Fase1/r1_4_tokenization.h
         Fase1/r1_5_term_frequency.c
         Fase1/r1_5_term_frequency.h
+        Fase1/r2_1_linked_list.c
+        Fase1/r2_1_linked_list.h
 )
