@@ -10,7 +10,7 @@
  * e cada linha pode ter um tamanho diferente (matriz irregular)
  */
 typedef struct {
-    int **strings;
+    int **strings; // frase tokenizada OUU frequencia das frases
     int *lengths; // tamanho de cada linha (pq pode variar)
     int size; // tamanho da matrix
     int count;
@@ -38,7 +38,7 @@ MATRIX_INT *create_matrix_int(int size);
 void add_int_array(MATRIX_INT *mi, int *vec, int len);
 
 /**
- * @brief Imprime todos os arrays de inteiros da matriz
+ * @brief imprime todos os arrays de inteiros da matriz
  *
  * imprime todos os arrays de inteiros armazenados na matriz
  * caso apareça -1 imprime "SD" (Simbolo Desconhecido)
@@ -51,10 +51,30 @@ void print_matrix_int(MATRIX_INT *mi);
  * @brief liberta toda a memoria associada a matriz de inteiros
  *
  * liberta todos os arrays de inteiros armazenados
+ * complexidade: O(n) -> n eh o número de arrays
  *
  * @param mi ponteiro para a matriz a ser libertada
  */
 void free_matrix_int(MATRIX_INT *mi);
+
+/**
+ * @brief tokeniza (?) um texto usando tokens selecionados com o metodo greedy longest-match
+ *
+ * converte cada frase do texto em um vetor de IDs de tokens
+ * seleciona o token mais longo possível em cada posição do texto
+ * tokens não encontrados no vocabulário são representados
+ * pelo valor -1 (Símbolo Desconhecido ou SD)
+ *
+ * @param text ponteiro para a matriz de strings contendo o texto a ser tokenized
+ * @param tokens ponteiro para a matriz de strings contendo o vocabulario de tokens
+ * @return mi, ou seja, os vetores de IDs de tokens para cada frase
+ *
+ * @example
+ * texto: ["bar par"]
+ * tokens: ["b", "a", "r", " ", "p", "ar", "bar"]
+ * resultado: [6, 3, 4, 5]  // "bar", " ", "p", "ar"
+ */
+MATRIX_INT *tokenizer(MATRIX_STR *text, MATRIX_STR *tokens);
 
 /**
  * @brief funçao de teste para o requisito R1.4

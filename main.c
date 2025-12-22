@@ -14,7 +14,9 @@ int main(void) {
     // test_r1_3();
     // printf("\n>>> R1.4 <<<\n");
     // test_r1_4();
-    printf("\n>>> R1.5 <<<\n");
-    test_r1_5();
+    // printf("\n>>> R1.5 <<<\n");
+    // test_r1_5();
+    printf("\nFASE 2:\n");
+    printf("\n>>> R2.1 <<<\n");
     return 0;
 }
