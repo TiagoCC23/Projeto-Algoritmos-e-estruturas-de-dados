@@ -7,7 +7,7 @@
 #include "r2_3_text_files.h"
 
 
-
+void saveDocBin(char *fileName, DOC *doc);
 
 void test_r2_r4();
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_4_BINARY_FILES_H

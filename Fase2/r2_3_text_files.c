@@ -64,6 +64,8 @@ void loadDoc(char *fileName, DOC *doc) {
                     loadDocTokensIDs(fp, &doc->tokensID, buffer);
                     seccao=0;
                     break;
+                default:
+                break;
             }
         }
 fclose(fp);
@@ -76,24 +78,24 @@ void saveDoc(char *fileName, DOC *doc) {
         return;
     }
 
-    fprintf(fp,"#Strings\n");                        // printa Strings que sera a tabela
-    fprintf(fp, "%d", doc->text.count);             // printa o numero de strings
+    fprintf(fp,"#Strings\n");                                        // grava Strings que sera a tabela
+    fprintf(fp, "%d", doc->text.count);                              // grava o numero de strings
     for (int i = 0; i < doc->text.count; i++) {
-        fprintf(fp, "%s\n", doc->text.strings[i]);   // printa os textos que estao na linha da string
+        fprintf(fp, "%s\n", doc->text.strings[i]);                   // grava o conteudo da String
     }
 
     fprintf(fp, "#Tokens\n");
     fprintf(fp, "%d", doc->tokens.count);
     for (int i = 0; i < doc->tokens.count; i++) {
-        fprintf(fp, "%s\n", doc->tokens.strings[i]);  // printa os tokens que estao na linha da string
+        fprintf(fp, "%s\n", doc->tokens.strings[i]);                 // grava o conteudo do Token
     }
 
     fprintf(fp, "#IDs\n");
     fprintf(fp, "%d",doc->tokensID.count);
     for (int i = 0; i < doc->tokensID.count; i++) {
-        fprintf(fp,"%d ",doc->tokensID.lengths[i]);                 // printa o tamanho da linha dos IDs
+        fprintf(fp,"%d ",doc->tokensID.lengths[i]);                  // grava a quantidade de IDs
         for (int j = 0; j < doc->tokensID.lengths[i]; j++) {
-            fprintf(fp,"%d ",doc->tokensID.strings[i][j]);           // printa os tokens pertecentes a linha
+            fprintf(fp,"%d ",doc->tokensID.strings[i][j]);           // grava o ID que pertence a linha
         }
         fprintf(fp,"\n");
     }
