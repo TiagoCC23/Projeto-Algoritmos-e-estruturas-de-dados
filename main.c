@@ -3,13 +3,11 @@
 #include "Fase1/r1_3_alphabet_tokens.h"
 #include "r1_4_tokenization.h"
 #include "Fase1/r1_6_similarity.h"
-
+#include "Fase2/"
 #include "Fase2/r2_3_text_files.h"
 #include "Fase2/r2_4_binary_files.h"
 
-int main(void)
-{
-
+int main(void){
      printf("FASE 1:\n");
      // printf("\n>>> R1.1 <<<\n");
      // test_r1_1();
@@ -23,8 +21,9 @@ int main(void)
     // teste_r1_5();
     // printf("\n>>> R1.6 <<<\n");
     // test_r1_6();
-    // printf("FASE 2:\n");
-
+    printf("FASE 2:\n");
+    printf("\n>>> R1.3:\n");
+    test_r2_1();
     // printf("\n>>> R2.3 <<<\n");
     test_r2_r3();
     return 0;
