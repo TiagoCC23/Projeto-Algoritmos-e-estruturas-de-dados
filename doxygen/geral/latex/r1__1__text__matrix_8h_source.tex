@@ -1,0 +1,32 @@
+\doxysection{r1\+\_\+1\+\_\+text\+\_\+matrix.\+h}
+\hypertarget{r1__1__text__matrix_8h_source}{}\label{r1__1__text__matrix_8h_source}\index{Fase1/r1\_1\_text\_matrix.h@{Fase1/r1\_1\_text\_matrix.h}}
+\mbox{\hyperlink{r1__1__text__matrix_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_1\_TEXT\_MATRIX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_1\_TEXT\_MATRIX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_a00cbca77782f1d0a06611d6c6ea7f545}{strings}};\ \textcolor{comment}{//\ matriz\ dinamico\ de\ strings\ -\/>\ o\ **\ eh\ para\ apontar\ para\ outras\ strings!!}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_a439227feff9d7f55384e8780cfc2eb82}{size}};\ \textcolor{comment}{//\ tamanho\ da\ matriz}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ \textcolor{comment}{//\ conta\ o\ numero\ de\ strings\ armazenadas\ (atual)}}
+\DoxyCodeLine{00012\ \}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ \mbox{\hyperlink{r1__1__text__matrix_8h_a579e364d1d05d41d2a17146adda98931}{MATRIX\_TOKENS}};\ \textcolor{comment}{//\ uma\ estrutura\ semelhante\ ao\ MATRIX\_STR}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *\mbox{\hyperlink{r1__1__text__matrix_8h_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(\textcolor{keywordtype}{int}\ size);\ \textcolor{comment}{//\ cria\ a\ matriz}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_a8d7232c5adcaa4b5dab39fe19659ff43}{resize\_matrix}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx,\ \textcolor{keywordtype}{int}\ new\_size);\ \textcolor{comment}{//\ reajusta\ a\ matriz}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);\ \textcolor{comment}{//\ adiciona\ strings}}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_a28e9ebdf5266e50b21b0253c590acbaa}{print\_matrix\_str}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx);\ \textcolor{comment}{//\ imprime\ a\ lista\ de\ strings}}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_a34e9789a7cbc4d007bd33adbb9aba02d}{remove\_line}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx,\ \textcolor{keywordtype}{int}\ idx);\ \textcolor{comment}{//\ remove\ uma\ linha\ que\ o\ utilizador\ quiser}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_ae2b49b2c92128ef0d93a9a7379bca450}{remove\_strings}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx,\ \textcolor{keywordtype}{int}\ start,\ \textcolor{keywordtype}{int}\ end);\ \textcolor{comment}{//\ remove\ um\ intervalo\ de\ linhas\ que\ o\ utilizador\ quer}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\_matrix\_str}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *mx);\ \textcolor{comment}{//\ liberta\ a\ matrix\ toda}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__1__text__matrix_8h_acd46af836c1863d8e133e931db03752a}{test\_r1\_1}}();\ \textcolor{comment}{//\ funcao\ de\ teste}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_1\_TEXT\_MATRIX\_H}}
+
+\end{DoxyCode}
