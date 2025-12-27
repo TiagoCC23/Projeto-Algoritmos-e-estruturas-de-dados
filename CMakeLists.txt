@@ -15,17 +15,17 @@ add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
         "Fase1/r1_3_alphabet_tokens.h"
         Fase1/r1_4_tokenization.c
         Fase1/r1_4_tokenization.h
+        Fase1/r1_5_term_frequency.c
+        Fase1/r1_5_term_frequency.h
         Fase1/r1_6_similarity.c
         Fase1/r1_6_similarity.h
         Fase2/r2_1_linked_list.c
         Fase2/r2_1_linked_list.h
+        Fase2/r2_2_dynamic_matrix.c
+        Fase2/r2_2_dynamic_matrix.h
         Fase2/r2_3_text_files.c
         Fase2/r2_3_text_files.h
         Fase2/r2_4_binary_files.c
         Fase2/r2_4_binary_files.h
         Fase2/r2_1_linked_list.c
-        Fase2/r2_2_dynamic_matrix.c
-        Fase2/r2_2_dynamic_matrix.h
-        Fase1/r1_5_term_frequency.h
-        Fase1/r1_5_term_frequency.c
 )
