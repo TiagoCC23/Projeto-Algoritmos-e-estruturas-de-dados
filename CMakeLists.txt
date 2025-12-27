@@ -23,4 +23,9 @@ add_executable(Projeto_Algoritmos_e_estruturas_de_dados main.c
         Fase2/r2_3_text_files.h
         Fase2/r2_4_binary_files.c
         Fase2/r2_4_binary_files.h
+        Fase2/r2_1_linked_list.c
+        Fase2/r2_2_dynamic_matrix.c
+        Fase2/r2_2_dynamic_matrix.h
+        Fase1/r1_5_term_frequency.h
+        Fase1/r1_5_term_frequency.c
 )
