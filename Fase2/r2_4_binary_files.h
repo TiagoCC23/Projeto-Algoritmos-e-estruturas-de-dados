@@ -11,21 +11,23 @@
  * @param fp eh o ponteiro para o ficheiro
  * @param text a struct que contem o texto
  */
-void loadDocBinText(FILE *fp, MATRIX_STR *text);
+MATRIX_STR* loadDocBinText(FILE *fp);
 
 /**
  * @brief esta funçao permite carregar o que tiver no ficheiro binario para a struct tokens
  * @param fp eh o ponteiro para o ficheiro
  * @param tokens a struct que contem os tokens
  */
-void loadDocBinTokens(FILE *fp, MATRIX_STR *tokens);
+MATRIX_STR* loadDocBinTokens(FILE *fp);
 
 /**
  * @brief esta funçao permite carregar o que tiver no ficheiro binario para a struct tokensID
  * @param fp eh o ponteiro para o ficheiro
  * @param tokensID a struct que contem os ids dos tokens
  */
-void loadDocBinTokensIDs(FILE *fp, MATRIX_INT *tokensID);
+MATRIX_INT* loadDocBinTokensIDs(FILE *fp);
+
+LL_TK_TF* loadDocBinTermFreq(FILE *fp);
 
 /**
  * @brief esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar paras as funçoes respetivas

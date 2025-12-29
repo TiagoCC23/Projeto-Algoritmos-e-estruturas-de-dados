@@ -5,13 +5,6 @@
 /**
  * @brief esta struct contem as outras matrizes do projeto, sendo elas para a struct principal do ficheiro
  */
-typedef struct {
-    MATRIX_STR text;            // texto original
-    MATRIX_STR tokens;          // tokens
-    MATRIX_INT tokensID;        // matriz de ids
-} DOC;
-
-
 
 /**
  * @brief esta funçao permite carregar o que tiver no ficheiro de texto para a struct text
@@ -36,6 +29,22 @@ void loadDocTokens(FILE *fp, MATRIX_STR *tokens, const char *first_line);
  * @param first_line a linha que mostra a quantidade de linhas na struct
  */
 void loadDocTokensIDs(FILE *fp, MATRIX_INT *tokensID, const char *first_line);
+
+/**
+ * @brief
+ * @param fp
+ * @param term_frequency
+ * @param first_line
+ */
+void loadDocTokensFrequency(FILE *fp, LL_TK_TF *term_frequency, const char *first_line);
+
+/**
+ * @brief
+ * @param fp
+ * @param des
+ * @param size
+ */
+void parseIntArray(FILE *fp, int *des, int size);
 
 /**
  * @brief esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar paras as funçoes respetivas
