@@ -1,12 +1,6 @@
-//
-// Created by tiago on 19/12/2025.
-//
-
 #ifndef PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_3_TEXT_FILES_H
 #define PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_3_TEXT_FILES_H
-#include "r1_1_text_matrix.h"
-#include "r1_4_tokenization.h"
-
+#include "r2_2_dynamic_matrix.h"
 
 /**
  * @brief esta struct contem as outras matrizes do projeto, sendo elas para a struct principal do ficheiro
@@ -16,6 +10,7 @@ typedef struct {
     MATRIX_STR tokens;          // tokens
     MATRIX_INT tokensID;        // matriz de ids
 } DOC;
+
 
 
 /**
@@ -60,4 +55,5 @@ void saveDoc(char *fileName, DOC *doc);
  * @brief funçao de testes
  */
 void test_r2_r3();
+
 #endif //PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_3_TEXT_FILES_H
