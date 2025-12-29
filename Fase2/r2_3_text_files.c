@@ -182,5 +182,16 @@ void saveDoc(char *fileName, DOC *doc) {
 
 
 void test_r2_r3() {
-
+    DOC *newDoc=create_doc();
+    printf("Create Doc List\n");
+    add_string(newDoc->text, "Hello World");
+    add_string(newDoc->text, "Ola Mundo");
+    add_string(newDoc->text, "Hallo Welt");
+    add_string(newDoc->text, "Hola Mundo");
+    add_string(newDoc->text, "Bonjour le monde");
+    printf("%d frases carregadas", newDoc->text->count);
+    printf("Alphabet tokens\n");
+    build_tokens(newDoc->text, newDoc->tokens, 30);
+    printf("Tokenization\n");
+    newDoc->ids=tokenizer(newDoc->tokens, newDoc->tokens);
 }

@@ -1,5 +1,8 @@
 #ifndef PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_3_TEXT_FILES_H
 #define PROJETO_ALGORITMOS_E_ESTRUTURAS_DE_DADOS_R2_3_TEXT_FILES_H
+#include "../Fase1/r1_3_alphabet_tokens.h"
+#include "../Fase1/r1_4_tokenization.h"
+
 #include "r2_2_dynamic_matrix.h"
 
 /**
