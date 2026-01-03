@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto-Algoritmos-e-estruturas-de-dados: Fase1/r1_1_text_matrix.h File Reference</title>
+<title>Projeto AED Rayssa Santos Tiago Chousal: Fase1/r1_1_text_matrix.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto-Algoritmos-e-estruturas-de-dados
+   <div id="projectname">Projeto AED Rayssa Santos Tiago Chousal
    </div>
   </td>
  </tr>
@@ -142,6 +142,8 @@ Functions</h2></td></tr>
 <p>estrutura para armazenar uma matriz de tokens </p>
 <p>estrutura semelhante ao <a class="el" href="struct_m_a_t_r_i_x___s_t_r.html" title="estrutura para armazenar uma matriz dinamica de strings">MATRIX_STR</a>, utilizada especificamente para armazenar tokens </p>
 
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8h_source.html#l00024">24</a> of file <a class="el" href="r1__1__text__matrix_8h_source.html">r1_1_text_matrix.h</a>.</p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -165,7 +167,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>adiciona uma string a matriz </p>
-<p>adiciona uma nova string a matriz</p>
+<p>adiciona uma nova string a matriz Complexidade: O(1) amortizado (redimensionamento O(n) ocasional)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz que vai ser adicionada a string </td></tr>
@@ -173,6 +175,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00022">22</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -192,7 +196,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>cria uma nova matriz de strings </p>
-<p>aloca memoria para uma nova matriz de strings com um tamanho inicial especificado</p>
+<p>aloca memoria para uma nova matriz de strings com um tamanho inicial especificado Complexidade: O(1)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>tamanho inicial da matriz </td></tr>
@@ -200,6 +204,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>ponteiro para a matriz criada </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00003">3</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -219,13 +225,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>liberta a matriz escolhida da memoria </p>
-<p>liberta todas as strings armazenadas</p>
+<p>liberta todas as strings armazenadas Complexidade: O(n) onde n é o número de strings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz a ser libertada </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00060">60</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -245,13 +253,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>imprime todas as strings da matriz </p>
-<p>exibe no console todas as strings armazenadas na matriz</p>
+<p>exibe no console todas as strings armazenadas na matriz Complexidade: O(n) onde n é o número de strings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz a ser impressa </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00054">54</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -275,7 +285,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>remove uma linha especifica da matriz </p>
-<p>remove a string no indice especificado, deslocando as strings subsequentes</p>
+<p>remove a string no indice especificado, deslocando as strings subsequentes Complexidade: O(n) onde n é o número de strings após o índice removido</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz </td></tr>
@@ -283,6 +293,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00031">31</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -311,7 +323,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>remove um intervalo especifico de strings da matriz </p>
-<p>remove todas as strings começando pelo start e terminando no end e por fim, desloca-se as strings restantes</p>
+<p>remove todas as strings começando pelo start e terminando no end e por fim, desloca-se as strings restantes Complexidade: O(n) onde n é o número total de strings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz </td></tr>
@@ -320,6 +332,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00040">40</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -343,8 +357,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>redimensiona uma matriz de strings </p>
-<p>ajusta o tamanho da matriz para o novo tamanho especificado caso</p>
-<p>o novo tamanho for menor que o count atual, as strings que estao a mais sao perdidas</p>
+<p>ajusta o tamanho da matriz para o novo tamanho especificado caso o novo tamanho for menor que o count atual, as strings que estao a mais sao perdidas Complexidade: O(n) onde n é o número de strings a copiar</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mx</td><td>ponteiro para a matriz que vai ser redimensionada </td></tr>
@@ -352,6 +365,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00014">14</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>
@@ -371,6 +386,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>funçao de teste para o requisito R1.1 </p>
+
+<p class="definition">Definition at line <a class="el" href="r1__1__text__matrix_8c_source.html#l00068">68</a> of file <a class="el" href="r1__1__text__matrix_8c_source.html">r1_1_text_matrix.c</a>.</p>
 
 </div>
 </div>

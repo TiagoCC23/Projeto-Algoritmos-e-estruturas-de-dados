@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto-Algoritmos-e-estruturas-de-dados: Fase2/r2_1_linked_list.h File Reference</title>
+<title>Projeto AED Rayssa Santos Tiago Chousal: Fase2/r2_1_linked_list.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto-Algoritmos-e-estruturas-de-dados
+   <div id="projectname">Projeto AED Rayssa Santos Tiago Chousal
    </div>
   </td>
  </tr>
@@ -100,26 +100,35 @@ $(function(){initNavTree('r2__1__linked__list_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:tk_5Ftf_5Fnode" id="r_tk_5Ftf_5Fnode"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtk__tf__node.html">tk_tf_node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nó da lista ligada contendo vetores de tokens e frequências TF.  <a href="structtk__tf__node.html#details">More...</a><br /></td></tr>
 <tr class="memitem:LL_5FTK_5FTF" id="r_LL_5FTK_5FTF"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista ligada bidirecional para armazenar vetores TF de todo o texto.  <a href="struct_l_l___t_k___t_f.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a786a66d7beb932286924a0b91487e81f" id="r_a786a66d7beb932286924a0b91487e81f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtk__tf__node.html">tk_tf_node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786a66d7beb932286924a0b91487e81f">TK_TF_NODE</a></td></tr>
+<tr class="memdesc:a786a66d7beb932286924a0b91487e81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nó da lista ligada contendo vetores de tokens e frequências TF.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aca1d285da6a991f2c005415b20d8005d" id="r_aca1d285da6a991f2c005415b20d8005d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca1d285da6a991f2c005415b20d8005d">create_linked_list</a> ()</td></tr>
-<tr class="memdesc:aca1d285da6a991f2c005415b20d8005d"><td class="mdescLeft">&#160;</td><td class="mdescRight">cria e inicializa uma nova lista ligada vazia  <br /></td></tr>
+<tr class="memdesc:aca1d285da6a991f2c005415b20d8005d"><td class="mdescLeft">&#160;</td><td class="mdescRight">cria e inicializa uma nova lista ligada vazia Complexidade: O(1)  <br /></td></tr>
 <tr class="memitem:aa4fbf28d697d589a582e787811316885" id="r_aa4fbf28d697d589a582e787811316885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a786a66d7beb932286924a0b91487e81f">TK_TF_NODE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4fbf28d697d589a582e787811316885">create_node</a> (int *tk, int *tf, int len)</td></tr>
+<tr class="memdesc:aa4fbf28d697d589a582e787811316885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo nó com vetores de tokens e frequências TF.  <br /></td></tr>
 <tr class="memitem:a53f99f14e4b761657eecb70212b687f6" id="r_a53f99f14e4b761657eecb70212b687f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53f99f14e4b761657eecb70212b687f6">insert_node</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list, int *tk, int *tf, int len, int id)</td></tr>
+<tr class="memdesc:a53f99f14e4b761657eecb70212b687f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um novo nó na lista em uma posição específica.  <br /></td></tr>
 <tr class="memitem:a2948e6227529685c98bdd6d4b5335c06" id="r_a2948e6227529685c98bdd6d4b5335c06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2948e6227529685c98bdd6d4b5335c06">delete_node</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list, int id)</td></tr>
+<tr class="memdesc:a2948e6227529685c98bdd6d4b5335c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um nó da lista em uma posição específica.  <br /></td></tr>
 <tr class="memitem:a825ef76a479a17ef512d3394f5d7531c" id="r_a825ef76a479a17ef512d3394f5d7531c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a786a66d7beb932286924a0b91487e81f">TK_TF_NODE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a825ef76a479a17ef512d3394f5d7531c">peep_node</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list, int pos)</td></tr>
+<tr class="memdesc:a825ef76a479a17ef512d3394f5d7531c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acessa um nó da lista em uma posição específica.  <br /></td></tr>
 <tr class="memitem:a64a165484eac8ab84be00c9a4c2e7b74" id="r_a64a165484eac8ab84be00c9a4c2e7b74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64a165484eac8ab84be00c9a4c2e7b74">search_node</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list, int *search_ids, int search_len)</td></tr>
+<tr class="memdesc:a64a165484eac8ab84be00c9a4c2e7b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura nós que contenham determinados IDs de tokens.  <br /></td></tr>
 <tr class="memitem:ae47b68ccad593c353eae73360edfb8a0" id="r_ae47b68ccad593c353eae73360edfb8a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae47b68ccad593c353eae73360edfb8a0">print_linked_list</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list)</td></tr>
-<tr class="memdesc:ae47b68ccad593c353eae73360edfb8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">imprime todos os nós da lista ligada na consola  <br /></td></tr>
+<tr class="memdesc:ae47b68ccad593c353eae73360edfb8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">imprime todos os nós da lista ligada na consola complexidade: O(n) -&gt; n eh o número de nós  <br /></td></tr>
 <tr class="memitem:aeb7ac9088b635bee4918c362f533871d" id="r_aeb7ac9088b635bee4918c362f533871d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb7ac9088b635bee4918c362f533871d">free_linked_list</a> (<a class="el" href="struct_l_l___t_k___t_f.html">LL_TK_TF</a> *list)</td></tr>
-<tr class="memdesc:aeb7ac9088b635bee4918c362f533871d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberta toda a memória associada à lista (nós e vetores internos).  <br /></td></tr>
+<tr class="memdesc:aeb7ac9088b635bee4918c362f533871d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liberta toda a memória associada à lista (nós e vetores internos) complexidade: O(n) -&gt; n eh o número de nós.  <br /></td></tr>
 <tr class="memitem:a4eeda357ba37320f252ec403a36f8fb8" id="r_a4eeda357ba37320f252ec403a36f8fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eeda357ba37320f252ec403a36f8fb8">test_r2_1</a> ()</td></tr>
+<tr class="memdesc:a4eeda357ba37320f252ec403a36f8fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">funcao de teste para o requisito R2.1  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="a786a66d7beb932286924a0b91487e81f" name="a786a66d7beb932286924a0b91487e81f"></a>
@@ -133,6 +142,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Nó da lista ligada contendo vetores de tokens e frequências TF. </p>
+<p>Cada nó armazena os vetores de IDs de tokens e suas respectivas frequências TF para uma frase do texto. Inclui também apontadores para navegação bidirecional. </p>
 
 </div>
 </div>
@@ -152,8 +164,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>cria e inicializa uma nova lista ligada vazia </p>
+<p>cria e inicializa uma nova lista ligada vazia Complexidade: O(1) </p>
 <dl class="section return"><dt>Returns</dt><dd>ponteiro para a lista criada </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00003">3</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
 
 </div>
 </div>
@@ -181,6 +195,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Cria um novo nó com vetores de tokens e frequências TF. </p>
+<p>Aloca memória para um novo nó e copia os vetores fornecidos. Complexidade: O(n) onde n é o comprimento dos vetores</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tk</td><td>Vetor de IDs de tokens a copiar </td></tr>
+    <tr><td class="paramname">tf</td><td>Vetor de frequências TF a copiar </td></tr>
+    <tr><td class="paramname">len</td><td>Comprimento dos vetores tk e tf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ponteiro para o nó criado, ou NULL em caso de erro </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00012">12</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
+
 </div>
 </div>
 <a id="a2948e6227529685c98bdd6d4b5335c06" name="a2948e6227529685c98bdd6d4b5335c06"></a>
@@ -202,6 +230,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Remove um nó da lista em uma posição específica. </p>
+<p>Remove o nó na posição especificada pelo índice, libertando toda a memória associada ao nó e seus vetores internos. Complexidade: O(n) no pior caso (posição no meio da lista)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Ponteiro para a lista ligada </td></tr>
+    <tr><td class="paramname">id</td><td>Índice do nó a remover (0-based) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00075">75</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
+
 </div>
 </div>
 <a id="aeb7ac9088b635bee4918c362f533871d" name="aeb7ac9088b635bee4918c362f533871d"></a>
@@ -219,16 +259,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Liberta toda a memória associada à lista (nós e vetores internos). </p>
+<p>Liberta toda a memória associada à lista (nós e vetores internos) complexidade: O(n) -&gt; n eh o número de nós. </p>
 <ul>
 <li><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ponteiro</td><td>para a lista a destruir </td></tr>
+    <tr><td class="paramname">ponteiro</td><td>para a lista a libertar </td></tr>
   </table>
   </dd>
 </dl>
 </li>
 </ul>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00187">187</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
 
 </div>
 </div>
@@ -266,6 +308,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Insere um novo nó na lista em uma posição específica. </p>
+<p>Cria um novo nó com os vetores fornecidos e insere na posição especificada pelo índice. Índices negativos inserem no início, índices maiores que count inserem no final. Complexidade: O(n) no pior caso (posição no meio da lista)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Ponteiro para a lista ligada </td></tr>
+    <tr><td class="paramname">tk</td><td>Vetor de IDs de tokens </td></tr>
+    <tr><td class="paramname">tf</td><td>Vetor de frequências TF </td></tr>
+    <tr><td class="paramname">len</td><td>Comprimento dos vetores </td></tr>
+    <tr><td class="paramname">id</td><td>Índice de inserção (0-based) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00038">38</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
+
 </div>
 </div>
 <a id="a825ef76a479a17ef512d3394f5d7531c" name="a825ef76a479a17ef512d3394f5d7531c"></a>
@@ -287,6 +344,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Acessa um nó da lista em uma posição específica. </p>
+<p>Retorna o ponteiro para o nó na posição especificada sem removê-lo. Complexidade: O(n) no pior caso (posição no meio da lista)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Ponteiro para a lista ligada </td></tr>
+    <tr><td class="paramname">pos</td><td>Índice do nó a acessar (0-based) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ponteiro para o nó solicitado, ou NULL se índice inválido </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00115">115</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
+
 </div>
 </div>
 <a id="ae47b68ccad593c353eae73360edfb8a0" name="ae47b68ccad593c353eae73360edfb8a0"></a>
@@ -304,7 +374,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>imprime todos os nós da lista ligada na consola </p>
+<p>imprime todos os nós da lista ligada na consola complexidade: O(n) -&gt; n eh o número de nós </p>
 <ul>
 <li><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -314,6 +384,8 @@ Functions</h2></td></tr>
 </dl>
 </li>
 </ul>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00170">170</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
 
 </div>
 </div>
@@ -341,6 +413,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Procura nós que contenham determinados IDs de tokens. </p>
+<p>Retorna uma nova lista ligada contendo apenas os nós cujos vetores de tokens contenham todos os IDs fornecidos. Complexidade: O(n * m * k) onde n é número de nós, m é comprimento dos vetores, k é IDs de busca</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Ponteiro para a lista original </td></tr>
+    <tr><td class="paramname">search_ids</td><td>Vetor de IDs de tokens a buscar </td></tr>
+    <tr><td class="paramname">search_len</td><td>Comprimento do vetor de busca </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nova lista ligada com os nós que correspondem à busca, ou lista vazia se nenhum </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00137">137</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
+
 </div>
 </div>
 <a id="a4eeda357ba37320f252ec403a36f8fb8" name="a4eeda357ba37320f252ec403a36f8fb8"></a>
@@ -357,6 +443,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>funcao de teste para o requisito R2.1 </p>
+
+<p class="definition">Definition at line <a class="el" href="r2__1__linked__list_8c_source.html#l00206">206</a> of file <a class="el" href="r2__1__linked__list_8c_source.html">r2_1_linked_list.c</a>.</p>
 
 </div>
 </div>

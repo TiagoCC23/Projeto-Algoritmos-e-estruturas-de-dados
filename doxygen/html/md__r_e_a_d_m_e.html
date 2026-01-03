@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto-Algoritmos-e-estruturas-de-dados: Projeto-Algoritmos-e-estruturas-de-dados</title>
+<title>Projeto AED Rayssa Santos Tiago Chousal: 📊 Smart Text Analyzer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto-Algoritmos-e-estruturas-de-dados
+   <div id="projectname">Projeto AED Rayssa Santos Tiago Chousal
    </div>
   </td>
  </tr>
@@ -88,13 +88,88 @@ $(function(){initNavTree('md__r_e_a_d_m_e.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Projeto-Algoritmos-e-estruturas-de-dados </div></div>
+  <div class="headertitle"><div class="title">📊 Smart Text Analyzer </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p><img src="https://img.shields.io/badge/Language-C-blue.svg" alt="Language" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/Course-AED1%20%2F%20LP1-yellow.svg" alt="Course" style="pointer-events: none;" class="inline"/> <img src="https://img.shields.io/badge/University-UFP-green.svg" alt="University" style="pointer-events: none;" class="inline"/></p>
+<blockquote class="doxtable">
+<p><b>Projeto Prático de Desenvolvimento de Software em C</b></p>
+<p><em>Algoritmos e Estruturas de Dados 1 &amp; Linguagens de Programação 1</em></p>
+<p><em><b>FEITO POR: Rayssa Santos e Tiago chousal</b></em> </p>
+</blockquote>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Sobre o Projeto</h1>
+<p>O <b>Smart Text Analyzer</b> é um sistema eficiente de análise de texto desenvolvido em C. O objetivo principal é armazenar, processar e manipular grandes volumes de dados textuais, transformando-os em representações numéricas (vetores) para análise de similaridade.</p>
+<p>O sistema utiliza estruturas de dados dinâmicas para realizar a <b>tokenização</b> (baseada em padrões recorrentes) e calcular a frequência de termos (<b>TF - Term Frequency</b>), permitindo encontrar frases semelhantes através de métricas como o <b>Cosseno de Similaridade</b>.</p>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Funcionalidades Principais</h1>
+<ul>
+<li><b>Gestão Dinâmica de Memória:</b> Armazenamento de texto e tokens utilizando matrizes dinâmicas e listas ligadas.</li>
+<li><b>Tokenização Inteligente:</b> Algoritmo <em>greedy</em> para identificar os tokens mais longos numa frase.</li>
+<li><b>Vetorização (TF):</b> Cálculo da frequência de termos para cada frase do corpus.</li>
+<li><b>Pesquisa de Similaridade:</b> Comparação entre uma frase de entrada e o texto armazenado (Cosseno e Produto Interno).</li>
+<li><b>Persistência de Dados:</b> Leitura e escrita de dados em ficheiros de texto e binários.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Estruturas de Dados</h1>
+<p>O projeto baseia-se nas seguintes estruturas principais:</p>
+<ul>
+<li><span class="tt"><a class="el" href="struct_m_a_t_r_i_x___s_t_r.html" title="estrutura para armazenar uma matriz dinamica de strings">MATRIX_STR</a></span>: Matriz dinâmica para armazenar strings (texto bruto e vocabulário).</li>
+<li><span class="tt"><a class="el" href="struct_m_a_t_r_i_x___i_n_t.html" title="estrutura para armazenar uma matriz dinamica de arrays de inteiros">MATRIX_INT</a></span>: Matriz dinâmica para armazenar IDs de tokens e frequências.</li>
+<li><span class="tt"><a class="el" href="struct_l_l___t_k___t_f.html" title="Lista ligada bidirecional para armazenar vetores TF de todo o texto.">LL_TK_TF</a></span>: Lista Duplamente Ligada para armazenar pares de vetores (Tokens + Frequências).</li>
+<li><span class="tt"><a class="el" href="struct_d_o_c.html" title="esta struct contem as outras matrizes do projeto, sendo elas para a struct principal do ficheiro">DOC</a></span>: Estrutura agregadora que contém todo o contexto do documento.</li>
+</ul>
+<hr  />
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Estado de Implementação dos Requisitos</h1>
+<p>Conforme solicitado no enunciado do projeto, abaixo encontra-se a tabela de requisitos e o seu estado atual de desenvolvimento.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">ID  </th><th class="markdownTableHeadLeft">Descrição Resumida  </th><th class="markdownTableHeadCenter">Peso (AED1/LP1)  </th><th class="markdownTableHeadCenter">Estado  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R1.1</b>  </td><td class="markdownTableBodyLeft">Estruturas <span class="tt"><a class="el" href="struct_m_a_t_r_i_x___s_t_r.html" title="estrutura para armazenar uma matriz dinamica de strings">MATRIX_STR</a></span> (Texto/Tokens) e funções base  </td><td class="markdownTableBodyCenter">1.0 / 1.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>R1.2</b>  </td><td class="markdownTableBodyLeft">Manipulação (Inserir/Remover) e Pesquisa de texto  </td><td class="markdownTableBodyCenter">3.0 / 3.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R1.3</b>  </td><td class="markdownTableBodyLeft">Algoritmo de cálculo do alfabeto de tokens (Merge)  </td><td class="markdownTableBodyCenter">3.0 / 3.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>R1.4</b>  </td><td class="markdownTableBodyLeft">Tokenização das frases (Vetor de IDs)  </td><td class="markdownTableBodyCenter">1.0 / 1.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R1.5</b>  </td><td class="markdownTableBodyLeft">Vetorização TF (Frequência de Termos)  </td><td class="markdownTableBodyCenter">1.0 / 1.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>R1.6</b>  </td><td class="markdownTableBodyLeft">Cálculo de Similaridade (Cosseno/Produto Interno)  </td><td class="markdownTableBodyCenter">1.0 / 1.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R2.1</b>  </td><td class="markdownTableBodyLeft">Estrutura <span class="tt"><a class="el" href="struct_l_l___t_k___t_f.html" title="Lista ligada bidirecional para armazenar vetores TF de todo o texto.">LL_TK_TF</a></span> (Lista Ligada) e gestão de nós  </td><td class="markdownTableBodyCenter">3.0 / 3.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>R2.2</b>  </td><td class="markdownTableBodyLeft">Estrutura agregadora <span class="tt"><a class="el" href="struct_d_o_c.html" title="esta struct contem as outras matrizes do projeto, sendo elas para a struct principal do ficheiro">DOC</a></span> e <span class="tt"><a class="el" href="struct_m_a_t_r_i_x___i_n_t.html" title="estrutura para armazenar uma matriz dinamica de arrays de inteiros">MATRIX_INT</a></span>  </td><td class="markdownTableBodyCenter">2.0 / 2.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R2.3</b>  </td><td class="markdownTableBodyLeft">I/O com Ficheiros de Texto  </td><td class="markdownTableBodyCenter">2.0 / 2.0  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b>R2.4</b>  </td><td class="markdownTableBodyLeft">I/O com Ficheiros Binários  </td><td class="markdownTableBodyCenter">1.5 / 1.5  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b>R2.5</b>  </td><td class="markdownTableBodyLeft">Documentação Doxygen, Git e README  </td><td class="markdownTableBodyCenter">1.5 / 1.5  </td><td class="markdownTableBodyCenter">✅  </td></tr>
+</table>
+<blockquote class="doxtable">
+<p><b>Legenda:</b></p><ul>
+<li>✅ : Implementado</li>
+<li>🚧 : Parcialmente Implementado</li>
+<li>❌ : Não Implementado </li>
+</ul>
+</blockquote>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

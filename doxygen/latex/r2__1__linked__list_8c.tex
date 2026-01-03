@@ -5,23 +5,23 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8c_aca1d285da6a991f2c005415b20d8005d}{create\+\_\+linked\+\_\+list}} ()
-\begin{DoxyCompactList}\small\item\em cria e inicializa uma nova lista ligada vazia \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em cria e inicializa uma nova lista ligada vazia Complexidade\+: O(1) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8c_aa4fbf28d697d589a582e787811316885}{create\+\_\+node}} (int \texorpdfstring{$\ast$}{*}tk, int \texorpdfstring{$\ast$}{*}tf, int len)
-\item 
+\begin{DoxyCompactList}\small\item\em Cria um novo nó com vetores de tokens e frequências TF. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{r2__1__linked__list_8c_a53f99f14e4b761657eecb70212b687f6}{insert\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}tk, int \texorpdfstring{$\ast$}{*}tf, int len, int id)
-\item 
+\begin{DoxyCompactList}\small\item\em Insere um novo nó na lista em uma posição específica. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{r2__1__linked__list_8c_a2948e6227529685c98bdd6d4b5335c06}{delete\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int id)
-\item 
+\begin{DoxyCompactList}\small\item\em Remove um nó da lista em uma posição específica. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8c_a51c433beed38c5745e9b60ea452e12c4}{peep\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int idx)
-\item 
+\begin{DoxyCompactList}\small\item\em Acessa um nó da lista em uma posição específica. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8c_a64a165484eac8ab84be00c9a4c2e7b74}{search\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}search\+\_\+ids, int search\+\_\+len)
-\item 
+\begin{DoxyCompactList}\small\item\em Procura nós que contenham determinados IDs de tokens. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{r2__1__linked__list_8c_ae47b68ccad593c353eae73360edfb8a0}{print\+\_\+linked\+\_\+list}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list)
-\begin{DoxyCompactList}\small\item\em imprime todos os nós da lista ligada na consola \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em imprime todos os nós da lista ligada na consola complexidade\+: O(n) -\/\texorpdfstring{$>$}{>} n eh o número de nós \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{r2__1__linked__list_8c_aeb7ac9088b635bee4918c362f533871d}{free\+\_\+linked\+\_\+list}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list)
-\begin{DoxyCompactList}\small\item\em Liberta toda a memória associada à lista (nós e vetores internos). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Liberta toda a memória associada à lista (nós e vetores internos) complexidade\+: O(n) -\/\texorpdfstring{$>$}{>} n eh o número de nós. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{r2__1__linked__list_8c_a4eeda357ba37320f252ec403a36f8fb8}{test\+\_\+r2\+\_\+1}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em funcao de teste para o requisito R2.\+1 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
@@ -35,22 +35,65 @@ void \mbox{\hyperlink{r2__1__linked__list_8c_a4eeda357ba37320f252ec403a36f8fb8}{
 
 
 
-cria e inicializa uma nova lista ligada vazia 
+cria e inicializa uma nova lista ligada vazia Complexidade\+: O(1) 
 
 \begin{DoxyReturn}{Returns}
 ponteiro para a lista criada 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00003}{3}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
+
 \Hypertarget{r2__1__linked__list_8c_aa4fbf28d697d589a582e787811316885}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!create\_node@{create\_node}}
 \index{create\_node@{create\_node}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{create\_node()}{create\_node()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_aa4fbf28d697d589a582e787811316885} 
 \mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} create\+\_\+node (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{tk}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tf}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
 
+
+
+Cria um novo nó com vetores de tokens e frequências TF. 
+
+Aloca memória para um novo nó e copia os vetores fornecidos. Complexidade\+: O(n) onde n é o comprimento dos vetores
+
+
+\begin{DoxyParams}{Parameters}
+{\em tk} & Vetor de IDs de tokens a copiar \\
+\hline
+{\em tf} & Vetor de frequências TF a copiar \\
+\hline
+{\em len} & Comprimento dos vetores tk e tf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o nó criado, ou NULL em caso de erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00012}{12}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
+
 \Hypertarget{r2__1__linked__list_8c_a2948e6227529685c98bdd6d4b5335c06}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!delete\_node@{delete\_node}}
 \index{delete\_node@{delete\_node}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{delete\_node()}{delete\_node()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_a2948e6227529685c98bdd6d4b5335c06} 
 void delete\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Remove um nó da lista em uma posição específica. 
+
+Remove o nó na posição especificada pelo índice, libertando toda a memória associada ao nó e seus vetores internos. Complexidade\+: O(n) no pior caso (posição no meio da lista)
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a lista ligada \\
+\hline
+{\em id} & Índice do nó a remover (0-\/based) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00075}{75}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
 
 \Hypertarget{r2__1__linked__list_8c_aeb7ac9088b635bee4918c362f533871d}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!free\_linked\_list@{free\_linked\_list}}
 \index{free\_linked\_list@{free\_linked\_list}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
@@ -60,27 +103,74 @@ void free\+\_\+linked\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink
 
 
 
-Liberta toda a memória associada à lista (nós e vetores internos). 
+Liberta toda a memória associada à lista (nós e vetores internos) complexidade\+: O(n) -\/\texorpdfstring{$>$}{>} n eh o número de nós. 
 
 
 \begin{DoxyItemize}
 \item 
 \begin{DoxyParams}{Parameters}
-{\em ponteiro} & para a lista a destruir \\
+{\em ponteiro} & para a lista a libertar \\
 \hline
 \end{DoxyParams}
 
-\end{DoxyItemize}\Hypertarget{r2__1__linked__list_8c_a53f99f14e4b761657eecb70212b687f6}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!insert\_node@{insert\_node}}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00187}{187}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
+
+\Hypertarget{r2__1__linked__list_8c_a53f99f14e4b761657eecb70212b687f6}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!insert\_node@{insert\_node}}
 \index{insert\_node@{insert\_node}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{insert\_node()}{insert\_node()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_a53f99f14e4b761657eecb70212b687f6} 
 void insert\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tk}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tf}{, }\item[{int}]{len}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
 
+
+
+Insere um novo nó na lista em uma posição específica. 
+
+Cria um novo nó com os vetores fornecidos e insere na posição especificada pelo índice. Índices negativos inserem no início, índices maiores que count inserem no final. Complexidade\+: O(n) no pior caso (posição no meio da lista)
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a lista ligada \\
+\hline
+{\em tk} & Vetor de IDs de tokens \\
+\hline
+{\em tf} & Vetor de frequências TF \\
+\hline
+{\em len} & Comprimento dos vetores \\
+\hline
+{\em id} & Índice de inserção (0-\/based) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00038}{38}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
+
 \Hypertarget{r2__1__linked__list_8c_a51c433beed38c5745e9b60ea452e12c4}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!peep\_node@{peep\_node}}
 \index{peep\_node@{peep\_node}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{peep\_node()}{peep\_node()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_a51c433beed38c5745e9b60ea452e12c4} 
-\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} peep\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} peep\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Acessa um nó da lista em uma posição específica. 
+
+Retorna o ponteiro para o nó na posição especificada sem removê-\/lo. Complexidade\+: O(n) no pior caso (posição no meio da lista)
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a lista ligada \\
+\hline
+{\em pos} & Índice do nó a acessar (0-\/based) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o nó solicitado, ou NULL se índice inválido 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00115}{115}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
 
 \Hypertarget{r2__1__linked__list_8c_ae47b68ccad593c353eae73360edfb8a0}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!print\_linked\_list@{print\_linked\_list}}
 \index{print\_linked\_list@{print\_linked\_list}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
@@ -90,7 +180,7 @@ void print\+\_\+linked\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlin
 
 
 
-imprime todos os nós da lista ligada na consola 
+imprime todos os nós da lista ligada na consola complexidade\+: O(n) -\/\texorpdfstring{$>$}{>} n eh o número de nós 
 
 
 \begin{DoxyItemize}
@@ -100,15 +190,49 @@ imprime todos os nós da lista ligada na consola
 \hline
 \end{DoxyParams}
 
-\end{DoxyItemize}\Hypertarget{r2__1__linked__list_8c_a64a165484eac8ab84be00c9a4c2e7b74}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!search\_node@{search\_node}}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00170}{170}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
+
+\Hypertarget{r2__1__linked__list_8c_a64a165484eac8ab84be00c9a4c2e7b74}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!search\_node@{search\_node}}
 \index{search\_node@{search\_node}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{search\_node()}{search\_node()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_a64a165484eac8ab84be00c9a4c2e7b74} 
 \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} search\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{search\+\_\+ids}{, }\item[{int}]{search\+\_\+len}{}\end{DoxyParamCaption})}
+
+
+
+Procura nós que contenham determinados IDs de tokens. 
+
+Retorna uma nova lista ligada contendo apenas os nós cujos vetores de tokens contenham todos os IDs fornecidos. Complexidade\+: O(n \texorpdfstring{$\ast$}{*} m \texorpdfstring{$\ast$}{*} k) onde n é número de nós, m é comprimento dos vetores, k é IDs de busca
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a lista original \\
+\hline
+{\em search\+\_\+ids} & Vetor de IDs de tokens a buscar \\
+\hline
+{\em search\+\_\+len} & Comprimento do vetor de busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nova lista ligada com os nós que correspondem à busca, ou lista vazia se nenhum 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00137}{137}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
 
 \Hypertarget{r2__1__linked__list_8c_a4eeda357ba37320f252ec403a36f8fb8}\index{r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}!test\_r2\_1@{test\_r2\_1}}
 \index{test\_r2\_1@{test\_r2\_1}!r2\_1\_linked\_list.c@{r2\_1\_linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{test\_r2\_1()}{test\_r2\_1()}}
 {\footnotesize\ttfamily \label{r2__1__linked__list_8c_a4eeda357ba37320f252ec403a36f8fb8} 
 void test\+\_\+r2\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funcao de teste para o requisito R2.\+1 
+
+
+
+Definition at line \mbox{\hyperlink{r2__1__linked__list_8c_source_l00206}{206}} of file \mbox{\hyperlink{r2__1__linked__list_8c_source}{r2\+\_\+1\+\_\+linked\+\_\+list.\+c}}.
 

@@ -42,11 +42,9 @@ char* contarFreq(char **pares, int totalPares) {
                 contador++;
             }
         }
-
         if (contador > maior) {
             maior = contador;
             endereco = i;
-
         }
     }
 
@@ -82,17 +80,18 @@ void caracteresUnicos(MATRIX_STR *tokens, MATRIX_STR *matr) {
         return;
     }
 
-    int CaracteresAnalisados[256] = {0};
+    int CaracteresAnalisados[256] = {0};                        // ASCII
 
     for (int i = 0; i < matr->count; i++) {
         char *string = matr->strings[i];
         for (int j = 0; j < strlen(string); j++) {
-            unsigned char c = (unsigned char)string[j];
-            if (CaracteresAnalisados[c] == 0) {
+            unsigned char c = (unsigned char)string[j];         // evita caracteres negativos
+            if (CaracteresAnalisados[c] == 0) {                 // caso o caracter nao exista, ele passa a existir
                 CaracteresAnalisados[c] = 1;
                 char *newStr = (char *)malloc(2);
-                if (newStr == NULL) return;
-
+                if (newStr == NULL){
+                    return;
+            }
                 newStr[0] = string[j];
                 newStr[1] = '\0';
 
@@ -107,10 +106,9 @@ void merge(MATRIX_STR *tokens, MATRIX_STR *matr) {
 
     int pos = 0;
     char auxSubStr[3];
-    char **freqString = NULL;
+    char **freqString = NULL;               // apontador que aponta para um array dinamico que vai guardar todos os pares
 
-
-    for (int i = 0; i < matr->count; i++) {                                               // criar os pares consecutivos
+    for (int i = 0; i < matr->count; i++) {    // criar os pares consecutivos
         char *string = matr->strings[i];
         int tam = (int)strlen(string);
         for (int j = 0; j < tam - 1; j++) {

@@ -1,0 +1,115 @@
+\doxysection{r1\+\_\+4\+\_\+tokenization.\+c}
+\hypertarget{r1__4__tokenization_8c_source}{}\label{r1__4__tokenization_8c_source}\index{Fase1/r1\_4\_tokenization.c@{Fase1/r1\_4\_tokenization.c}}
+\mbox{\hyperlink{r1__4__tokenization_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__4__tokenization_8h}{r1\_4\_tokenization.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00003}\mbox{\hyperlink{r1__4__tokenization_8c_af35115a830726ad140dcaebbca4d9ef2}{00003}}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{r1__4__tokenization_8c_af35115a830726ad140dcaebbca4d9ef2}{create\_matrix\_int}}(\textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00004}00004\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}));}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00005}00005\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}\ =\ malloc(size\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}\ *));}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00006}00006\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}\ =\ malloc(size\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00007}00007\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a439227feff9d7f55384e8780cfc2eb82}{size}}\ =\ size;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00008}00008\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{return}\ mi;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00012}\mbox{\hyperlink{r1__4__tokenization_8c_ab960a60f4cddf45ff2170949429c84ca}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_ab960a60f4cddf45ff2170949429c84ca}{add\_int\_array}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi,\ \textcolor{keywordtype}{int}\ *arr,\ \textcolor{keywordtype}{int}\ len)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00013}00013\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}]\ =\ malloc(len\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ len;\ i++)}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00015}00015\ \ \ \ \ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}][i]\ =\ arr[i];}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00016}00016\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}]\ =\ len;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00017}00017\ \ \ \ \ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}++;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00020}\mbox{\hyperlink{r1__4__tokenization_8c_ac65f56f3e0c040c04d28eccba80d9f4c}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_ac65f56f3e0c040c04d28eccba80d9f4c}{print\_matrix\_int}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%d]\ -\/>\ "{}},\ i);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[i];\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j]\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}SD\ "{}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\ "{}},\ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j]);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00034}\mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{free\_matrix\_int}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ i++)}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ free(mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i]);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00037}00037\ \ \ \ \ free(mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00038}00038\ \ \ \ \ free(mi-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00039}00039\ \ \ \ \ free(mi);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00042}\mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{00042}}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{tokenizer}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *text,\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *tokens)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi\ =\ \mbox{\hyperlink{r1__4__tokenization_8c_af35115a830726ad140dcaebbca4d9ef2}{create\_matrix\_int}}(text-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}});\ \textcolor{comment}{//\ mi\ =\ matrix\ of\ ints}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ text-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *vec\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vec\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *str\ =\ text-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_a00cbca77782f1d0a06611d6c6ea7f545}{strings}}[i];}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ str\_length\ =\ strlen(str);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ <\ str\_length)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ greater\_length\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ greater\_index\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ tokens-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tok\_length\ =\ strlen(tokens-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_a00cbca77782f1d0a06611d6c6ea7f545}{strings}}[k]);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tok\_length\ <=\ greater\_length)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ +\ tok\_length\ <=\ str\_length\ \&\&\ strncmp(\&str[j],\ tokens-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_a00cbca77782f1d0a06611d6c6ea7f545}{strings}}[k],\ tok\_length)\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ greater\_length\ =\ tok\_length;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ greater\_index\ =\ k;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ vec\ =\ (\textcolor{keywordtype}{int}*)\ realloc(vec,\ (vec\_count\ +\ 1)\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (greater\_index\ ==\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vec[vec\_count++]\ =\ -\/1;\ \textcolor{comment}{//\ o\ tal\ do\ SD\ -\/>\ simbolo\ desconhecido}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vec[vec\_count++]\ =\ greater\_index;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j\ +=\ greater\_length;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{r1__4__tokenization_8c_ab960a60f4cddf45ff2170949429c84ca}{add\_int\_array}}(mi,\ vec,\ vec\_count);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ free(vec);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{return}\ mi;}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00083}\mbox{\hyperlink{r1__4__tokenization_8c_abee7cc90261a11fda780c8106fcc1ab3}{00083}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_abee7cc90261a11fda780c8106fcc1ab3}{test\_r1\_4}}()\ \{}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *tokens\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(7);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}b"{}});\ \ \ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}a"{}});\ \ \ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}r"{}});\ \ \ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}\ "{}});\ \ \ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00089}00089\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}p"{}});\ \ \ \textcolor{comment}{//\ 4}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}ar"{}});\ \ \textcolor{comment}{//\ 5}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}bar"{}});\ \textcolor{comment}{//\ 6}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *text\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(4);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00094}00094\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}bar\ par"{}});\ \textcolor{comment}{//\ para\ dar\ certo}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00095}00095\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}dar\ car"{}});\ \textcolor{comment}{//\ para\ aparecer\ o\ SD}}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00097}00097\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *token\_id\ =\ \mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{tokenizer}}(text,\ tokens);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00099}00099\ \ \ \ \ printf(\textcolor{stringliteral}{"{}tokens\ que\ vao\ ser\ utilizados:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa}{print\_matrix\_str}}(tokens);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00101}00101\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)ntextos\ exemplos:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa}{print\_matrix\_str}}(text);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00103}00103\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)nIDs\ dos\ tokens\ respectivos:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{r1__4__tokenization_8c_ac65f56f3e0c040c04d28eccba80d9f4c}{print\_matrix\_int}}(token\_id);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\_matrix\_str}}(tokens);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\_matrix\_str}}(text);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00108}00108\ \ \ \ \ \mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{free\_matrix\_int}}(token\_id);}
+\DoxyCodeLine{\Hypertarget{r1__4__tokenization_8c_source_l00109}00109\ \}}
+
+\end{DoxyCode}

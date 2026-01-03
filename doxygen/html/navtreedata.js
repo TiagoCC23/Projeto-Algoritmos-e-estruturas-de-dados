@@ -24,8 +24,13 @@
 */
 var NAVTREE =
 [
-  [ "Projeto-Algoritmos-e-estruturas-de-dados", "index.html", [
-    [ "Projeto-Algoritmos-e-estruturas-de-dados", "md__r_e_a_d_m_e.html", null ],
+  [ "Projeto AED Rayssa Santos Tiago Chousal", "index.html", [
+    [ "📊 Smart Text Analyzer", "md__r_e_a_d_m_e.html", [
+      [ "Sobre o Projeto", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Funcionalidades Principais", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Estruturas de Dados", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+      [ "Estado de Implementação dos Requisitos", "md__r_e_a_d_m_e.html#autotoc_md8", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
