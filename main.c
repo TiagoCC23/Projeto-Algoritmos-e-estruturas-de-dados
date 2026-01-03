@@ -30,8 +30,8 @@ int main(void){
     printf("FASE 2:\n");
     // printf("\n>>> R2.1:\n");
     // test_r2_1();
-    printf("\n>>> R2.2 <<<\n");
-    test_r2_2();
+    // printf("\n>>> R2.2 <<<\n");
+    // test_r2_2();
     // printf("\n>>> R2.3 <<<\n");
     // test_r2_r3();
     return 0;
