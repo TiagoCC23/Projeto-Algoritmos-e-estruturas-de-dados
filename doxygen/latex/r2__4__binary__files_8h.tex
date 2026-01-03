@@ -1,0 +1,159 @@
+\doxysection{Fase2/r2\+\_\+4\+\_\+binary\+\_\+files.h File Reference}
+\hypertarget{r2__4__binary__files_8h}{}\label{r2__4__binary__files_8h}\index{Fase2/r2\_4\_binary\_files.h@{Fase2/r2\_4\_binary\_files.h}}
+{\ttfamily \#include "{}r2\+\_\+3\+\_\+text\+\_\+files.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__4__binary__files_8h_aa9b110797cbd9a9836246d4ec6058fdb}{load\+Doc\+Bin\+Text}} (FILE \texorpdfstring{$\ast$}{*}fp)
+\begin{DoxyCompactList}\small\item\em esta funçao carrega as strings de texto do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__4__binary__files_8h_ad6a10e6ff63a7ba3a200589e98f395d1}{load\+Doc\+Bin\+Tokens}} (FILE \texorpdfstring{$\ast$}{*}fp)
+\begin{DoxyCompactList}\small\item\em esta funçao carrega os tokens do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__4__binary__files_8h_a94322a1b9112c69ee9569d53fa8ba150}{load\+Doc\+Bin\+Tokens\+IDs}} (FILE \texorpdfstring{$\ast$}{*}fp)
+\begin{DoxyCompactList}\small\item\em esta funçao carrega os ids dos tokens do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__4__binary__files_8h_a40e6d9da6e8a864e5ff04a2f47698abf}{load\+Doc\+Bin\+Term\+Freq}} (FILE \texorpdfstring{$\ast$}{*}fp)
+\begin{DoxyCompactList}\small\item\em esta funçao carrega os as frequencias dos ids do ficheiro binário para a struct \doxylink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__4__binary__files_8h_a3d3aa28870c3b5cef790bb2716d4e2e9}{load\+Doc\+Bin}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}doc)
+\begin{DoxyCompactList}\small\item\em esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar para as funçoes respetivas \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__4__binary__files_8h_ada97146a03f42d1ad0c1090723c86ae4}{save\+Doc\+Bin}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}doc)
+\begin{DoxyCompactList}\small\item\em esta funçao permite guardar o que tiver na struct doc para o ficheiro binario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__4__binary__files_8h_ac63e7834e0bf0782a37a9f96aa098eb0}{test\+\_\+r2\+\_\+r4}} ()
+\begin{DoxyCompactList}\small\item\em funçao de testes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r2__4__binary__files_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r2__4__binary__files_8h_a3d3aa28870c3b5cef790bb2716d4e2e9}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!loadDocBin@{loadDocBin}}
+\index{loadDocBin@{loadDocBin}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{loadDocBin()}{loadDocBin()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_a3d3aa28870c3b5cef790bb2716d4e2e9} 
+void load\+Doc\+Bin (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}}]{doc}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar para as funçoes respetivas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & o nome do ficheiro de binario \\
+\hline
+{\em doc} & a struct que contem tudo sobre o binario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_a40e6d9da6e8a864e5ff04a2f47698abf}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!loadDocBinTermFreq@{loadDocBinTermFreq}}
+\index{loadDocBinTermFreq@{loadDocBinTermFreq}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{loadDocBinTermFreq()}{loadDocBinTermFreq()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_a40e6d9da6e8a864e5ff04a2f47698abf} 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} load\+Doc\+Bin\+Term\+Freq (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao carrega os as frequencias dos ids do ficheiro binário para a struct \doxylink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a struct \doxylink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_aa9b110797cbd9a9836246d4ec6058fdb}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!loadDocBinText@{loadDocBinText}}
+\index{loadDocBinText@{loadDocBinText}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{loadDocBinText()}{loadDocBinText()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_aa9b110797cbd9a9836246d4ec6058fdb} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} load\+Doc\+Bin\+Text (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao carrega as strings de texto do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_ad6a10e6ff63a7ba3a200589e98f395d1}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!loadDocBinTokens@{loadDocBinTokens}}
+\index{loadDocBinTokens@{loadDocBinTokens}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{loadDocBinTokens()}{loadDocBinTokens()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_ad6a10e6ff63a7ba3a200589e98f395d1} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} load\+Doc\+Bin\+Tokens (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao carrega os tokens do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_a94322a1b9112c69ee9569d53fa8ba150}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!loadDocBinTokensIDs@{loadDocBinTokensIDs}}
+\index{loadDocBinTokensIDs@{loadDocBinTokensIDs}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{loadDocBinTokensIDs()}{loadDocBinTokensIDs()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_a94322a1b9112c69ee9569d53fa8ba150} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*} load\+Doc\+Bin\+Tokens\+IDs (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao carrega os ids dos tokens do ficheiro binário para a struct \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a struct \doxylink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_ada97146a03f42d1ad0c1090723c86ae4}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!saveDocBin@{saveDocBin}}
+\index{saveDocBin@{saveDocBin}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{saveDocBin()}{saveDocBin()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_ada97146a03f42d1ad0c1090723c86ae4} 
+void save\+Doc\+Bin (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}}]{doc}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite guardar o que tiver na struct doc para o ficheiro binario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & nome do ficheiro binario \\
+\hline
+{\em doc} & a struct que contem tudo sobre o binario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__4__binary__files_8h_ac63e7834e0bf0782a37a9f96aa098eb0}\index{r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}!test\_r2\_r4@{test\_r2\_r4}}
+\index{test\_r2\_r4@{test\_r2\_r4}!r2\_4\_binary\_files.h@{r2\_4\_binary\_files.h}}
+\doxysubsubsection{\texorpdfstring{test\_r2\_r4()}{test\_r2\_r4()}}
+{\footnotesize\ttfamily \label{r2__4__binary__files_8h_ac63e7834e0bf0782a37a9f96aa098eb0} 
+void test\+\_\+r2\+\_\+r4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao de testes 
+

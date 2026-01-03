@@ -1,0 +1,139 @@
+\doxysection{Fase2/r2\+\_\+1\+\_\+linked\+\_\+list.h File Reference}
+\hypertarget{r2__1__linked__list_8h}{}\label{r2__1__linked__list_8h}\index{Fase2/r2\_1\_linked\_list.h@{Fase2/r2\_1\_linked\_list.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtk__tf__node}{tk\+\_\+tf\+\_\+node}}
+\item 
+struct \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structtk__tf__node}{tk\+\_\+tf\+\_\+node}} \mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8h_aca1d285da6a991f2c005415b20d8005d}{create\+\_\+linked\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em cria e inicializa uma nova lista ligada vazia \end{DoxyCompactList}\item 
+\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8h_aa4fbf28d697d589a582e787811316885}{create\+\_\+node}} (int \texorpdfstring{$\ast$}{*}tk, int \texorpdfstring{$\ast$}{*}tf, int len)
+\item 
+void \mbox{\hyperlink{r2__1__linked__list_8h_a53f99f14e4b761657eecb70212b687f6}{insert\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}tk, int \texorpdfstring{$\ast$}{*}tf, int len, int id)
+\item 
+void \mbox{\hyperlink{r2__1__linked__list_8h_a2948e6227529685c98bdd6d4b5335c06}{delete\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int id)
+\item 
+\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8h_a825ef76a479a17ef512d3394f5d7531c}{peep\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int pos)
+\item 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r2__1__linked__list_8h_a64a165484eac8ab84be00c9a4c2e7b74}{search\+\_\+node}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list, int \texorpdfstring{$\ast$}{*}search\+\_\+ids, int search\+\_\+len)
+\item 
+void \mbox{\hyperlink{r2__1__linked__list_8h_ae47b68ccad593c353eae73360edfb8a0}{print\+\_\+linked\+\_\+list}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em imprime todos os nós da lista ligada na consola \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__1__linked__list_8h_aeb7ac9088b635bee4918c362f533871d}{free\+\_\+linked\+\_\+list}} (\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Liberta toda a memória associada à lista (nós e vetores internos). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__1__linked__list_8h_a4eeda357ba37320f252ec403a36f8fb8}{test\+\_\+r2\+\_\+1}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{r2__1__linked__list_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!TK\_TF\_NODE@{TK\_TF\_NODE}}
+\index{TK\_TF\_NODE@{TK\_TF\_NODE}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{TK\_TF\_NODE}{TK\_TF\_NODE}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f} 
+typedef struct \mbox{\hyperlink{structtk__tf__node}{tk\+\_\+tf\+\_\+node}} \mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{r2__1__linked__list_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r2__1__linked__list_8h_aca1d285da6a991f2c005415b20d8005d}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!create\_linked\_list@{create\_linked\_list}}
+\index{create\_linked\_list@{create\_linked\_list}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{create\_linked\_list()}{create\_linked\_list()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_aca1d285da6a991f2c005415b20d8005d} 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} create\+\_\+linked\+\_\+list (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+cria e inicializa uma nova lista ligada vazia 
+
+\begin{DoxyReturn}{Returns}
+ponteiro para a lista criada 
+\end{DoxyReturn}
+\Hypertarget{r2__1__linked__list_8h_aa4fbf28d697d589a582e787811316885}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!create\_node@{create\_node}}
+\index{create\_node@{create\_node}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{create\_node()}{create\_node()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_aa4fbf28d697d589a582e787811316885} 
+\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} create\+\_\+node (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{tk}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tf}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r2__1__linked__list_8h_a2948e6227529685c98bdd6d4b5335c06}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!delete\_node@{delete\_node}}
+\index{delete\_node@{delete\_node}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{delete\_node()}{delete\_node()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a2948e6227529685c98bdd6d4b5335c06} 
+void delete\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r2__1__linked__list_8h_aeb7ac9088b635bee4918c362f533871d}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!free\_linked\_list@{free\_linked\_list}}
+\index{free\_linked\_list@{free\_linked\_list}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{free\_linked\_list()}{free\_linked\_list()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_aeb7ac9088b635bee4918c362f533871d} 
+void free\+\_\+linked\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Liberta toda a memória associada à lista (nós e vetores internos). 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em ponteiro} & para a lista a destruir \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{r2__1__linked__list_8h_a53f99f14e4b761657eecb70212b687f6}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!insert\_node@{insert\_node}}
+\index{insert\_node@{insert\_node}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{insert\_node()}{insert\_node()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a53f99f14e4b761657eecb70212b687f6} 
+void insert\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tk}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{tf}{, }\item[{int}]{len}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r2__1__linked__list_8h_a825ef76a479a17ef512d3394f5d7531c}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!peep\_node@{peep\_node}}
+\index{peep\_node@{peep\_node}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{peep\_node()}{peep\_node()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a825ef76a479a17ef512d3394f5d7531c} 
+\mbox{\hyperlink{r2__1__linked__list_8h_a786a66d7beb932286924a0b91487e81f}{TK\+\_\+\+TF\+\_\+\+NODE}} \texorpdfstring{$\ast$}{*} peep\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r2__1__linked__list_8h_ae47b68ccad593c353eae73360edfb8a0}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!print\_linked\_list@{print\_linked\_list}}
+\index{print\_linked\_list@{print\_linked\_list}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{print\_linked\_list()}{print\_linked\_list()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_ae47b68ccad593c353eae73360edfb8a0} 
+void print\+\_\+linked\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+imprime todos os nós da lista ligada na consola 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em ponteiro} & para a lista a imprimir \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{r2__1__linked__list_8h_a64a165484eac8ab84be00c9a4c2e7b74}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!search\_node@{search\_node}}
+\index{search\_node@{search\_node}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{search\_node()}{search\_node()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a64a165484eac8ab84be00c9a4c2e7b74} 
+\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*} search\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{search\+\_\+ids}{, }\item[{int}]{search\+\_\+len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{r2__1__linked__list_8h_a4eeda357ba37320f252ec403a36f8fb8}\index{r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}!test\_r2\_1@{test\_r2\_1}}
+\index{test\_r2\_1@{test\_r2\_1}!r2\_1\_linked\_list.h@{r2\_1\_linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{test\_r2\_1()}{test\_r2\_1()}}
+{\footnotesize\ttfamily \label{r2__1__linked__list_8h_a4eeda357ba37320f252ec403a36f8fb8} 
+void test\+\_\+r2\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+

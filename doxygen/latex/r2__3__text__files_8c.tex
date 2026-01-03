@@ -1,0 +1,187 @@
+\doxysection{Fase2/r2\+\_\+3\+\_\+text\+\_\+files.c File Reference}
+\hypertarget{r2__3__text__files_8c}{}\label{r2__3__text__files_8c}\index{Fase2/r2\_3\_text\_files.c@{Fase2/r2\_3\_text\_files.c}}
+{\ttfamily \#include "{}r2\+\_\+3\+\_\+text\+\_\+files.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_a534a2664e0ba0a2d45125b3747e7eaec}{load\+Doc\+Text}} (FILE \texorpdfstring{$\ast$}{*}fp, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}text, const char \texorpdfstring{$\ast$}{*}first\+\_\+line)
+\begin{DoxyCompactList}\small\item\em esta funçao permite carregar o que tiver no ficheiro de texto para a struct text \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_a719af955a520fb33857756d4f797543f}{load\+Doc\+Tokens}} (FILE \texorpdfstring{$\ast$}{*}fp, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}tokens, const char \texorpdfstring{$\ast$}{*}first\+\_\+line)
+\begin{DoxyCompactList}\small\item\em esta funçao permite carregar o que tiver no ficheiro de texto para a struct tokens \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_a3c220d1fd1b2b29550601edc9230c410}{load\+Doc\+Tokens\+IDs}} (FILE \texorpdfstring{$\ast$}{*}fp, \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}tokens\+ID, const char \texorpdfstring{$\ast$}{*}first\+\_\+line)
+\begin{DoxyCompactList}\small\item\em esta funçao permite carregar o que tiver no ficheiro de texto para a struct tokens\+ID \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_af7df3879530dc3e1b853bdc8d5b7d5cc}{load\+Doc\+Tokens\+Frequency}} (FILE \texorpdfstring{$\ast$}{*}fp, \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{r1__5__term__frequency_8c_ad05fe4be37d9f098f5df899e9735b41a}{term\+\_\+frequency}}, const char \texorpdfstring{$\ast$}{*}first\+\_\+line)
+\begin{DoxyCompactList}\small\item\em esta funçao permite carregar as frequencias dos ids que tiverem no ficherido de texto para a struct term\+\_\+frequency \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_ab94e3bde660d5c220607fcd99dd55cc4}{parse\+Int\+Array}} (FILE \texorpdfstring{$\ast$}{*}fp, int \texorpdfstring{$\ast$}{*}des, int size)
+\begin{DoxyCompactList}\small\item\em esta funçao permite converter os um inteio char em inteiro int \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_ab26de614e9d2fbfb2bc016e86e6a4e13}{load\+Doc}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}doc)
+\begin{DoxyCompactList}\small\item\em esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar paras as funçoes respetivas \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_a3fb91e9c1161f1b9f09e4feff21ca87f}{save\+Doc}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}doc)
+\begin{DoxyCompactList}\small\item\em esta funçao permite guardar o que tiver na struct doc para o ficheiro de texto \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r2__3__text__files_8c_ad60bbcf72bc868c03c8945b8c44b79c2}{test\+\_\+r2\+\_\+r3}} ()
+\begin{DoxyCompactList}\small\item\em funçao de testes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r2__3__text__files_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r2__3__text__files_8c_ab26de614e9d2fbfb2bc016e86e6a4e13}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!loadDoc@{loadDoc}}
+\index{loadDoc@{loadDoc}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{loadDoc()}{loadDoc()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_ab26de614e9d2fbfb2bc016e86e6a4e13} 
+void load\+Doc (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}}]{doc}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao eh a funçao principal para o carregamento vindo dos ficheiros. Esta eh responsavel por analisar e dependendo do que encontrar mandar paras as funçoes respetivas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & o nome do ficheiro de texto \\
+\hline
+{\em doc} & a struct que contem tudo sobre o texto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_a534a2664e0ba0a2d45125b3747e7eaec}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!loadDocText@{loadDocText}}
+\index{loadDocText@{loadDocText}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{loadDocText()}{loadDocText()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_a534a2664e0ba0a2d45125b3747e7eaec} 
+void load\+Doc\+Text (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{first\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite carregar o que tiver no ficheiro de texto para a struct text 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+{\em text} & a struct que contem o corpus do texto \\
+\hline
+{\em first\+\_\+line} & a linha que mostra a quantidade de linhas na struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_a719af955a520fb33857756d4f797543f}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!loadDocTokens@{loadDocTokens}}
+\index{loadDocTokens@{loadDocTokens}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{loadDocTokens()}{loadDocTokens()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_a719af955a520fb33857756d4f797543f} 
+void load\+Doc\+Tokens (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{first\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite carregar o que tiver no ficheiro de texto para a struct tokens 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+{\em tokens} & a struct que contem os tokens \\
+\hline
+{\em first\+\_\+line} & a linha que mostra a quantidade de linhas na struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_af7df3879530dc3e1b853bdc8d5b7d5cc}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!loadDocTokensFrequency@{loadDocTokensFrequency}}
+\index{loadDocTokensFrequency@{loadDocTokensFrequency}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{loadDocTokensFrequency()}{loadDocTokensFrequency()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_af7df3879530dc3e1b853bdc8d5b7d5cc} 
+void load\+Doc\+Tokens\+Frequency (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{, }\item[{\mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\+\_\+\+TK\+\_\+\+TF}} \texorpdfstring{$\ast$}{*}}]{term\+\_\+frequency}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{first\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite carregar as frequencias dos ids que tiverem no ficherido de texto para a struct term\+\_\+frequency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+{\em term\+\_\+frequency} & a struct que contem as frequencias dos ids \\
+\hline
+{\em first\+\_\+line} & a linha que mostra a quantidade de linhas na struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_a3c220d1fd1b2b29550601edc9230c410}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!loadDocTokensIDs@{loadDocTokensIDs}}
+\index{loadDocTokensIDs@{loadDocTokensIDs}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{loadDocTokensIDs()}{loadDocTokensIDs()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_a3c220d1fd1b2b29550601edc9230c410} 
+void load\+Doc\+Tokens\+IDs (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}}]{tokens\+ID}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{first\+\_\+line}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite carregar o que tiver no ficheiro de texto para a struct tokens\+ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & eh o ponteiro para o ficheiro \\
+\hline
+{\em tokens\+ID} & a struct que contem os ids dos tokens \\
+\hline
+{\em first\+\_\+line} & a linha que mostra a quantidade de linhas na struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_ab94e3bde660d5c220607fcd99dd55cc4}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!parseIntArray@{parseIntArray}}
+\index{parseIntArray@{parseIntArray}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{parseIntArray()}{parseIntArray()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_ab94e3bde660d5c220607fcd99dd55cc4} 
+void parse\+Int\+Array (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{fp}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{des}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite converter os um inteio char em inteiro int 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & file pointer do ficheiro em que queremos fazer essa conversao \\
+\hline
+{\em des} & apontador para o array de destino que vai levar com os ints convertidos \\
+\hline
+{\em size} & tamanho do array do destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_a3fb91e9c1161f1b9f09e4feff21ca87f}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!saveDoc@{saveDoc}}
+\index{saveDoc@{saveDoc}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{saveDoc()}{saveDoc()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_a3fb91e9c1161f1b9f09e4feff21ca87f} 
+void save\+Doc (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_d_o_c}{DOC}} \texorpdfstring{$\ast$}{*}}]{doc}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite guardar o que tiver na struct doc para o ficheiro de texto 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & nome do ficheiro de texto \\
+\hline
+{\em doc} & a struct que contem tudo sobre o texto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r2__3__text__files_8c_ad60bbcf72bc868c03c8945b8c44b79c2}\index{r2\_3\_text\_files.c@{r2\_3\_text\_files.c}!test\_r2\_r3@{test\_r2\_r3}}
+\index{test\_r2\_r3@{test\_r2\_r3}!r2\_3\_text\_files.c@{r2\_3\_text\_files.c}}
+\doxysubsubsection{\texorpdfstring{test\_r2\_r3()}{test\_r2\_r3()}}
+{\footnotesize\ttfamily \label{r2__3__text__files_8c_ad60bbcf72bc868c03c8945b8c44b79c2} 
+void test\+\_\+r2\+\_\+r3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao de testes 
+
