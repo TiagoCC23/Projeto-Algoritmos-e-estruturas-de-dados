@@ -30,6 +30,7 @@ MATRIX_INT *create_matrix_int(int size);
  * @brief adiciona um array de inteiros a matriz
  *
  * adiciona um novo array de inteiros a matriz
+ * Complexidade: O(1) amortizado (redimensionamento O(n) ocasional) + O(k) para copiar o array
  *
  * @param mi ponteiro para a matriz de destino
  * @param vec array de inteiros a ser adicionado
@@ -42,6 +43,7 @@ void add_int_array(MATRIX_INT *mi, int *vec, int len);
  *
  * imprime todos os arrays de inteiros armazenados na matriz
  * caso apareça -1 imprime "SD" (Simbolo Desconhecido)
+ * Complexidade: O(n * m) onde n é o número de arrays e m é o comprimento médio dos arrays
  *
  * @param mi ponteiro para a matriz a ser impressa
  */
@@ -64,6 +66,7 @@ void free_matrix_int(MATRIX_INT *mi);
  * seleciona o token mais longo possível em cada posição do texto
  * tokens não encontrados no vocabulário são representados
  * pelo valor -1 (Símbolo Desconhecido ou SD)
+ * Complexidade: O(n * m * k) onde n é número de frases, m é comprimento das frases, k é número de tokens
  *
  * @param text ponteiro para a matriz de strings contendo o texto a ser tokenized
  * @param tokens ponteiro para a matriz de strings contendo o vocabulario de tokens
