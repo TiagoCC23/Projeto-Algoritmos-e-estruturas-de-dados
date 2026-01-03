@@ -96,7 +96,7 @@ void test_r1_4() {
 
     MATRIX_INT *token_id = tokenizer(text, tokens);
 
-    printf("\ntokens que vao ser utilizados:\n");
+    printf("tokens que vao ser utilizados:\n");
     print_matrix_str(tokens);
     printf("\ntextos exemplos:\n");
     print_matrix_str(text);
