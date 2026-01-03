@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['savedoc_0',['saveDoc',['../r2__3__text__files_8c.html#a3fb91e9c1161f1b9f09e4feff21ca87f',1,'saveDoc(char *fileName, DOC *doc):&#160;r2_3_text_files.c'],['../r2__3__text__files_8h.html#a3fb91e9c1161f1b9f09e4feff21ca87f',1,'saveDoc(char *fileName, DOC *doc):&#160;r2_3_text_files.c']]],
+  ['savedocbin_1',['saveDocBin',['../r2__4__binary__files_8c.html#ada97146a03f42d1ad0c1090723c86ae4',1,'saveDocBin(char *fileName, DOC *doc):&#160;r2_4_binary_files.c'],['../r2__4__binary__files_8h.html#ada97146a03f42d1ad0c1090723c86ae4',1,'saveDocBin(char *fileName, DOC *doc):&#160;r2_4_binary_files.c']]],
+  ['search_5fnode_2',['search_node',['../r2__1__linked__list_8c.html#a64a165484eac8ab84be00c9a4c2e7b74',1,'search_node(LL_TK_TF *list, int *search_ids, int search_len):&#160;r2_1_linked_list.c'],['../r2__1__linked__list_8h.html#a64a165484eac8ab84be00c9a4c2e7b74',1,'search_node(LL_TK_TF *list, int *search_ids, int search_len):&#160;r2_1_linked_list.c']]],
+  ['stringsearch_3',['stringSearch',['../r1__2__text__and__tokens_8c.html#afe9fdf224cb378ae90a20207fd489049',1,'stringSearch(const MATRIX_STR *str, const char *subStr):&#160;r1_2_text_and_tokens.c'],['../r1__2__text__and__tokens_8h.html#afe9fdf224cb378ae90a20207fd489049',1,'stringSearch(const MATRIX_STR *str, const char *subStr):&#160;r1_2_text_and_tokens.c']]],
+  ['substituirparnotexto_4',['substituirParNoTexto',['../r1__3__alphabet__tokens_8c.html#a30afbcc1d6284065b1a97a195915231d',1,'substituirParNoTexto(MATRIX_STR *text, char *par, char novoIdToken):&#160;r1_3_alphabet_tokens.c'],['../r1__3__alphabet__tokens_8h.html#a85acc498efe2660825e345b3bf47f0d8',1,'substituirParNoTexto(MATRIX_STR *text, char *par, char novoTokenID):&#160;r1_3_alphabet_tokens.c']]]
+];

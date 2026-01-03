@@ -2,7 +2,7 @@
 
 
 void loadFile(char* fileName, MATRIX_STR *mx) {
-    FILE *fp = fopen(fileName, "r");
+    FILE *fp = fopen(fileName, "r");  // abre o ficheiro e caso não exista, ele nao abre
     if (fp==NULL) {
         printf("File Not Found\n");
         return;
@@ -16,16 +16,14 @@ void loadFile(char* fileName, MATRIX_STR *mx) {
     fclose(fp);
 }
 
-
-int stringSearch(const MATRIX_STR *str, const char *subStr)
-{
-    int contadorPalavras=0;
-    for (int i=0; i< str->count; i++)
-    {
-    if (strstr(str->strings[i],subStr)!=NULL)
-    {
-        contadorPalavras++;
-    }
+int stringSearch(const MATRIX_STR *str, const char *subStr) {
+    int contadorPalavras = 0;
+    for (int i = 0; i < str->count; i++) {
+        if (strstr(str->strings[i], subStr) != NULL) // o strstr permite procurar numa string por uma substring e
+                                                         //caso nao seja NULL incrementa o numero de palavras
+        {
+            contadorPalavras++;
+        }
     }
     return contadorPalavras;
 }

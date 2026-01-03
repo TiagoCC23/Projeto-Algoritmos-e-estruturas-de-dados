@@ -1,0 +1,196 @@
+\doxysection{Fase1/r1\+\_\+3\+\_\+alphabet\+\_\+tokens.c File Reference}
+\hypertarget{r1__3__alphabet__tokens_8c}{}\label{r1__3__alphabet__tokens_8c}\index{Fase1/r1\_3\_alphabet\_tokens.c@{Fase1/r1\_3\_alphabet\_tokens.c}}
+{\ttfamily \#include "{}r1\+\_\+3\+\_\+alphabet\+\_\+tokens.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_a30afbcc1d6284065b1a97a195915231d}{substituir\+Par\+No\+Texto}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}text, char \texorpdfstring{$\ast$}{*}par, char novo\+Id\+Token)
+\begin{DoxyCompactList}\small\item\em esta funçao serve para substituir todas as ocorrencias de um par por um id, diminuindo o tamanho da string e possibilitando o merge \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r1__3__alphabet__tokens_8c_a20271e1e2144efae8cae82cd25c0f301}{contar\+Freq}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pares, int total\+Pares)
+\begin{DoxyCompactList}\small\item\em esta funçao serve para ver qual par e o mais repetido. Caso a frequencia seja igual, retorna o primeiro par \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_ade57a27495081107f4ea534327a50a39}{build\+\_\+tokens}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}text, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}tokens, int new\+Tokens)
+\begin{DoxyCompactList}\small\item\em esta funçao permite criar os tokens finais. Nela temos os caracteres unicos e por fim temos os caracteres unicos mais os pares ate ao numero de tokens desejados \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_af8dad7b09536a49ab58dfb9ccab40136}{caracteres\+Unicos}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}tokens, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}matr)
+\begin{DoxyCompactList}\small\item\em funçao que ira apanhar os caracteres que sao unicos na frase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_af06f820f82ba1c68bf5d44d633c7045f}{merge}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}tokens, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}matr)
+\begin{DoxyCompactList}\small\item\em esta funçao permite fazer a junçao dos tokens. Assim sendo, ela pega nos pares consecutivos, ve qual e o mais frequente e funde-\/o. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_ae1a05bb2b5e912ecdc9b3a8a9d0ac7f0}{imprimir\+Alfabeto}} (const \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}tokens)
+\begin{DoxyCompactList}\small\item\em esta funçao serve para formatar e imprimir o alfabeto de tokens \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_a49db60c2cd7a0b91c1459d9852c86c4e}{tokens\+Finais}} ()
+\begin{DoxyCompactList}\small\item\em funçao client que mostra os tokens todos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_a31ba0a34409918378e10df32e874a9cc}{teste\+Coleta}} ()
+\begin{DoxyCompactList}\small\item\em funçao que mostra os caracteres unicos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_a10bd5cf679f2b8976169f288afec7a3c}{teste\+Frequencias}} ()
+\begin{DoxyCompactList}\small\item\em funçao que mostra o par mais frequente apos o primeiro merge \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__3__alphabet__tokens_8c_acf4dc90156ba9455d9be6ce423ab339f}{test\+\_\+r1\+\_\+3}} ()
+\begin{DoxyCompactList}\small\item\em client de teste das funçoes todas deste requisito \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r1__3__alphabet__tokens_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r1__3__alphabet__tokens_8c_ade57a27495081107f4ea534327a50a39}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!build\_tokens@{build\_tokens}}
+\index{build\_tokens@{build\_tokens}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{build\_tokens()}{build\_tokens()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_ade57a27495081107f4ea534327a50a39} 
+void build\+\_\+tokens (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{, }\item[{int}]{new\+Tokens}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite criar os tokens finais. Nela temos os caracteres unicos e por fim temos os caracteres unicos mais os pares ate ao numero de tokens desejados 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & matriz que contem o corpus do texto que sera comprimido \\
+\hline
+{\em tokens} & matriz usada para armazenar os tokens \\
+\hline
+{\em new\+Tokens} & a quantidade de tokens desejada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N\texorpdfstring{$^\wedge$}{\string^}2) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_af8dad7b09536a49ab58dfb9ccab40136}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!caracteresUnicos@{caracteresUnicos}}
+\index{caracteresUnicos@{caracteresUnicos}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{caracteresUnicos()}{caracteresUnicos()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_af8dad7b09536a49ab58dfb9ccab40136} 
+void caracteres\+Unicos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{matr}{}\end{DoxyParamCaption})}
+
+
+
+funçao que ira apanhar os caracteres que sao unicos na frase 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & matriz que vai guardar os tokens \\
+\hline
+{\em matr} & a mesma struct onde vai ser passada a matriz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_a20271e1e2144efae8cae82cd25c0f301}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!contarFreq@{contarFreq}}
+\index{contarFreq@{contarFreq}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{contarFreq()}{contarFreq()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_a20271e1e2144efae8cae82cd25c0f301} 
+char \texorpdfstring{$\ast$}{*} contar\+Freq (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pares}{, }\item[{int}]{total\+Pares}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao serve para ver qual par e o mais repetido. Caso a frequencia seja igual, retorna o primeiro par 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pares} & pares que existem nas strings \\
+\hline
+{\em total\+Pares} & quantidade de pares \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+par com maior frequencia 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N\texorpdfstring{$^\wedge$}{\string^}2) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_ae1a05bb2b5e912ecdc9b3a8a9d0ac7f0}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!imprimirAlfabeto@{imprimirAlfabeto}}
+\index{imprimirAlfabeto@{imprimirAlfabeto}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{imprimirAlfabeto()}{imprimirAlfabeto()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_ae1a05bb2b5e912ecdc9b3a8a9d0ac7f0} 
+void imprimir\+Alfabeto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao serve para formatar e imprimir o alfabeto de tokens 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & matriz de tokens usada para formatar e imprimir o alfabeto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_af06f820f82ba1c68bf5d44d633c7045f}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!merge@{merge}}
+\index{merge@{merge}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_af06f820f82ba1c68bf5d44d633c7045f} 
+void merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{matr}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite fazer a junçao dos tokens. Assim sendo, ela pega nos pares consecutivos, ve qual e o mais frequente e funde-\/o. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & matriz que vai guardar os tokens \\
+\hline
+{\em matr} & matriz que contem o corpus do texto que ira diminuir apos os merges substituindo o par pelo novo id do par \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N\texorpdfstring{$^\wedge$}{\string^}2) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_a30afbcc1d6284065b1a97a195915231d}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!substituirParNoTexto@{substituirParNoTexto}}
+\index{substituirParNoTexto@{substituirParNoTexto}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{substituirParNoTexto()}{substituirParNoTexto()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_a30afbcc1d6284065b1a97a195915231d} 
+void substituir\+Par\+No\+Texto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{par}{, }\item[{char}]{novo\+Token\+ID}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao serve para substituir todas as ocorrencias de um par por um id, diminuindo o tamanho da string e possibilitando o merge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & matriz que contem o corpus do texto \\
+\hline
+{\em par} & par de maior frequencia que vai para a funçao e depois substituido \\
+\hline
+{\em novo\+Token\+ID} & o token atualizado para depois substituir no par, para diminuir a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r1__3__alphabet__tokens_8c_acf4dc90156ba9455d9be6ce423ab339f}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!test\_r1\_3@{test\_r1\_3}}
+\index{test\_r1\_3@{test\_r1\_3}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{test\_r1\_3()}{test\_r1\_3()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_acf4dc90156ba9455d9be6ce423ab339f} 
+void test\+\_\+r1\+\_\+3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+client de teste das funçoes todas deste requisito 
+
+\Hypertarget{r1__3__alphabet__tokens_8c_a31ba0a34409918378e10df32e874a9cc}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!testeColeta@{testeColeta}}
+\index{testeColeta@{testeColeta}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{testeColeta()}{testeColeta()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_a31ba0a34409918378e10df32e874a9cc} 
+void teste\+Coleta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao que mostra os caracteres unicos 
+
+\Hypertarget{r1__3__alphabet__tokens_8c_a10bd5cf679f2b8976169f288afec7a3c}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!testeFrequencias@{testeFrequencias}}
+\index{testeFrequencias@{testeFrequencias}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{testeFrequencias()}{testeFrequencias()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_a10bd5cf679f2b8976169f288afec7a3c} 
+void teste\+Frequencias (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao que mostra o par mais frequente apos o primeiro merge 
+
+\Hypertarget{r1__3__alphabet__tokens_8c_a49db60c2cd7a0b91c1459d9852c86c4e}\index{r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}!tokensFinais@{tokensFinais}}
+\index{tokensFinais@{tokensFinais}!r1\_3\_alphabet\_tokens.c@{r1\_3\_alphabet\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{tokensFinais()}{tokensFinais()}}
+{\footnotesize\ttfamily \label{r1__3__alphabet__tokens_8c_a49db60c2cd7a0b91c1459d9852c86c4e} 
+void tokens\+Finais (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao client que mostra os tokens todos 
+

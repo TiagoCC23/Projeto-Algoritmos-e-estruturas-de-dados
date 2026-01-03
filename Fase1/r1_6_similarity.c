@@ -13,9 +13,9 @@ int *arrayFreq= (int*)calloc(alfabetoTokens, sizeof(int));
     }
     for (int i=0; i<size; i++)
     {
-        int id= ids[i];
-        int frequencia=freqs[i];
-        arrayFreq[id]=frequencia;
+        int id= ids[i];  // passa a posiçao do array de ids para os ids
+        int frequencia=freqs[i]; // mesma coisa para as frequencias
+        arrayFreq[id]=frequencia; // no array que vai devolver, na posiçao dos ids, recebe a frequenci
     }
     return arrayFreq;
 }

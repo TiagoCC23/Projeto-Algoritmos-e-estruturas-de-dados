@@ -5,6 +5,10 @@
 #include "r1_4_tokenization.h"
 #include "r2_1_linked_list.h"
 
+/**
+ * @brief esta struct contem as outras matrizes do projeto, sendo elas para a struct principal do ficheiro
+ */
+
 typedef struct {
     MATRIX_STR *text; // texto original
     MATRIX_STR *tokens; // tokens
