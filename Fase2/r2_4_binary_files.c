@@ -4,6 +4,8 @@
 
 #include "r2_4_binary_files.h"
 
+
+
 MATRIX_STR* loadDocBinText(FILE *fp) {
 
     int total=0;
@@ -41,7 +43,7 @@ MATRIX_STR* loadDocBinTokens(FILE *fp) {
 
         char *strTokensTemp=(char*)malloc(tokensSize*sizeof(char));
 
-        fread(&strTokensTemp, sizeof(char), tokensSize, fp);
+        fread(strTokensTemp, sizeof(char), tokensSize, fp);
         add_string(tokens, strTokensTemp);
         free(strTokensTemp);
     }
@@ -60,7 +62,7 @@ MATRIX_INT* loadDocBinTokensIDs(FILE *fp) {
         int tokensIDSize=0;
         fread(&tokensIDSize, sizeof(int), 1, fp);
         int *strTokensIDsTemp=(int*)malloc(tokensIDSize*sizeof(int));
-        fread(strTokensIDsTemp, sizeof(char), tokensIDSize, fp);
+        fread(strTokensIDsTemp, sizeof(int), tokensIDSize, fp);
         add_int_array(tokensID, strTokensIDsTemp, tokensIDSize);
         free(strTokensIDsTemp);
     }
@@ -79,7 +81,7 @@ LL_TK_TF* loadDocBinTermFreq(FILE *fp)
         int length=0;
         fread(&length, sizeof(int),1, fp);
         int *strFreqTemp=(int*)malloc(length*sizeof(int));
-        int *strTokensTemp = (int*)malloc(length * sizeof(char));
+        int *strTokensTemp = (int*)malloc(length * sizeof(int));
         fread(strFreqTemp, sizeof(int),length, fp);
         fread(strTokensTemp, sizeof(int),length, fp);
         insert_node(nodes, strTokensTemp, strFreqTemp, length, i);
@@ -94,10 +96,10 @@ void loadDocBin(char *fileName, DOC *doc) {
         printf("File Not Found\n");
         return;
     }
-    loadDocBinText(fp);
-    loadDocBinTokens(fp);
-    loadDocBinTokensIDs(fp);
-    loadDocBinTermFreq(fp);
+    doc->text=loadDocBinText(fp);
+    doc->tokens=loadDocBinTokens(fp);
+    doc->ids=loadDocBinTokensIDs(fp);
+    doc->term_frequency=loadDocBinTermFreq(fp);
 
 fclose(fp);
     printf("Document loaded with succes");
@@ -152,9 +154,10 @@ void saveDocBin(char *fileName, DOC *doc) {
         {
             fwrite(&current->length, sizeof(int), 1, fp);
 
-                fwrite(&current->term_frequency, sizeof(int), 1, fp);
+                fwrite(current->term_frequency, sizeof(int), current->length, fp);
 
-                fwrite(&current->tokens, sizeof(int), 1, fp);
+                fwrite(current->tokens, sizeof(int), current->length, fp);
+            current=current->next;
         }
     }
 
@@ -167,7 +170,41 @@ void saveDocBin(char *fileName, DOC *doc) {
 
 
 
-void test_r2_r4()
-{
+void test_r2_r4() {
+    DOC *newDocSaveBin=create_doc();
+    if (newDocSaveBin->text==NULL) {
+        newDocSaveBin->text=create_matrix(50);
+    }
+    if (newDocSaveBin->tokens==NULL) {
+         newDocSaveBin->tokens=create_matrix(50);
+    }
+    if (newDocSaveBin->ids == NULL) {
+         newDocSaveBin->ids = create_matrix_int(50);
+    }
+    if (newDocSaveBin->term_frequency == NULL) {
+        newDocSaveBin->term_frequency = create_linked_list();
+    }
+    add_string(newDocSaveBin->text, "Hello World");
+    add_string(newDocSaveBin->text, "Ola Mundo");
 
+    char *fileName = "..\\Fase2\\Teste2_4.bin";
+
+    printf("%d frases carregadas", newDocSaveBin->text->count);
+    printf("Alphabet tokens\n");
+    build_tokens(newDocSaveBin->text, newDocSaveBin->tokens, 30);
+    printf("Tokenization\n");
+    newDocSaveBin->ids=tokenizer(newDocSaveBin->text, newDocSaveBin->tokens);
+    //printf("Frequency tokens\n");
+    //newDocSaveBin->term_frequency= term_frequency(newDocSaveBin->ids);
+    //saveDocBin(fileName, newDocSaveBin);
+
+
+    DOC *newDocLoadBin = create_doc();
+    newDocLoadBin->text=NULL;
+    newDocLoadBin->tokens=NULL;
+    newDocLoadBin->ids=NULL;
+    newDocLoadBin->term_frequency=NULL;
+    loadDocBin(fileName, newDocLoadBin);
+    free_doc(newDocSaveBin);
+    free_doc(newDocLoadBin);
 }

@@ -1,0 +1,94 @@
+\doxysection{Fase1/r1\+\_\+2\+\_\+text\+\_\+and\+\_\+tokens.c File Reference}
+\hypertarget{r1__2__text__and__tokens_8c}{}\label{r1__2__text__and__tokens_8c}\index{Fase1/r1\_2\_text\_and\_tokens.c@{Fase1/r1\_2\_text\_and\_tokens.c}}
+{\ttfamily \#include "{}r1\+\_\+2\+\_\+text\+\_\+and\+\_\+tokens.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{r1__2__text__and__tokens_8c_a104b277caf9a5c242567e8556771454d}{load\+File}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx)
+\begin{DoxyCompactList}\small\item\em esta funçao permite carregar do ficheiro de texto previamente preenchido para a struct para poder ser feita a pesquisa (a pesquisa nao eh feita nesta funçao) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{r1__2__text__and__tokens_8c_afe9fdf224cb378ae90a20207fd489049}{string\+Search}} (const \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}str, const char \texorpdfstring{$\ast$}{*}sub\+Str)
+\begin{DoxyCompactList}\small\item\em esta funçao serve para contar a quantidade de strings em que aparece determinada substring \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__2__text__and__tokens_8c_ad7dc885cbbad54a3778421488e92c3e6}{teste\+SearchC}} ()
+\begin{DoxyCompactList}\small\item\em esta funçao permite fazer a procura de palavras vindo do ficheiro c \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__2__text__and__tokens_8c_ad175f34fa2c433bb31a4f81695f7c15f}{teste\+Search\+TXT}} ()
+\begin{DoxyCompactList}\small\item\em esta funçao permite fazer a procura de palavras, vindo de um ficheiro de texto \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__2__text__and__tokens_8c_a90e8fcbd9a901606ff9e09bb03afad57}{test\+\_\+r1\+\_\+2}} ()
+\begin{DoxyCompactList}\small\item\em seria o client da função teste para a subpesquisa \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r1__2__text__and__tokens_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r1__2__text__and__tokens_8c_a104b277caf9a5c242567e8556771454d}\index{r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily \label{r1__2__text__and__tokens_8c_a104b277caf9a5c242567e8556771454d} 
+void load\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite carregar do ficheiro de texto previamente preenchido para a struct para poder ser feita a pesquisa (a pesquisa nao eh feita nesta funçao) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & nome do ficheiro que seria um .txt \\
+\hline
+{\em mx} & matriz que ira conter o corpus do texto. Nela serao adicionadas os termos para poderem ser procurados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r1__2__text__and__tokens_8c_afe9fdf224cb378ae90a20207fd489049}\index{r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}!stringSearch@{stringSearch}}
+\index{stringSearch@{stringSearch}!r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{stringSearch()}{stringSearch()}}
+{\footnotesize\ttfamily \label{r1__2__text__and__tokens_8c_afe9fdf224cb378ae90a20207fd489049} 
+int string\+Search (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{sub\+Str}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao serve para contar a quantidade de strings em que aparece determinada substring 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & matriz que contem o corpus do texto \\
+\hline
+{\em sub\+Str} & substring que ira ser procurada nas substrings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a quantidade de vezes em que a substring aparece no texto 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+complexidade O(\+N) 
+\end{DoxyNote}
+\Hypertarget{r1__2__text__and__tokens_8c_a90e8fcbd9a901606ff9e09bb03afad57}\index{r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}!test\_r1\_2@{test\_r1\_2}}
+\index{test\_r1\_2@{test\_r1\_2}!r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{test\_r1\_2()}{test\_r1\_2()}}
+{\footnotesize\ttfamily \label{r1__2__text__and__tokens_8c_a90e8fcbd9a901606ff9e09bb03afad57} 
+void test\+\_\+r1\+\_\+2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+seria o client da função teste para a subpesquisa 
+
+\Hypertarget{r1__2__text__and__tokens_8c_ad7dc885cbbad54a3778421488e92c3e6}\index{r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}!testeSearchC@{testeSearchC}}
+\index{testeSearchC@{testeSearchC}!r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{testeSearchC()}{testeSearchC()}}
+{\footnotesize\ttfamily \label{r1__2__text__and__tokens_8c_ad7dc885cbbad54a3778421488e92c3e6} 
+void teste\+SearchC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite fazer a procura de palavras vindo do ficheiro c 
+
+\Hypertarget{r1__2__text__and__tokens_8c_ad175f34fa2c433bb31a4f81695f7c15f}\index{r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}!testeSearchTXT@{testeSearchTXT}}
+\index{testeSearchTXT@{testeSearchTXT}!r1\_2\_text\_and\_tokens.c@{r1\_2\_text\_and\_tokens.c}}
+\doxysubsubsection{\texorpdfstring{testeSearchTXT()}{testeSearchTXT()}}
+{\footnotesize\ttfamily \label{r1__2__text__and__tokens_8c_ad175f34fa2c433bb31a4f81695f7c15f} 
+void teste\+Search\+TXT (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+esta funçao permite fazer a procura de palavras, vindo de um ficheiro de texto 
+

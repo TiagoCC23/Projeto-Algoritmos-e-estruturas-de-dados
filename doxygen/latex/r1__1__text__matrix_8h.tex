@@ -1,0 +1,198 @@
+\doxysection{Fase1/r1\+\_\+1\+\_\+text\+\_\+matrix.h File Reference}
+\hypertarget{r1__1__text__matrix_8h}{}\label{r1__1__text__matrix_8h}\index{Fase1/r1\_1\_text\_matrix.h@{Fase1/r1\_1\_text\_matrix.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}}
+\begin{DoxyCompactList}\small\item\em estrutura para armazenar uma matriz dinamica de strings \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \mbox{\hyperlink{r1__1__text__matrix_8h_a579e364d1d05d41d2a17146adda98931}{MATRIX\+\_\+\+TOKENS}}
+\begin{DoxyCompactList}\small\item\em estrutura para armazenar uma matriz de tokens \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r1__1__text__matrix_8h_aca9361dfe6f799a23e0816632c048abe}{create\+\_\+matrix}} (int size)
+\begin{DoxyCompactList}\small\item\em cria uma nova matriz de strings \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_a8d7232c5adcaa4b5dab39fe19659ff43}{resize\+\_\+matrix}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int new\+\_\+size)
+\begin{DoxyCompactList}\small\item\em redimensiona uma matriz de strings \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\+\_\+string}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em adiciona uma string a matriz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_a28e9ebdf5266e50b21b0253c590acbaa}{print\+\_\+matrix\+\_\+str}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx)
+\begin{DoxyCompactList}\small\item\em imprime todas as strings da matriz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_a34e9789a7cbc4d007bd33adbb9aba02d}{remove\+\_\+line}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int idx)
+\begin{DoxyCompactList}\small\item\em remove uma linha especifica da matriz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_ae2b49b2c92128ef0d93a9a7379bca450}{remove\+\_\+strings}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx, int start, int end)
+\begin{DoxyCompactList}\small\item\em remove um intervalo especifico de strings da matriz \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\+\_\+matrix\+\_\+str}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}mx)
+\begin{DoxyCompactList}\small\item\em liberta a matriz escolhida da memoria \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__1__text__matrix_8h_acd46af836c1863d8e133e931db03752a}{test\+\_\+r1\+\_\+1}} ()
+\begin{DoxyCompactList}\small\item\em funçao de teste para o requisito R1.\+1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{r1__1__text__matrix_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{r1__1__text__matrix_8h_a579e364d1d05d41d2a17146adda98931}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!MATRIX\_TOKENS@{MATRIX\_TOKENS}}
+\index{MATRIX\_TOKENS@{MATRIX\_TOKENS}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{MATRIX\_TOKENS}{MATRIX\_TOKENS}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_a579e364d1d05d41d2a17146adda98931} 
+typedef \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \mbox{\hyperlink{r1__1__text__matrix_8h_a579e364d1d05d41d2a17146adda98931}{MATRIX\+\_\+\+TOKENS}}}
+
+
+
+estrutura para armazenar uma matriz de tokens 
+
+estrutura semelhante ao \doxylink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}, utilizada especificamente para armazenar tokens 
+
+\label{doc-func-members}
+\Hypertarget{r1__1__text__matrix_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r1__1__text__matrix_8h_aab2dbb6ead4fbed59e31d4c6eb19cf75}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!add\_string@{add\_string}}
+\index{add\_string@{add\_string}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{add\_string()}{add\_string()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_aab2dbb6ead4fbed59e31d4c6eb19cf75} 
+void add\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+adiciona uma string a matriz 
+
+adiciona uma nova string a matriz
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz que vai ser adicionada a string \\
+\hline
+{\em str} & string a ser adicionada \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_aca9361dfe6f799a23e0816632c048abe}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!create\_matrix@{create\_matrix}}
+\index{create\_matrix@{create\_matrix}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{create\_matrix()}{create\_matrix()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_aca9361dfe6f799a23e0816632c048abe} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*} create\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+cria uma nova matriz de strings 
+
+aloca memoria para uma nova matriz de strings com um tamanho inicial especificado
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & tamanho inicial da matriz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a matriz criada 
+\end{DoxyReturn}
+\Hypertarget{r1__1__text__matrix_8h_a29b5b8c43b8c3f3b14ed9cd7b9951898}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!free\_matrix\_str@{free\_matrix\_str}}
+\index{free\_matrix\_str@{free\_matrix\_str}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{free\_matrix\_str()}{free\_matrix\_str()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_a29b5b8c43b8c3f3b14ed9cd7b9951898} 
+void free\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{}\end{DoxyParamCaption})}
+
+
+
+liberta a matriz escolhida da memoria 
+
+liberta todas as strings armazenadas
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz a ser libertada \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_a28e9ebdf5266e50b21b0253c590acbaa}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!print\_matrix\_str@{print\_matrix\_str}}
+\index{print\_matrix\_str@{print\_matrix\_str}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{print\_matrix\_str()}{print\_matrix\_str()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_a28e9ebdf5266e50b21b0253c590acbaa} 
+void print\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{}\end{DoxyParamCaption})}
+
+
+
+imprime todas as strings da matriz 
+
+exibe no console todas as strings armazenadas na matriz
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz a ser impressa \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_a34e9789a7cbc4d007bd33adbb9aba02d}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!remove\_line@{remove\_line}}
+\index{remove\_line@{remove\_line}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{remove\_line()}{remove\_line()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_a34e9789a7cbc4d007bd33adbb9aba02d} 
+void remove\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+remove uma linha especifica da matriz 
+
+remove a string no indice especificado, deslocando as strings subsequentes
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz \\
+\hline
+{\em idx} & indice da string a ser removida \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_ae2b49b2c92128ef0d93a9a7379bca450}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!remove\_strings@{remove\_strings}}
+\index{remove\_strings@{remove\_strings}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{remove\_strings()}{remove\_strings()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_ae2b49b2c92128ef0d93a9a7379bca450} 
+void remove\+\_\+strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{start}{, }\item[{int}]{end}{}\end{DoxyParamCaption})}
+
+
+
+remove um intervalo especifico de strings da matriz 
+
+remove todas as strings começando pelo start e terminando no end e por fim, desloca-\/se as strings restantes
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz \\
+\hline
+{\em start} & indice inicial do intervalo (inclusive) \\
+\hline
+{\em end} & indice final do intervalo (inclusive) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_a8d7232c5adcaa4b5dab39fe19659ff43}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!resize\_matrix@{resize\_matrix}}
+\index{resize\_matrix@{resize\_matrix}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{resize\_matrix()}{resize\_matrix()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_a8d7232c5adcaa4b5dab39fe19659ff43} 
+void resize\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{mx}{, }\item[{int}]{new\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+redimensiona uma matriz de strings 
+
+ajusta o tamanho da matriz para o novo tamanho especificado caso
+
+o novo tamanho for menor que o count atual, as strings que estao a mais sao perdidas
+
+
+\begin{DoxyParams}{Parameters}
+{\em mx} & ponteiro para a matriz que vai ser redimensionada \\
+\hline
+{\em new\+\_\+size} & novo tamanho desejado para a matriz \\
+\hline
+\end{DoxyParams}
+\Hypertarget{r1__1__text__matrix_8h_acd46af836c1863d8e133e931db03752a}\index{r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}!test\_r1\_1@{test\_r1\_1}}
+\index{test\_r1\_1@{test\_r1\_1}!r1\_1\_text\_matrix.h@{r1\_1\_text\_matrix.h}}
+\doxysubsubsection{\texorpdfstring{test\_r1\_1()}{test\_r1\_1()}}
+{\footnotesize\ttfamily \label{r1__1__text__matrix_8h_acd46af836c1863d8e133e931db03752a} 
+void test\+\_\+r1\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao de teste para o requisito R1.\+1 
+

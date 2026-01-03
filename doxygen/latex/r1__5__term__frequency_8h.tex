@@ -1,0 +1,69 @@
+\doxysection{Fase1/r1\+\_\+5\+\_\+term\+\_\+frequency.h File Reference}
+\hypertarget{r1__5__term__frequency_8h}{}\label{r1__5__term__frequency_8h}\index{Fase1/r1\_5\_term\_frequency.h@{Fase1/r1\_5\_term\_frequency.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}r1\+\_\+4\+\_\+tokenization.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{r1__5__term__frequency_8h_ad05fe4be37d9f098f5df899e9735b41a}{term\+\_\+frequency}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}tt)
+\begin{DoxyCompactList}\small\item\em calcula as frequencias para todas as frases tokenizadas \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__5__term__frequency_8h_a6be9cfcf2f73c193ff4bfd2dd7964877}{print\+\_\+tf\+\_\+matrix}} (\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}ids, \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}tf)
+\begin{DoxyCompactList}\small\item\em imprime os pares conforme o exemplo dado no R1.\+5 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{r1__5__term__frequency_8h_a8ba05a4196fe68462ce5555eb678a94d}{test\+\_\+r1\+\_\+5}} ()
+\begin{DoxyCompactList}\small\item\em funçao de teste para o requisito R1.\+5 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{r1__5__term__frequency_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{r1__5__term__frequency_8h_a6be9cfcf2f73c193ff4bfd2dd7964877}\index{r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}!print\_tf\_matrix@{print\_tf\_matrix}}
+\index{print\_tf\_matrix@{print\_tf\_matrix}!r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}}
+\doxysubsubsection{\texorpdfstring{print\_tf\_matrix()}{print\_tf\_matrix()}}
+{\footnotesize\ttfamily \label{r1__5__term__frequency_8h_a6be9cfcf2f73c193ff4bfd2dd7964877} 
+void print\+\_\+tf\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}}]{ids}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}}]{tf}{}\end{DoxyParamCaption})}
+
+
+
+imprime os pares conforme o exemplo dado no R1.\+5 
+
+
+\begin{DoxyItemize}
+\item Exemplo de output\+: \mbox{[}0\mbox{]}\+: \{6\+:1, 3\+:1, 4\+:1, 5\+:1\}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em ids} & matriz com os IDs dos tokens (output do tokenizer!!!) \\
+\hline
+{\em tf} & matriz com as frequencias (output do term\+\_\+frequency!!!) \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{r1__5__term__frequency_8h_ad05fe4be37d9f098f5df899e9735b41a}\index{r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}!term\_frequency@{term\_frequency}}
+\index{term\_frequency@{term\_frequency}!r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}}
+\doxysubsubsection{\texorpdfstring{term\_frequency()}{term\_frequency()}}
+{\footnotesize\ttfamily \label{r1__5__term__frequency_8h_ad05fe4be37d9f098f5df899e9735b41a} 
+\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*} term\+\_\+frequency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*}}]{tt}{}\end{DoxyParamCaption})}
+
+
+
+calcula as frequencias para todas as frases tokenizadas 
+
+para cada frase tokenizada na matriz eh calculado um vetor com as frequencias de cada token na frase a frequencia representa quantas vezes cada token aparece complexidade\+: O(n \texorpdfstring{$\ast$}{*} m) -\/\texorpdfstring{$>$}{>} n eh o numero de frases e m eh o numero de tokens por frase
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokenized\+\_\+text} & matriz com as tokenizaçoes de todas as frases \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+MATRIX\+\_\+\+INT\texorpdfstring{$\ast$}{*} matriz com as frequencias de cada frase 
+\end{DoxyReturn}
+\Hypertarget{r1__5__term__frequency_8h_a8ba05a4196fe68462ce5555eb678a94d}\index{r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}!test\_r1\_5@{test\_r1\_5}}
+\index{test\_r1\_5@{test\_r1\_5}!r1\_5\_term\_frequency.h@{r1\_5\_term\_frequency.h}}
+\doxysubsubsection{\texorpdfstring{test\_r1\_5()}{test\_r1\_5()}}
+{\footnotesize\ttfamily \label{r1__5__term__frequency_8h_a8ba05a4196fe68462ce5555eb678a94d} 
+void test\+\_\+r1\+\_\+5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+funçao de teste para o requisito R1.\+5 
+

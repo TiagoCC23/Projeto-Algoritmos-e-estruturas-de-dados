@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['r1_5f1_5ftext_5fmatrix_2ec_0',['r1_1_text_matrix.c',['../r1__1__text__matrix_8c.html',1,'']]],
+  ['r1_5f1_5ftext_5fmatrix_2eh_1',['r1_1_text_matrix.h',['../r1__1__text__matrix_8h.html',1,'']]],
+  ['r1_5f2_5ftext_5fand_5ftokens_2ec_2',['r1_2_text_and_tokens.c',['../r1__2__text__and__tokens_8c.html',1,'']]],
+  ['r1_5f2_5ftext_5fand_5ftokens_2eh_3',['r1_2_text_and_tokens.h',['../r1__2__text__and__tokens_8h.html',1,'']]],
+  ['r1_5f3_5falphabet_5ftokens_2ec_4',['r1_3_alphabet_tokens.c',['../r1__3__alphabet__tokens_8c.html',1,'']]],
+  ['r1_5f3_5falphabet_5ftokens_2eh_5',['r1_3_alphabet_tokens.h',['../r1__3__alphabet__tokens_8h.html',1,'']]],
+  ['r1_5f4_5ftokenization_2ec_6',['r1_4_tokenization.c',['../r1__4__tokenization_8c.html',1,'']]],
+  ['r1_5f4_5ftokenization_2eh_7',['r1_4_tokenization.h',['../r1__4__tokenization_8h.html',1,'']]],
+  ['r1_5f5_5fterm_5ffrequency_2ec_8',['r1_5_term_frequency.c',['../r1__5__term__frequency_8c.html',1,'']]],
+  ['r1_5f5_5fterm_5ffrequency_2eh_9',['r1_5_term_frequency.h',['../r1__5__term__frequency_8h.html',1,'']]],
+  ['r1_5f6_5fsimilarity_2ec_10',['r1_6_similarity.c',['../r1__6__similarity_8c.html',1,'']]],
+  ['r1_5f6_5fsimilarity_2eh_11',['r1_6_similarity.h',['../r1__6__similarity_8h.html',1,'']]],
+  ['r2_5f1_5flinked_5flist_2ec_12',['r2_1_linked_list.c',['../r2__1__linked__list_8c.html',1,'']]],
+  ['r2_5f1_5flinked_5flist_2eh_13',['r2_1_linked_list.h',['../r2__1__linked__list_8h.html',1,'']]],
+  ['r2_5f2_5fdynamic_5fmatrix_2ec_14',['r2_2_dynamic_matrix.c',['../r2__2__dynamic__matrix_8c.html',1,'']]],
+  ['r2_5f2_5fdynamic_5fmatrix_2eh_15',['r2_2_dynamic_matrix.h',['../r2__2__dynamic__matrix_8h.html',1,'']]],
+  ['r2_5f3_5ftext_5ffiles_2ec_16',['r2_3_text_files.c',['../r2__3__text__files_8c.html',1,'']]],
+  ['r2_5f3_5ftext_5ffiles_2eh_17',['r2_3_text_files.h',['../r2__3__text__files_8h.html',1,'']]],
+  ['r2_5f4_5fbinary_5ffiles_2ec_18',['r2_4_binary_files.c',['../r2__4__binary__files_8c.html',1,'']]],
+  ['r2_5f4_5fbinary_5ffiles_2eh_19',['r2_4_binary_files.h',['../r2__4__binary__files_8h.html',1,'']]],
+  ['readme_2emd_20',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+];

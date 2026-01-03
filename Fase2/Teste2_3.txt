@@ -1,0 +1,37 @@
+#Strings
+2
+
+ Mundo
+#Tokens
+25
+H
+e
+l
+o
+ 
+W
+r
+d
+O
+a
+M
+u
+n
+He
+Hel
+Hell
+Hello
+Hello 
+Hello W
+Hello Wo
+Hello Wor
+Hello Worl
+Hello World
+Ol
+Ola
+#IDs
+2
+1 -1 
+7 -1 4 10 11 12 7 3 
+#Nodes
+0
