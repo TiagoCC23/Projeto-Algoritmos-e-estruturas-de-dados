@@ -1,0 +1,105 @@
+\doxysection{r1\+\_\+6\+\_\+similarity.\+c}
+\hypertarget{r1__6__similarity_8c_source}{}\label{r1__6__similarity_8c_source}\index{Fase1/r1\_6\_similarity.c@{Fase1/r1\_6\_similarity.c}}
+\mbox{\hyperlink{r1__6__similarity_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ tiago\ on\ 03/12/2025.}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__6__similarity_8h}{r1\_6\_similarity.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00007}\mbox{\hyperlink{r1__6__similarity_8c_a1500050facfc6ce98a89be9fa71a06c5}{00007}}\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{r1__6__similarity_8c_a1500050facfc6ce98a89be9fa71a06c5}{converterFrequencias}}(\textcolor{keywordtype}{int}\ *ids,\ \textcolor{keywordtype}{int}\ *freqs,\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{int}\ alfabetoTokens)}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00009}00009\ \textcolor{keywordtype}{int}\ *arrayFreq=\ (\textcolor{keywordtype}{int}*)calloc(alfabetoTokens,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{if}\ (arrayFreq==NULL)}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<size;\ i++)}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}=\ ids[i];\ \ \textcolor{comment}{//\ passa\ a\ posiçao\ do\ array\ de\ ids\ para\ os\ ids}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ frequencia=freqs[i];\ \textcolor{comment}{//\ mesma\ coisa\ para\ as\ frequencias}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ arrayFreq[id]=frequencia;\ \textcolor{comment}{//\ no\ array\ que\ vai\ devolver,\ na\ posiçao\ dos\ ids,\ recebe\ a\ frequenci}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ arrayFreq;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00023}\mbox{\hyperlink{r1__6__similarity_8c_abe1b6ae632dc4a244dfd83c3efb1e5d8}{00023}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{r1__6__similarity_8c_abe1b6ae632dc4a244dfd83c3efb1e5d8}{produtoInterno\_TF}}(\textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{int}\ *b,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ soma\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ soma\ +=\ a[i]\ *\ b[i];}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})\ soma;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00031}\mbox{\hyperlink{r1__6__similarity_8c_ad6af2029d4e38306d401669cc62eadd6}{00031}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{r1__6__similarity_8c_ad6af2029d4e38306d401669cc62eadd6}{normalCossenoSimilaridade\_TF}}(\textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{float}\ normal\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ normal\ +=\ a[i]\ *\ a[i];}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00036}00036\ \ \ \ \ normal\ =\ sqrtf(normal);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ normal;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00040}\mbox{\hyperlink{r1__6__similarity_8c_a97892b375ae662c03f918c7a1b70c3b0}{00040}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{r1__6__similarity_8c_a97892b375ae662c03f918c7a1b70c3b0}{cossenoSimilaridade\_TF}}(\textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{int}\ *b,\ \textcolor{keywordtype}{int}\ size)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{float}\ produtoInt\ =\ \mbox{\hyperlink{r1__6__similarity_8c_abe1b6ae632dc4a244dfd83c3efb1e5d8}{produtoInterno\_TF}}(a,\ b,\ size);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{float}\ cossenoSim\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00043}00043\ \ \ \ \ cossenoSim\ =\ produtoInt\ /\ (\mbox{\hyperlink{r1__6__similarity_8c_ad6af2029d4e38306d401669cc62eadd6}{normalCossenoSimilaridade\_TF}}(a,\ size)\ *\ \mbox{\hyperlink{r1__6__similarity_8c_ad6af2029d4e38306d401669cc62eadd6}{normalCossenoSimilaridade\_TF}}(b,\ size));}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ cossenoSim;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00047}\mbox{\hyperlink{r1__6__similarity_8c_a00a7a19c4ce0495608a6f61563a909ba}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__6__similarity_8c_a00a7a19c4ce0495608a6f61563a909ba}{testeprodInterno}}()\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{int}\ arrayAteste[]\ =\ \{4,\ 2,\ 3,\ 4\};}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ arrayBteste[]\ =\ \{4,\ 1,\ 2,\ 5\};}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00051}00051\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%.f\(\backslash\)n"{}},\ \mbox{\hyperlink{r1__6__similarity_8c_abe1b6ae632dc4a244dfd83c3efb1e5d8}{produtoInterno\_TF}}(arrayAteste,\ arrayBteste,\ size));}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00054}\mbox{\hyperlink{r1__6__similarity_8c_a7e58fa6aa96086016f22508be1c34be8}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__6__similarity_8c_a7e58fa6aa96086016f22508be1c34be8}{testeSimilaridade}}()\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{int}\ arrayAteste[]\ =\ \{4,\ 2,\ 3,\ 4\};}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{int}\ arrayBteste[]\ =\ \{4,\ 1,\ 2,\ 5\};}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00058}00058\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}},\ \mbox{\hyperlink{r1__6__similarity_8c_a97892b375ae662c03f918c7a1b70c3b0}{cossenoSimilaridade\_TF}}(arrayAteste,\ arrayBteste,\ size));}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00061}\mbox{\hyperlink{r1__6__similarity_8c_a88073b258a523dbb5ff8a622b5cb4501}{00061}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{r1__6__similarity_8c_a88073b258a523dbb5ff8a622b5cb4501}{testeCompararFrases}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *ids,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tf,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ idA,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ idB,\ \textcolor{keywordtype}{int}\ alfabetoTokens)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{int}\ *tfa=\mbox{\hyperlink{r1__6__similarity_8c_a1500050facfc6ce98a89be9fa71a06c5}{converterFrequencias}}(ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[idA],\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[idA],\ ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[idA],\ alfabetoTokens);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{int}\ *tfb=\mbox{\hyperlink{r1__6__similarity_8c_a1500050facfc6ce98a89be9fa71a06c5}{converterFrequencias}}(ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[idB],\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[idB],\ ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[idB],\ alfabetoTokens);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{float}\ resTeste\ =\ \mbox{\hyperlink{r1__6__similarity_8c_a97892b375ae662c03f918c7a1b70c3b0}{cossenoSimilaridade\_TF}}(tfa,\ tfb,\ alfabetoTokens);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (resTeste\ >\ 0.80)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Elevada\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00067}00067\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (resTeste\ >\ 0.50\ \&\&\ resTeste\ <\ 0.80)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Media\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00069}00069\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Baixa\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00072}00072\ \ \ \ \ free(tfa);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00073}00073\ \ \ \ \ free(tfb);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{return}\ resTeste;}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00076}\mbox{\hyperlink{r1__6__similarity_8c_ac3b1ef141255769074c5b1bedb311f83}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__6__similarity_8c_ac3b1ef141255769074c5b1bedb311f83}{testeComFrases}}()}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *tokens\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(8);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}the"{}});\ \ \ \ \ \ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}a"{}});\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00081}00081\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}\ "{}});\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}cat"{}});\ \ \ \ \ \ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}dog"{}});\ \ \ \ \ \ \textcolor{comment}{//\ 4}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}sleeps"{}});\ \ \ \textcolor{comment}{//\ 5}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}runs"{}});\ \ \ \ \ \textcolor{comment}{//\ 6}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}eats"{}});\ \ \ \ \ \textcolor{comment}{//\ 7}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *text\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(15);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}the\ cat\ sleeps"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00089}00089\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}a\ cat\ eats"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}the\ dog\ runs"{}});}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *token\_id\ =\ \mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{tokenizer}}(text,\ tokens);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tf\ =\ \mbox{\hyperlink{r1__5__term__frequency_8c_ad05fe4be37d9f098f5df899e9735b41a}{term\_frequency}}(token\_id);}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00093}00093\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f"{}},\ \mbox{\hyperlink{r1__6__similarity_8c_a88073b258a523dbb5ff8a622b5cb4501}{testeCompararFrases}}(token\_id,\ tf,\ 0,\ 1,\ tokens-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}));}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00095}\mbox{\hyperlink{r1__6__similarity_8c_ac8cbaee5ebd225d70877a3dcedd7a1b8}{00095}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__6__similarity_8c_ac8cbaee5ebd225d70877a3dcedd7a1b8}{test\_r1\_6}}()\ \{}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00096}00096\ \ \ \ \ \mbox{\hyperlink{r1__6__similarity_8c_ac3b1ef141255769074c5b1bedb311f83}{testeComFrases}}();}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//\ testeprodInterno();}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ testeSimilaridade();}}
+\DoxyCodeLine{\Hypertarget{r1__6__similarity_8c_source_l00099}00099\ \}}
+
+\end{DoxyCode}

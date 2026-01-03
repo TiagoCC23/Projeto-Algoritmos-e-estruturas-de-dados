@@ -35,7 +35,7 @@ void add\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a
 
 adiciona uma string a matriz 
 
-adiciona uma nova string a matriz
+adiciona uma nova string a matriz Complexidade\+: O(1) amortizado (redimensionamento O(n) ocasional)
 
 
 \begin{DoxyParams}{Parameters}
@@ -44,6 +44,10 @@ adiciona uma nova string a matriz
 {\em str} & string a ser adicionada \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00022}{22}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!create\_matrix@{create\_matrix}}
 \index{create\_matrix@{create\_matrix}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{create\_matrix()}{create\_matrix()}}
@@ -54,7 +58,7 @@ adiciona uma nova string a matriz
 
 cria uma nova matriz de strings 
 
-aloca memoria para uma nova matriz de strings com um tamanho inicial especificado
+aloca memoria para uma nova matriz de strings com um tamanho inicial especificado Complexidade\+: O(1)
 
 
 \begin{DoxyParams}{Parameters}
@@ -64,6 +68,10 @@ aloca memoria para uma nova matriz de strings com um tamanho inicial especificad
 \begin{DoxyReturn}{Returns}
 ponteiro para a matriz criada 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00003}{3}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!free\_matrix\_str@{free\_matrix\_str}}
 \index{free\_matrix\_str@{free\_matrix\_str}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{free\_matrix\_str()}{free\_matrix\_str()}}
@@ -74,13 +82,17 @@ void free\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{
 
 liberta a matriz escolhida da memoria 
 
-liberta todas as strings armazenadas
+liberta todas as strings armazenadas Complexidade\+: O(n) onde n é o número de strings
 
 
 \begin{DoxyParams}{Parameters}
 {\em mx} & ponteiro para a matriz a ser libertada \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00060}{60}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_a28e9ebdf5266e50b21b0253c590acbaa}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!print\_matrix\_str@{print\_matrix\_str}}
 \index{print\_matrix\_str@{print\_matrix\_str}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{print\_matrix\_str()}{print\_matrix\_str()}}
@@ -91,13 +103,17 @@ void print\+\_\+matrix\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink
 
 imprime todas as strings da matriz 
 
-exibe no console todas as strings armazenadas na matriz
+exibe no console todas as strings armazenadas na matriz Complexidade\+: O(n) onde n é o número de strings
 
 
 \begin{DoxyParams}{Parameters}
 {\em mx} & ponteiro para a matriz a ser impressa \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00054}{54}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_a34e9789a7cbc4d007bd33adbb9aba02d}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!remove\_line@{remove\_line}}
 \index{remove\_line@{remove\_line}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{remove\_line()}{remove\_line()}}
@@ -108,7 +124,7 @@ void remove\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_
 
 remove uma linha especifica da matriz 
 
-remove a string no indice especificado, deslocando as strings subsequentes
+remove a string no indice especificado, deslocando as strings subsequentes Complexidade\+: O(n) onde n é o número de strings após o índice removido
 
 
 \begin{DoxyParams}{Parameters}
@@ -117,6 +133,10 @@ remove a string no indice especificado, deslocando as strings subsequentes
 {\em idx} & indice da string a ser removida \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00031}{31}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_ae2b49b2c92128ef0d93a9a7379bca450}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!remove\_strings@{remove\_strings}}
 \index{remove\_strings@{remove\_strings}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{remove\_strings()}{remove\_strings()}}
@@ -127,7 +147,7 @@ void remove\+\_\+strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct
 
 remove um intervalo especifico de strings da matriz 
 
-remove todas as strings começando pelo start e terminando no end e por fim, desloca-\/se as strings restantes
+remove todas as strings começando pelo start e terminando no end e por fim, desloca-\/se as strings restantes Complexidade\+: O(n) onde n é o número total de strings
 
 
 \begin{DoxyParams}{Parameters}
@@ -138,6 +158,10 @@ remove todas as strings começando pelo start e terminando no end e por fim, des
 {\em end} & indice final do intervalo (inclusive) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00040}{40}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_a8d7232c5adcaa4b5dab39fe19659ff43}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!resize\_matrix@{resize\_matrix}}
 \index{resize\_matrix@{resize\_matrix}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{resize\_matrix()}{resize\_matrix()}}
@@ -148,9 +172,7 @@ void resize\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_
 
 redimensiona uma matriz de strings 
 
-ajusta o tamanho da matriz para o novo tamanho especificado caso
-
-o novo tamanho for menor que o count atual, as strings que estao a mais sao perdidas
+ajusta o tamanho da matriz para o novo tamanho especificado caso o novo tamanho for menor que o count atual, as strings que estao a mais sao perdidas Complexidade\+: O(n) onde n é o número de strings a copiar
 
 
 \begin{DoxyParams}{Parameters}
@@ -159,6 +181,10 @@ o novo tamanho for menor que o count atual, as strings que estao a mais sao perd
 {\em new\+\_\+size} & novo tamanho desejado para a matriz \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00014}{14}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
+
 \Hypertarget{r1__1__text__matrix_8c_acd46af836c1863d8e133e931db03752a}\index{r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}!test\_r1\_1@{test\_r1\_1}}
 \index{test\_r1\_1@{test\_r1\_1}!r1\_1\_text\_matrix.c@{r1\_1\_text\_matrix.c}}
 \doxysubsubsection{\texorpdfstring{test\_r1\_1()}{test\_r1\_1()}}
@@ -168,4 +194,8 @@ void test\+\_\+r1\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 funçao de teste para o requisito R1.\+1 
+
+
+
+Definition at line \mbox{\hyperlink{r1__1__text__matrix_8c_source_l00068}{68}} of file \mbox{\hyperlink{r1__1__text__matrix_8c_source}{r1\+\_\+1\+\_\+text\+\_\+matrix.\+c}}.
 

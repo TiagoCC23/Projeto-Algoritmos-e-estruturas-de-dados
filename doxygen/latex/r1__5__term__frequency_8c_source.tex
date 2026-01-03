@@ -1,0 +1,87 @@
+\doxysection{r1\+\_\+5\+\_\+term\+\_\+frequency.\+c}
+\hypertarget{r1__5__term__frequency_8c_source}{}\label{r1__5__term__frequency_8c_source}\index{Fase1/r1\_5\_term\_frequency.c@{Fase1/r1\_5\_term\_frequency.c}}
+\mbox{\hyperlink{r1__5__term__frequency_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__5__term__frequency_8h}{r1\_5\_term\_frequency.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00003}\mbox{\hyperlink{r1__5__term__frequency_8c_ad05fe4be37d9f098f5df899e9735b41a}{00003}}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{r1__5__term__frequency_8c_ad05fe4be37d9f098f5df899e9735b41a}{term\_frequency}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tt)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00004}00004\ \ \ \ \ \textcolor{keywordflow}{if}\ (tt\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00005}00005\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00006}00006\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tf\ =\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}));}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00009}00009\ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a439227feff9d7f55384e8780cfc2eb82}{size}}\ =\ tt-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a439227feff9d7f55384e8780cfc2eb82}{size}};}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00010}00010\ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}\ =\ tt-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00012}00012\ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}\ *)\ *\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00013}00013\ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ *\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (!tf\ ||\ !tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}\ ||\ !tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}})\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ tt-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[i];}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[i]\ =\ len;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i]\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int})\ *\ len);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ len;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ token\ =\ tt-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j];}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ len;\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tt-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][k]\ ==\ token)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j]\ =\ count;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ tf;}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00040}\mbox{\hyperlink{r1__5__term__frequency_8c_a6be9cfcf2f73c193ff4bfd2dd7964877}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__5__term__frequency_8c_a6be9cfcf2f73c193ff4bfd2dd7964877}{print\_tf\_matrix}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *ids,\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tf)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (ids\ ==\ NULL\ ||\ tf\ ==\ NULL)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}[\%d]:\ \{"{}},\ i);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ len\ =\ ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_a5d60d4025e037d09ff777deccb085f0b}{lengths}}[i];}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ len;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d:\%d"{}},\ ids-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j],\ tf-\/>\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t_aed604633901436ee7dd6f3060e1ae874}{strings}}[i][j]);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ <\ len\ -\/\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00058}\mbox{\hyperlink{r1__5__term__frequency_8c_a8ba05a4196fe68462ce5555eb678a94d}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__5__term__frequency_8c_a8ba05a4196fe68462ce5555eb678a94d}{test\_r1\_5}}()\ \{}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *tokens\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(7);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}b"{}});\ \ \ \textcolor{comment}{//\ 0}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}a"{}});\ \ \ \textcolor{comment}{//\ 1}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}r"{}});\ \ \ \textcolor{comment}{//\ 2}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}\ "{}});\ \ \ \textcolor{comment}{//\ 3}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}p"{}});\ \ \ \textcolor{comment}{//\ 4}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}ar"{}});\ \ \textcolor{comment}{//\ 5}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00066}00066\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(tokens,\ \textcolor{stringliteral}{"{}bar"{}});\ \textcolor{comment}{//\ 6}}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *text\ =\ \mbox{\hyperlink{r1__1__text__matrix_8c_aca9361dfe6f799a23e0816632c048abe}{create\_matrix}}(1);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_aab2dbb6ead4fbed59e31d4c6eb19cf75}{add\_string}}(text,\ \textcolor{stringliteral}{"{}bar\ par"{}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tokenized\ =\ \mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{tokenizer}}(text,\ tokens);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *tf\ =\ \mbox{\hyperlink{r1__5__term__frequency_8c_ad05fe4be37d9f098f5df899e9735b41a}{term\_frequency}}(tokenized);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00074}00074\ \ \ \ \ printf(\textcolor{stringliteral}{"{}frequencias:\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{r1__5__term__frequency_8c_a6be9cfcf2f73c193ff4bfd2dd7964877}{print\_tf\_matrix}}(tokenized,\ tf);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\_matrix\_str}}(tokens);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{r1__1__text__matrix_8c_a29b5b8c43b8c3f3b14ed9cd7b9951898}{free\_matrix\_str}}(text);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{free\_matrix\_int}}(tokenized);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{free\_matrix\_int}}(tf);}
+\DoxyCodeLine{\Hypertarget{r1__5__term__frequency_8c_source_l00081}00081\ \}}
+
+\end{DoxyCode}

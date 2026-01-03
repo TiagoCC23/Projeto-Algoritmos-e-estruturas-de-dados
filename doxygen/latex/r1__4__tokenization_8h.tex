@@ -36,7 +36,7 @@ void add\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{st
 
 adiciona um array de inteiros a matriz 
 
-adiciona um novo array de inteiros a matriz
+adiciona um novo array de inteiros a matriz Complexidade\+: O(1) amortizado (redimensionamento O(n) ocasional) + O(k) para copiar o array
 
 
 \begin{DoxyParams}{Parameters}
@@ -47,6 +47,10 @@ adiciona um novo array de inteiros a matriz
 {\em len} & tamanho do array de inteiros \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00012}{12}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
+
 \Hypertarget{r1__4__tokenization_8h_af35115a830726ad140dcaebbca4d9ef2}\index{r1\_4\_tokenization.h@{r1\_4\_tokenization.h}!create\_matrix\_int@{create\_matrix\_int}}
 \index{create\_matrix\_int@{create\_matrix\_int}!r1\_4\_tokenization.h@{r1\_4\_tokenization.h}}
 \doxysubsubsection{\texorpdfstring{create\_matrix\_int()}{create\_matrix\_int()}}
@@ -67,6 +71,10 @@ cria uma nova matriz de arrays de inteiros com o tamanho especificado
 \begin{DoxyReturn}{Returns}
 ponteiro para a matriz criada 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00003}{3}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
+
 \Hypertarget{r1__4__tokenization_8h_a3ae343444f61fe128b7d9675fb82bdf1}\index{r1\_4\_tokenization.h@{r1\_4\_tokenization.h}!free\_matrix\_int@{free\_matrix\_int}}
 \index{free\_matrix\_int@{free\_matrix\_int}!r1\_4\_tokenization.h@{r1\_4\_tokenization.h}}
 \doxysubsubsection{\texorpdfstring{free\_matrix\_int()}{free\_matrix\_int()}}
@@ -84,6 +92,10 @@ liberta todos os arrays de inteiros armazenados complexidade\+: O(n) -\/\texorpd
 {\em mi} & ponteiro para a matriz a ser libertada \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00034}{34}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
+
 \Hypertarget{r1__4__tokenization_8h_ac65f56f3e0c040c04d28eccba80d9f4c}\index{r1\_4\_tokenization.h@{r1\_4\_tokenization.h}!print\_matrix\_int@{print\_matrix\_int}}
 \index{print\_matrix\_int@{print\_matrix\_int}!r1\_4\_tokenization.h@{r1\_4\_tokenization.h}}
 \doxysubsubsection{\texorpdfstring{print\_matrix\_int()}{print\_matrix\_int()}}
@@ -94,13 +106,17 @@ void print\+\_\+matrix\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink
 
 imprime todos os arrays de inteiros da matriz 
 
-imprime todos os arrays de inteiros armazenados na matriz caso apareça -\/1 imprime "{}\+SD"{} (Simbolo Desconhecido)
+imprime todos os arrays de inteiros armazenados na matriz caso apareça -\/1 imprime "{}\+SD"{} (Simbolo Desconhecido) Complexidade\+: O(n \texorpdfstring{$\ast$}{*} m) onde n é o número de arrays e m é o comprimento médio dos arrays
 
 
 \begin{DoxyParams}{Parameters}
 {\em mi} & ponteiro para a matriz a ser impressa \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00020}{20}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
+
 \Hypertarget{r1__4__tokenization_8h_abee7cc90261a11fda780c8106fcc1ab3}\index{r1\_4\_tokenization.h@{r1\_4\_tokenization.h}!test\_r1\_4@{test\_r1\_4}}
 \index{test\_r1\_4@{test\_r1\_4}!r1\_4\_tokenization.h@{r1\_4\_tokenization.h}}
 \doxysubsubsection{\texorpdfstring{test\_r1\_4()}{test\_r1\_4()}}
@@ -111,9 +127,17 @@ void test\+\_\+r1\+\_\+4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 funçao de teste para o requisito R1.\+4 
 
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00083}{83}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
+
 \Hypertarget{r1__4__tokenization_8h_a85bc092e91b0f59fe65e22d6bfb6c953}\index{r1\_4\_tokenization.h@{r1\_4\_tokenization.h}!tokenizer@{tokenizer}}
 \index{tokenizer@{tokenizer}!r1\_4\_tokenization.h@{r1\_4\_tokenization.h}}
 \doxysubsubsection{\texorpdfstring{tokenizer()}{tokenizer()}}
 {\footnotesize\ttfamily \label{r1__4__tokenization_8h_a85bc092e91b0f59fe65e22d6bfb6c953} 
 \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\+\_\+\+INT}} \texorpdfstring{$\ast$}{*} tokenizer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{text}{, }\item[{\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\+\_\+\+STR}} \texorpdfstring{$\ast$}{*}}]{tokens}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{r1__4__tokenization_8c_source_l00042}{42}} of file \mbox{\hyperlink{r1__4__tokenization_8c_source}{r1\+\_\+4\+\_\+tokenization.\+c}}.
 

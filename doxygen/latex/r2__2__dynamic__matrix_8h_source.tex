@@ -2,27 +2,27 @@
 \hypertarget{r2__2__dynamic__matrix_8h_source}{}\label{r2__2__dynamic__matrix_8h_source}\index{Fase2/r2\_2\_dynamic\_matrix.h@{Fase2/r2\_2\_dynamic\_matrix.h}}
 \mbox{\hyperlink{r2__2__dynamic__matrix_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__1__text__matrix_8h}{r1\_1\_text\_matrix.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__4__tokenization_8h}{r1\_4\_tokenization.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r2__1__linked__list_8h}{r2\_1\_linked\_list.h}}"{}}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *\mbox{\hyperlink{struct_d_o_c_a51db222f24950475bbd031989a925526}{text}};\ \textcolor{comment}{//\ texto\ original}}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *\mbox{\hyperlink{struct_d_o_c_a2c22c27f3acf4696ffc9fe395cfc28b6}{tokens}};\ \textcolor{comment}{//\ tokens}}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{struct_d_o_c_a7583813df3bb551880c32352f736686b}{ids}};\ \textcolor{comment}{//\ matriz\ de\ IDs\ (resultado\ do\ tokenizer)}}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\_TK\_TF}}\ *\mbox{\hyperlink{struct_d_o_c_a746d0766955510f3c9b64aeab32396b0}{term\_frequency}};\ \textcolor{comment}{//\ lista\ ligada\ com\ as\ frequencias}}
-\DoxyCodeLine{00017\ \}\ \mbox{\hyperlink{struct_d_o_c}{DOC}};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \mbox{\hyperlink{struct_d_o_c}{DOC}}\ *\mbox{\hyperlink{r2__2__dynamic__matrix_8h_a4dc04286495233ce8441cd2af5d1d045}{create\_doc}}();}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r2__2__dynamic__matrix_8h_ab220da78aa452a734522163b52f80666}{free\_doc}}(\mbox{\hyperlink{struct_d_o_c}{DOC}}\ *doc);}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r2__2__dynamic__matrix_8h_a2ec1ec17f999c6b38ce8d7fb38371819}{test\_r2\_2}}();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__1__text__matrix_8h}{r1\_1\_text\_matrix.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__4__tokenization_8h}{r1\_4\_tokenization.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r2__1__linked__list_8h}{r2\_1\_linked\_list.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00012}\mbox{\hyperlink{struct_d_o_c}{00012}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00013}\mbox{\hyperlink{struct_d_o_c_a51db222f24950475bbd031989a925526}{00013}}\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *\mbox{\hyperlink{struct_d_o_c_a51db222f24950475bbd031989a925526}{text}};\ \textcolor{comment}{//\ texto\ original}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00014}\mbox{\hyperlink{struct_d_o_c_a2c22c27f3acf4696ffc9fe395cfc28b6}{00014}}\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *\mbox{\hyperlink{struct_d_o_c_a2c22c27f3acf4696ffc9fe395cfc28b6}{tokens}};\ \textcolor{comment}{//\ tokens}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00015}\mbox{\hyperlink{struct_d_o_c_a7583813df3bb551880c32352f736686b}{00015}}\ \ \ \ \ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{struct_d_o_c_a7583813df3bb551880c32352f736686b}{ids}};\ \textcolor{comment}{//\ matriz\ de\ IDs\ (resultado\ do\ tokenizer)}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00016}\mbox{\hyperlink{struct_d_o_c_a746d0766955510f3c9b64aeab32396b0}{00016}}\ \ \ \ \ \mbox{\hyperlink{struct_l_l___t_k___t_f}{LL\_TK\_TF}}\ *\mbox{\hyperlink{struct_d_o_c_a746d0766955510f3c9b64aeab32396b0}{term\_frequency}};\ \textcolor{comment}{//\ lista\ ligada\ com\ as\ frequencias}}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00017}00017\ \}\ \mbox{\hyperlink{struct_d_o_c}{DOC}};}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00019}00019\ \mbox{\hyperlink{struct_d_o_c}{DOC}}\ *\mbox{\hyperlink{r2__2__dynamic__matrix_8h_a4dc04286495233ce8441cd2af5d1d045}{create\_doc}}();}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00021}00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r2__2__dynamic__matrix_8h_ab220da78aa452a734522163b52f80666}{free\_doc}}(\mbox{\hyperlink{struct_d_o_c}{DOC}}\ *doc);}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00026}00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{r2__2__dynamic__matrix_8h_a2ec1ec17f999c6b38ce8d7fb38371819}{test\_r2\_2}}();}
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{r2__2__dynamic__matrix_8h_source_l00028}00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R2\_2\_DYNAMIC\_MATRIX\_H}}
 
 \end{DoxyCode}
