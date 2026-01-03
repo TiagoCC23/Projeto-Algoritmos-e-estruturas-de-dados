@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['parseintarray_0',['parseIntArray',['../r2__3__text__files_8c.html#ab94e3bde660d5c220607fcd99dd55cc4',1,'parseIntArray(FILE *fp, int *des, int size):&#160;r2_3_text_files.c'],['../r2__3__text__files_8h.html#ab94e3bde660d5c220607fcd99dd55cc4',1,'parseIntArray(FILE *fp, int *des, int size):&#160;r2_3_text_files.c']]],
+  ['peep_5fnode_1',['peep_node',['../r2__1__linked__list_8c.html#a51c433beed38c5745e9b60ea452e12c4',1,'peep_node(LL_TK_TF *list, int idx):&#160;r2_1_linked_list.c'],['../r2__1__linked__list_8h.html#a825ef76a479a17ef512d3394f5d7531c',1,'peep_node(LL_TK_TF *list, int pos):&#160;r2_1_linked_list.c']]],
+  ['prev_2',['prev',['../structtk__tf__node.html#ad9b75d8cea55776a28cc4532d511a323',1,'tk_tf_node']]],
+  ['print_5flinked_5flist_3',['print_linked_list',['../r2__1__linked__list_8c.html#ae47b68ccad593c353eae73360edfb8a0',1,'print_linked_list(LL_TK_TF *list):&#160;r2_1_linked_list.c'],['../r2__1__linked__list_8h.html#ae47b68ccad593c353eae73360edfb8a0',1,'print_linked_list(LL_TK_TF *list):&#160;r2_1_linked_list.c']]],
+  ['print_5fmatrix_5fint_4',['print_matrix_int',['../r1__4__tokenization_8c.html#ac65f56f3e0c040c04d28eccba80d9f4c',1,'print_matrix_int(MATRIX_INT *mi):&#160;r1_4_tokenization.c'],['../r1__4__tokenization_8h.html#ac65f56f3e0c040c04d28eccba80d9f4c',1,'print_matrix_int(MATRIX_INT *mi):&#160;r1_4_tokenization.c']]],
+  ['print_5fmatrix_5fstr_5',['print_matrix_str',['../r1__1__text__matrix_8c.html#a28e9ebdf5266e50b21b0253c590acbaa',1,'print_matrix_str(MATRIX_STR *mx):&#160;r1_1_text_matrix.c'],['../r1__1__text__matrix_8h.html#a28e9ebdf5266e50b21b0253c590acbaa',1,'print_matrix_str(MATRIX_STR *mx):&#160;r1_1_text_matrix.c']]],
+  ['print_5ftf_5fmatrix_6',['print_tf_matrix',['../r1__5__term__frequency_8c.html#a6be9cfcf2f73c193ff4bfd2dd7964877',1,'print_tf_matrix(MATRIX_INT *ids, MATRIX_INT *tf):&#160;r1_5_term_frequency.c'],['../r1__5__term__frequency_8h.html#a6be9cfcf2f73c193ff4bfd2dd7964877',1,'print_tf_matrix(MATRIX_INT *ids, MATRIX_INT *tf):&#160;r1_5_term_frequency.c']]],
+  ['produtointerno_5ftf_7',['produtoInterno_TF',['../r1__6__similarity_8c.html#abe1b6ae632dc4a244dfd83c3efb1e5d8',1,'produtoInterno_TF(int *a, int *b, int size):&#160;r1_6_similarity.c'],['../r1__6__similarity_8h.html#abe1b6ae632dc4a244dfd83c3efb1e5d8',1,'produtoInterno_TF(int *a, int *b, int size):&#160;r1_6_similarity.c']]],
+  ['projeto_20algoritmos_20e_20estruturas_20de_20dados_8',['Projeto-Algoritmos-e-estruturas-de-dados',['../md__r_e_a_d_m_e.html',1,'']]]
+];

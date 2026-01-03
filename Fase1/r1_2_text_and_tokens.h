@@ -7,18 +7,30 @@
 #include "r1_1_text_matrix.h"
 
 /**
- * @brief
- * @param fileName
- * @param mx
+ * @brief esta funçao permite carregar do ficheiro de texto previamente preenchido para a struct para poder ser feita a pesquisa (a pesquisa nao eh feita nesta funçao)
+ * @param fileName nome do ficheiro que seria um .txt
+ * @param mx matriz que ira conter o corpus do texto. Nela serao adicionadas os termos para poderem ser procurados
+ * @note complexidade O(N)
  */
 void loadFile(char* fileName, MATRIX_STR *mx);
 /**
  * @brief esta funçao serve para contar a quantidade de strings em que aparece determinada substring
  * @param str matriz que contem o corpus do texto
  * @param subStr substring que ira ser procurada nas substrings
- * @return a quantidade de vezes em que a substring apelidade de search aparece
+ * @return a quantidade de vezes em que a substring aparece no texto
+ * @note complexidade O(N)
  */
 int stringSearch(const MATRIX_STR *str, const char *subStr);
+
+/**
+ * @brief esta funçao permite fazer a procura de palavras vindo do ficheiro c
+ */
+void testeSearchC();
+
+/**
+ * @brief esta funçao permite fazer a procura de palavras, vindo de um ficheiro de texto
+ */
+void testeSearchTXT();
 
 /**
  * @brief seria o client da função teste para a subpesquisa

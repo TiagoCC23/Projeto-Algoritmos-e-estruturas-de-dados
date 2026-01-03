@@ -16,6 +16,7 @@
  * @param size quantidade de ids de tokens presentes na frase
  * @param alfabetoTokens o tamanho do alfabeto de todos os tokens que sao adicionados a string
  * @return array convertido para a funçao de teste
+ * @note complexidade O(N)
  */
 int* converterFrequencias(int *ids, int *freqs, int size, int alfabetoTokens);
 
@@ -25,6 +26,7 @@ int* converterFrequencias(int *ids, int *freqs, int size, int alfabetoTokens);
  * @param b frase/array b
  * @param size tamanho do array
  * @return resultado da operaçao
+ * @note complexidade O(N)
  */
 float cossenoSimilaridade_TF(int *a, int *b, int size );
 
@@ -34,6 +36,7 @@ float cossenoSimilaridade_TF(int *a, int *b, int size );
  * @param b frase/array b
  * @param size tamanho do array
  * @return resultado da operaçao
+ * @note complexidade O(N)
  */
 float produtoInterno_TF(int *a, int *b, int size);
 
@@ -42,6 +45,7 @@ float produtoInterno_TF(int *a, int *b, int size);
  * @param a frase/array
  * @param size tamanho do array
  * @return resultado da operaçao
+ * @note complexidade O(N)
  */
 float normalCossenoSimilaridade_TF(int *a, int size );
 

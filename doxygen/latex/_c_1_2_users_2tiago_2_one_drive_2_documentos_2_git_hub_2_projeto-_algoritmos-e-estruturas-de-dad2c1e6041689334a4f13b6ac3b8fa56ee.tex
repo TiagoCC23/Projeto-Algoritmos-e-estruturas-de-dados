@@ -1,0 +1,47 @@
+\doxysection{C\+:/\+Users/tiago/\+One\+Drive/\+Documentos/\+Git\+Hub/\+Projeto-\/\+Algoritmos-\/e-\/estruturas-\/de-\/dados/\+Fase1/r1\+\_\+4\+\_\+tokenization.\+h}
+\hypertarget{_c_1_2_users_2tiago_2_one_drive_2_documentos_2_git_hub_2_projeto-_algoritmos-e-estruturas-de-dad2c1e6041689334a4f13b6ac3b8fa56ee}{}\label{_c_1_2_users_2tiago_2_one_drive_2_documentos_2_git_hub_2_projeto-_algoritmos-e-estruturas-de-dad2c1e6041689334a4f13b6ac3b8fa56ee}tokeniza (?) um texto usando tokens selecionados com o metodo greedy longest-\/match
+
+tokeniza (?) um texto usando tokens selecionados com o metodo greedy longest-\/matchconverte cada frase do texto em um vetor de IDs de tokens seleciona o token mais longo possível em cada posição do texto tokens não encontrados no vocabulário são representados pelo valor -\/1 (Símbolo Desconhecido ou SD)
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & ponteiro para a matriz de strings contendo o texto a ser tokenized \\
+\hline
+{\em tokens} & ponteiro para a matriz de strings contendo o vocabulario de tokens \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mi, ou seja, os vetores de IDs de tokens para cada frase
+\end{DoxyReturn}
+texto\+: \mbox{[}"{}bar par"{}\mbox{]} tokens\+: \mbox{[}"{}b"{}, "{}a"{}, "{}r"{}, "{} "{}, "{}p"{}, "{}ar"{}, "{}bar"{}\mbox{]} resultado\+: \mbox{[}6, 3, 4, 5\mbox{]} // "{}bar"{}, "{} "{}, "{}p"{}, "{}ar"{}
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#ifndef\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_4\_TOKENIZATION\_H}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_4\_TOKENIZATION\_H}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{r1__1__text__matrix_8h}{r1\_1\_text\_matrix.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ **strings;\ \textcolor{comment}{//\ frase\ tokenizada\ OUU\ frequencia\ das\ frases}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ *lengths;\ \textcolor{comment}{//\ tamanho\ de\ cada\ linha\ (pq\ pode\ variar)}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ size;\ \textcolor{comment}{//\ tamanho\ da\ matrix}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ count;}
+\DoxyCodeLine{\}\ \mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}};\ \textcolor{comment}{//\ estrutura\ semelhante\ ao\ MATRIX\_STR\ só\ que\ para\ os\ interios\ (index)}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{r1__4__tokenization_8c_af35115a830726ad140dcaebbca4d9ef2}{create\_matrix\_int}}(\textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_ab960a60f4cddf45ff2170949429c84ca}{add\_int\_array}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi,\ \textcolor{keywordtype}{int}\ *vec,\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_ac65f56f3e0c040c04d28eccba80d9f4c}{print\_matrix\_int}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_a3ae343444f61fe128b7d9675fb82bdf1}{free\_matrix\_int}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *mi);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{struct_m_a_t_r_i_x___i_n_t}{MATRIX\_INT}}\ *\mbox{\hyperlink{r1__4__tokenization_8c_a85bc092e91b0f59fe65e22d6bfb6c953}{tokenizer}}(\mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *text,\ \mbox{\hyperlink{struct_m_a_t_r_i_x___s_t_r}{MATRIX\_STR}}\ *tokens);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{r1__4__tokenization_8c_abee7cc90261a11fda780c8106fcc1ab3}{test\_r1\_4}}();\ \textcolor{comment}{//\ funcao\ de\ teste}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJETO\_ALGORITMOS\_E\_ESTRUTURAS\_DE\_DADOS\_R1\_4\_TOKENIZATION\_H}}
+
+\end{DoxyCodeInclude}
+ 
