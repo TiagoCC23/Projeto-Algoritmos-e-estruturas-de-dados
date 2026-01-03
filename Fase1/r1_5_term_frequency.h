@@ -18,8 +18,10 @@ MATRIX_INT *term_frequency(MATRIX_INT *tt);
 
 /**
  * @brief imprime os pares conforme o exemplo dado no R1.5
- * * Exemplo de output: [0]: {6:1, 3:1, 4:1, 5:1}
- * * @param ids matriz com os IDs dos tokens (output do tokenizer!!!)
+ *
+ * Complexidade: O(n * m) onde n é número de frases e m é número de tokens únicos
+ *
+ * @param ids matriz com os IDs dos tokens (output do tokenizer!!!)
  * @param tf matriz com as frequencias (output do term_frequency!!!)
  */
 void print_tf_matrix(MATRIX_INT *ids, MATRIX_INT *tf);
