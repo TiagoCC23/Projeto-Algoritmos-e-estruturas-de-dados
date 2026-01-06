@@ -18,7 +18,7 @@ void loadDocTokens(FILE *fp, MATRIX_STR *tokens, const char *first_line) {
         add_string(tokens, buffer);
     }
 }
-// ... Mantém loadDocTokensIDs e loadDocTokensFrequency iguais ...
+
 void loadDocTokensIDs(FILE *fp, MATRIX_INT *tokensID, const char *first_line) {
     int n =  atoi(first_line);
     char buffer[1024];
